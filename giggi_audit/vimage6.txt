@@ -1,0 +1,278 @@
+=== NODE: vimage6 ===
+--- OS ---
+NAME="Linux Mint"
+VERSION="22.2 (Zara)"
+--- CPU ---
+Architecture:                            x86_64
+Model name:                              Intel(R) Xeon(R) CPU E5-1650 v2 @ 3.50GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      6
+Socket(s):                               1
+CPU(s) scaling MHz:                      90%
+CPU max MHz:                             3900,0000
+CPU min MHz:                             1200,0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       5,7Gi       978Mi       186Mi        25Gi        25Gi
+Swap:          2,0Gi        16Ki       2,0Gi
+
+MemTotal:       32793896 kB
+MemFree:         1001504 kB
+MemAvailable:   26833276 kB
+SwapTotal:       2097148 kB
+SwapFree:        2097132 kB
+--- DISK ---
+Filesystem      Size  Used Avail Use% Mounted on
+efivarfs        128K   87K   37K  71% /sys/firmware/efi/efivars
+/dev/sda3       468G  177G  268G  40% /
+/dev/sda2       512M  6,2M  506M   2% /boot/efi
+--- GPU (nvidia-smi) ---
+nvidia-smi not found
+--- DOCKER ---
+Docker version: Docker version 29.5.2, build 79eb04c
+
+Running containers:
+NAMES                                                                                                                IMAGE                                                STATUS                             PORTS
+giggi-e2e-app-496                                                                                                    giggi/web:ci-25e081d64002                            Up 49 seconds (health: starting)   3000/tcp, 0.0.0.0:13017->13017/tcp, [::]:13017->13017/tcp
+giggi-ci-496-db-1                                                                                                    postgres:16-alpine                                   Up About a minute (healthy)        0.0.0.0:5451->5432/tcp, [::]:5451->5432/tcp
+giggi-ci-496-redis-1                                                                                                 redis:7-alpine                                       Up About a minute (healthy)        0.0.0.0:6397->6379/tcp, [::]:6397->6379/tcp
+GITEA-ACTIONS-TASK-1408-WORKFLOW-CI-JOB-E2E-tests-5475bf022c9f48f5029b39d73d80de063212043fd7c737482ce8f370c4059922   git.dudeisland.eu/janiluuk/giggi-ci-runner:latest    Up 3 minutes                       
+docker-catalog-exporter                                                                                              python:3-alpine                                      Up 8 minutes                       
+giggi-ci-473-db-1                                                                                                    postgres:16-alpine                                   Up 28 hours (healthy)              0.0.0.0:5468->5432/tcp, [::]:5468->5432/tcp
+giggi-ci-473-redis-1                                                                                                 redis:7-alpine                                       Up 28 hours (healthy)              0.0.0.0:6414->6379/tcp, [::]:6414->6379/tcp
+giggi-ci-457-db-1                                                                                                    postgres:16-alpine                                   Up 34 hours (healthy)              0.0.0.0:5452->5432/tcp, [::]:5452->5432/tcp
+giggi-ci-457-redis-1                                                                                                 redis:7-alpine                                       Up 34 hours (healthy)              0.0.0.0:6398->6379/tcp, [::]:6398->6379/tcp
+giggi-ci-423-db-1                                                                                                    postgres:16-alpine                                   Up 39 hours (healthy)              0.0.0.0:5458->5432/tcp, [::]:5458->5432/tcp
+giggi-ci-423-redis-1                                                                                                 redis:7-alpine                                       Up 39 hours (healthy)              0.0.0.0:6404->6379/tcp, [::]:6404->6379/tcp
+giggi-ci-364-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                0.0.0.0:5439->5432/tcp, [::]:5439->5432/tcp
+giggi-ci-364-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                0.0.0.0:6385->6379/tcp, [::]:6385->6379/tcp
+giggi-ci-352-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                0.0.0.0:5467->5432/tcp, [::]:5467->5432/tcp
+giggi-ci-352-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                0.0.0.0:6413->6379/tcp, [::]:6413->6379/tcp
+buildx_buildkit_builder-c9ea4482-6898-477a-a51f-e1ab2b036c7e0                                                        moby/buildkit:buildx-stable-1                        Up 2 days                          
+buildx_buildkit_builder-d933bc11-4622-4a73-9489-78badf55486b0                                                        moby/buildkit:buildx-stable-1                        Up 2 days                          
+giggi-ci-325-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                0.0.0.0:5440->5432/tcp, [::]:5440->5432/tcp
+giggi-ci-325-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                0.0.0.0:6386->6379/tcp, [::]:6386->6379/tcp
+giggi-ci-309-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                0.0.0.0:5464->5432/tcp, [::]:5464->5432/tcp
+giggi-ci-309-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                0.0.0.0:6410->6379/tcp, [::]:6410->6379/tcp
+gitea-runner-sparkki                                                                                                 gitea/act_runner:latest                              Up 3 days                          
+buildx_buildkit_builder-cb232c76-3ae8-47ee-8f9d-2c845fbe984e0                                                        moby/buildkit:buildx-stable-1                        Up 3 days                          
+giggi-ci-db-1                                                                                                        postgres:16-alpine                                   Up 3 days (healthy)                0.0.0.0:5434->5432/tcp, [::]:5434->5432/tcp
+monitoring-loki                                                                                                      grafana/loki:3.4                                     Up 3 days                          
+vimage6-mailserver                                                                                                   ghcr.io/docker-mailserver/docker-mailserver:latest   Up 3 days (healthy)                0.0.0.0:25->25/tcp, [::]:25->25/tcp, 0.0.0.0:143->143/tcp, [::]:143->143/tcp, 0.0.0.0:465->465/tcp, [::]:465->465/tcp, 0.0.0.0:587->587/tcp, [::]:587->587/tcp, 110/tcp, 995/tcp, 0.0.0.0:993->993/tcp, [::]:993->993/tcp, 4190/tcp
+vimage6-roundcube                                                                                                    roundcube/roundcubemail:latest                       Up 3 days                          80/tcp
+vimage6-caddy                                                                                                        caddy:2-alpine                                       Up 3 days                          0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp, 443/udp, 2019/tcp
+vimage6-mariadb                                                                                                      mariadb:11                                           Up 3 days (healthy)                3306/tcp
+gitea                                                                                                                gitea/gitea:1.26                                     Up 3 days                          0.0.0.0:4322->22/tcp, [::]:4322->22/tcp, 0.0.0.0:3080->3000/tcp, [::]:3080->3000/tcp
+giggi-ci-redis-1                                                                                                     redis:7-alpine                                       Up 3 days (healthy)                0.0.0.0:6380->6379/tcp, [::]:6380->6379/tcp
+monitoring-grafana                                                                                                   grafana/grafana:latest                               Up 8 minutes                       
+monitoring-prometheus                                                                                                prom/prometheus:latest                               Up 3 days                          
+cadvisor                                                                                                             gcr.io/cadvisor/cadvisor:latest                      Up 3 days (healthy)                
+node-exporter                                                                                                        prom/node-exporter:latest                            Up 3 days                          
+gitea-runner-giggi                                                                                                   gitea/act_runner:latest                              Up 33 hours                        
+
+All containers (including stopped):
+NAMES                                                                                                                IMAGE                                                STATUS                             CREATED AT
+giggi-e2e-app-496                                                                                                    giggi/web:ci-25e081d64002                            Up 49 seconds (health: starting)   2026-06-01 23:16:57 +0300 EEST
+giggi-ci-496-db-1                                                                                                    postgres:16-alpine                                   Up About a minute (healthy)        2026-06-01 23:16:15 +0300 EEST
+giggi-ci-496-redis-1                                                                                                 redis:7-alpine                                       Up About a minute (healthy)        2026-06-01 23:16:15 +0300 EEST
+GITEA-ACTIONS-TASK-1408-WORKFLOW-CI-JOB-E2E-tests-5475bf022c9f48f5029b39d73d80de063212043fd7c737482ce8f370c4059922   git.dudeisland.eu/janiluuk/giggi-ci-runner:latest    Up 3 minutes                       2026-06-01 23:14:38 +0300 EEST
+docker-catalog-exporter                                                                                              python:3-alpine                                      Up 8 minutes                       2026-06-01 23:09:41 +0300 EEST
+giggi-e2e-app-473                                                                                                    giggi/web:ci-5e16a511ed0e                            Exited (0) 5 hours ago             2026-05-31 19:37:30 +0300 EEST
+giggi-ci-473-db-1                                                                                                    postgres:16-alpine                                   Up 28 hours (healthy)              2026-05-31 19:36:46 +0300 EEST
+giggi-ci-473-redis-1                                                                                                 redis:7-alpine                                       Up 28 hours (healthy)              2026-05-31 19:36:46 +0300 EEST
+giggi-e2e-app-457                                                                                                    giggi/web:ci-e4fd91760f7f                            Exited (0) 5 hours ago             2026-05-31 13:04:10 +0300 EEST
+giggi-ci-457-db-1                                                                                                    postgres:16-alpine                                   Up 34 hours (healthy)              2026-05-31 13:03:20 +0300 EEST
+giggi-ci-457-redis-1                                                                                                 redis:7-alpine                                       Up 34 hours (healthy)              2026-05-31 13:03:20 +0300 EEST
+giggi-e2e-app-423                                                                                                    giggi/web:ci-fed51ee21980                            Exited (0) 5 hours ago             2026-05-31 08:42:50 +0300 EEST
+giggi-ci-423-db-1                                                                                                    postgres:16-alpine                                   Up 39 hours (healthy)              2026-05-31 08:42:07 +0300 EEST
+giggi-ci-423-redis-1                                                                                                 redis:7-alpine                                       Up 39 hours (healthy)              2026-05-31 08:42:07 +0300 EEST
+giggi-e2e-app-364                                                                                                    giggi/web:ci-b94892d7c5cc                            Exited (0) 5 hours ago             2026-05-30 05:22:08 +0300 EEST
+giggi-ci-364-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                2026-05-30 05:21:30 +0300 EEST
+giggi-ci-364-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                2026-05-30 05:21:30 +0300 EEST
+giggi-ci-352-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                2026-05-30 04:20:03 +0300 EEST
+giggi-ci-352-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                2026-05-30 04:20:03 +0300 EEST
+buildx_buildkit_builder-c9ea4482-6898-477a-a51f-e1ab2b036c7e0                                                        moby/buildkit:buildx-stable-1                        Up 2 days                          2026-05-30 02:59:59 +0300 EEST
+buildx_buildkit_builder-d933bc11-4622-4a73-9489-78badf55486b0                                                        moby/buildkit:buildx-stable-1                        Up 2 days                          2026-05-30 02:59:57 +0300 EEST
+giggi-e2e-app-325                                                                                                    giggi/web:ci-dd605b93f2b0                            Exited (0) 5 hours ago             2026-05-30 02:33:43 +0300 EEST
+giggi-ci-325-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                2026-05-30 02:32:53 +0300 EEST
+giggi-ci-325-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                2026-05-30 02:32:53 +0300 EEST
+giggi-e2e-app-309                                                                                                    giggi/web:ci-6acab4ff0d7b                            Exited (0) 5 hours ago             2026-05-30 01:20:41 +0300 EEST
+giggi-ci-309-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                2026-05-30 01:20:04 +0300 EEST
+giggi-ci-309-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                2026-05-30 01:20:04 +0300 EEST
+gitea-runner-sparkki                                                                                                 gitea/act_runner:latest                              Up 3 days                          2026-05-29 20:24:13 +0300 EEST
+buildx_buildkit_builder-cb232c76-3ae8-47ee-8f9d-2c845fbe984e0                                                        moby/buildkit:buildx-stable-1                        Up 3 days                          2026-05-28 20:43:51 +0300 EEST
+giggi-ci-db-1                                                                                                        postgres:16-alpine                                   Up 3 days (healthy)                2026-05-23 09:51:02 +0300 EEST
+monitoring-loki                                                                                                      grafana/loki:3.4                                     Up 3 days                          2026-05-23 02:32:43 +0300 EEST
+vimage6-mailserver                                                                                                   ghcr.io/docker-mailserver/docker-mailserver:latest   Up 3 days (healthy)                2026-05-22 22:17:54 +0300 EEST
+vimage6-roundcube                                                                                                    roundcube/roundcubemail:latest                       Up 3 days                          2026-05-22 21:24:49 +0300 EEST
+vimage6-caddy                                                                                                        caddy:2-alpine                                       Up 3 days                          2026-05-22 17:49:13 +0300 EEST
+vimage6-mariadb                                                                                                      mariadb:11                                           Up 3 days (healthy)                2026-05-22 17:49:04 +0300 EEST
+gitea                                                                                                                gitea/gitea:1.26                                     Up 3 days                          2026-05-22 05:12:08 +0300 EEST
+giggi-ci-redis-1                                                                                                     redis:7-alpine                                       Up 3 days (healthy)                2026-05-22 03:17:28 +0300 EEST
+monitoring-grafana                                                                                                   grafana/grafana:latest                               Up 8 minutes                       2026-05-22 02:20:25 +0300 EEST
+monitoring-prometheus                                                                                                prom/prometheus:latest                               Up 3 days                          2026-05-22 02:19:11 +0300 EEST
+cadvisor                                                                                                             gcr.io/cadvisor/cadvisor:latest                      Up 3 days (healthy)                2026-05-22 02:14:11 +0300 EEST
+node-exporter                                                                                                        prom/node-exporter:latest                            Up 3 days                          2026-05-22 02:14:05 +0300 EEST
+gitea-runner-giggi                                                                                                   gitea/act_runner:latest                              Up 33 hours                        2026-05-22 01:55:12 +0300 EEST
+
+Docker resource usage:
+NAME                                                                                                                 CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O
+giggi-e2e-app-496                                                                                                    96.79%    306.3MiB / 31.27GiB   0.96%     10.4MB / 33.6MB   459kB / 0B
+giggi-ci-496-db-1                                                                                                    8.72%     75.59MiB / 31.27GiB   0.24%     1.3MB / 7.5MB     1.62MB / 64.2MB
+giggi-ci-496-redis-1                                                                                                 0.74%     3.801MiB / 31.27GiB   0.01%     16.4kB / 3.79kB   77.8kB / 90.1kB
+GITEA-ACTIONS-TASK-1408-WORKFLOW-CI-JOB-E2E-tests-5475bf022c9f48f5029b39d73d80de063212043fd7c737482ce8f370c4059922   201.43%   920MiB / 31.27GiB     2.87%     0B / 0B           34.3MB / 3.13GB
+docker-catalog-exporter                                                                                              0.01%     14.12MiB / 31.27GiB   0.04%     0B / 0B           311kB / 1.96MB
+giggi-ci-473-db-1                                                                                                    0.01%     30.34MiB / 31.27GiB   0.09%     3.1MB / 17.6MB    2.22MB / 91.6MB
+giggi-ci-473-redis-1                                                                                                 0.68%     4.062MiB / 31.27GiB   0.01%     85.8kB / 50kB     225kB / 250kB
+giggi-ci-457-db-1                                                                                                    0.00%     29.69MiB / 31.27GiB   0.09%     1.28MB / 5.98MB   3.29MB / 69.9MB
+giggi-ci-457-redis-1                                                                                                 0.73%     3.84MiB / 31.27GiB    0.01%     86.6kB / 57.1kB   139kB / 98.3kB
+giggi-ci-423-db-1                                                                                                    0.00%     30.77MiB / 31.27GiB   0.10%     7.9MB / 48.7MB    2.38MB / 98.1MB
+giggi-ci-423-redis-1                                                                                                 0.63%     4.316MiB / 31.27GiB   0.01%     134kB / 78kB      561kB / 590kB
+giggi-ci-364-db-1                                                                                                    0.00%     29.41MiB / 31.27GiB   0.09%     969kB / 3.84MB    2.89MB / 69.4MB
+giggi-ci-364-redis-1                                                                                                 0.60%     3.535MiB / 31.27GiB   0.01%     157kB / 114kB     36.9kB / 53.2kB
+giggi-ci-352-db-1                                                                                                    0.00%     22.54MiB / 31.27GiB   0.07%     34.1kB / 416B     127kB / 54.1MB
+giggi-ci-352-redis-1                                                                                                 0.50%     3.363MiB / 31.27GiB   0.01%     34.4kB / 416B     77.8kB / 8.19kB
+buildx_buildkit_builder-c9ea4482-6898-477a-a51f-e1ab2b036c7e0                                                        0.00%     9.922MiB / 31.27GiB   0.03%     44.9kB / 126B     73.7kB / 115kB
+buildx_buildkit_builder-d933bc11-4622-4a73-9489-78badf55486b0                                                        0.00%     10.57MiB / 31.27GiB   0.03%     45kB / 126B       22.9MB / 115kB
+giggi-ci-325-db-1                                                                                                    0.00%     30.86MiB / 31.27GiB   0.10%     8.61MB / 52.8MB   131kB / 98.9MB
+giggi-ci-325-redis-1                                                                                                 0.57%     4.051MiB / 31.27GiB   0.01%     208kB / 136kB     754kB / 651kB
+giggi-ci-309-db-1                                                                                                    0.00%     30.43MiB / 31.27GiB   0.10%     4.41MB / 24.9MB   680kB / 92.7MB
+giggi-ci-309-redis-1                                                                                                 3.43%     4.273MiB / 31.27GiB   0.01%     192kB / 130kB     479kB / 373kB
+gitea-runner-sparkki                                                                                                 0.00%     15.22MiB / 31.27GiB   0.05%     20MB / 18.6MB     6.03MB / 0B
+buildx_buildkit_builder-cb232c76-3ae8-47ee-8f9d-2c845fbe984e0                                                        0.01%     12.79MiB / 31.27GiB   0.04%     54.4kB / 126B     49MB / 1.14MB
+giggi-ci-db-1                                                                                                        0.00%     37.13MiB / 31.27GiB   0.12%     35.7kB / 126B     24.2MB / 700kB
+monitoring-loki                                                                                                      0.42%     101.5MiB / 31.27GiB   0.32%     0B / 0B           104MB / 134MB
+vimage6-mailserver                                                                                                   40.02%    407MiB / 31.27GiB     1.27%     3.05MB / 3.55MB   185MB / 4.67GB
+vimage6-roundcube                                                                                                    0.00%     67.57MiB / 31.27GiB   0.21%     117kB / 295kB     84.6MB / 20.5kB
+vimage6-caddy                                                                                                        0.00%     10.7MiB / 31.27GiB    0.03%     413kB / 376kB     42.3MB / 24.6kB
+vimage6-mariadb                                                                                                      0.01%     122.4MiB / 31.27GiB   0.38%     52.7kB / 11.3kB   52.8MB / 102kB
+gitea                                                                                                                0.90%     303MiB / 31.27GiB     0.95%     2.52GB / 47.4GB   1.71GB / 13.3GB
+giggi-ci-redis-1                                                                                                     0.64%     10.25MiB / 31.27GiB   0.03%     35.9kB / 126B     10.8MB / 4.1kB
+monitoring-grafana                                                                                                   0.78%     133.8MiB / 31.27GiB   0.42%     0B / 0B           5.39MB / 668kB
+monitoring-prometheus                                                                                                12.27%    792.1MiB / 31.27GiB   2.47%     0B / 0B           2.36GB / 13.2GB
+cadvisor                                                                                                             6.06%     420MiB / 31.27GiB     1.31%     0B / 0B           291MB / 438MB
+node-exporter                                                                                                        0.00%     12.42MiB / 31.27GiB   0.04%     0B / 0B           15.5MB / 0B
+gitea-runner-giggi                                                                                                   0.02%     16.98MiB / 31.27GiB   0.05%     57.4MB / 20.2MB   123MB / 544MB
+
+Docker images:
+REPOSITORY                                    TAG                                           SIZE      CREATED
+giggi/web                                     ci-3b466add4b49                               655MB     27 minutes ago
+git.dudeisland.eu/janiluuk/giggi              ci-3b466add4b49a18fb233930070b935385d74d172   655MB     27 minutes ago
+giggi/web                                     ci-25e081d64002                               655MB     27 minutes ago
+git.dudeisland.eu/janiluuk/giggi              ci-25e081d64002ba1e340d578797ff1b4f0c6ee08e   655MB     27 minutes ago
+git.dudeisland.eu/janiluuk/giggi              ci-e832fad3f33a3fd6ad9e8d88c09948cb796f1330   655MB     33 minutes ago
+giggi/web                                     ci-e832fad3f33a                               655MB     33 minutes ago
+giggi/web                                     ci-22cfd69874c1                               655MB     About an hour ago
+git.dudeisland.eu/janiluuk/giggi              ci-22cfd69874c1f074f95f09a8916ce460dc4973ba   655MB     About an hour ago
+giggi/web                                     ci-1aeec5d903aa                               655MB     About an hour ago
+git.dudeisland.eu/janiluuk/giggi              ci-1aeec5d903aac81ded33958bfaa26c7c4f1dfd04   655MB     About an hour ago
+giggi/web                                     ci-cc189d220163                               655MB     About an hour ago
+git.dudeisland.eu/janiluuk/giggi              ci-cc189d22016379632d85455a03b10667f9ebcd41   655MB     About an hour ago
+giggi/web                                     ci-25b5a2053f8f                               655MB     2 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-25b5a2053f8f15253a6c585cab2f5097c063f97b   655MB     2 hours ago
+giggi/web                                     ci-1a03da985108                               654MB     5 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-1a03da98510811410dc63dceeb6e752f3f9554b6   654MB     5 hours ago
+giggi/web                                     ci-3d1642ae7a1b                               654MB     6 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-3d1642ae7a1b4e313b69fea2a10b66906be74627   654MB     6 hours ago
+giggi/web                                     ci-ee7446946ef4                               654MB     7 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-ee7446946ef4ce260474300316220a30fd60f8ec   654MB     7 hours ago
+giggi/web                                     ci-ef654273d8f3                               654MB     7 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-ef654273d8f36ba820d33229311eb70b82e7b83b   654MB     7 hours ago
+giggi/web                                     ci-418dc81185cd                               654MB     8 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-418dc81185cd4dd308727915c633bc68fcdb5ffd   654MB     8 hours ago
+giggi/web                                     ci-23905a40527b                               654MB     9 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-23905a40527b3635ac0962fbaa65c6531f1563b5   654MB     9 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-f10aaf5b5c2815ded23140a01ad163d960d27886   654MB     23 hours ago
+giggi/web                                     ci-f10aaf5b5c28                               654MB     23 hours ago
+giggi/web                                     ci-0a07fcfd03ff                               654MB     23 hours ago
+git.dudeisland.eu/janiluuk/giggi              20260531-205318                               654MB     23 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-0a07fcfd03fff62cf16840e2ce578bf07f88896a   654MB     23 hours ago
+git.dudeisland.eu/janiluuk/giggi              latest                                        654MB     23 hours ago
+git.dudeisland.eu/janiluuk/giggi              main                                          654MB     23 hours ago
+git.dudeisland.eu/janiluuk/giggi              sha-0a07fcf                                   654MB     23 hours ago
+giggi/web                                     ci-39592136a549                               654MB     28 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-39592136a549f708fea492871200c75a42a32809   654MB     28 hours ago
+giggi/web                                     ci-45b7995b2c7f                               654MB     28 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-45b7995b2c7f159bd2ca0f580bcc3853b07b3a06   654MB     28 hours ago
+giggi/web                                     ci-5e16a511ed0e                               654MB     28 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-5e16a511ed0ecb0420ff5e4ff63b644ae10edadf   654MB     28 hours ago
+giggi/web                                     ci-e4fd91760f7f                               654MB     34 hours ago
+giggi/web                                     ci-fed51ee21980                               654MB     39 hours ago
+giggi/web                                     ci-b94892d7c5cc                               652MB     2 days ago
+giggi/web                                     ci-dd605b93f2b0                               652MB     2 days ago
+giggi/web                                     ci-6acab4ff0d7b                               652MB     2 days ago
+ghcr.io/catthehacker/ubuntu                   act-latest                                    2.29GB    3 days ago
+git.dudeisland.eu/janiluuk/giggi-ci-runner    latest                                        2.71GB    10 days ago
+mariadb                                       11                                            458MB     12 days ago
+gitea/gitea                                   1.26                                          245MB     12 days ago
+roundcube/roundcubemail                       latest                                        1.12GB    13 days ago
+postgres                                      16-alpine                                     396MB     2 weeks ago
+node                                          22-alpine                                     230MB     2 weeks ago
+moby/buildkit                                 buildx-stable-1                               355MB     2 weeks ago
+caddy                                         2-alpine                                      89MB      2 weeks ago
+grafana/grafana                               latest                                        1.46GB    2 weeks ago
+python                                        3-alpine                                      73.6MB    2 weeks ago
+redis                                         7-alpine                                      57.8MB    3 weeks ago
+gitea/act_runner                              latest                                        68.6MB    4 weeks ago
+prom/prometheus                               latest                                        578MB     5 weeks ago
+prom/node-exporter                            latest                                        40.7MB    7 weeks ago
+gcr.io/cadvisor/cadvisor                      latest                                        107MB     5 months ago
+ghcr.io/docker-mailserver/docker-mailserver   latest                                        1.22GB    9 months ago
+grafana/loki                                  3.4                                           151MB     14 months ago
+--- OLLAMA ---
+Ollama not detected
+--- LOCALAI ---
+LocalAI detected on port 8080
+--- NETWORK ---
+eno1             UP             192.168.2.105/24 fe80::116c:8333:2cfb:cddd/64 
+docker0          UP             172.17.0.1/16 fe80::181e:ff:fe30:2e5/64 
+br-3f0cfbec750b  UP             172.18.0.1/16 fe80::7c07:82ff:fe80:4a22/64 
+br-464b9a26f04c  UP             172.19.0.1/16 fe80::346e:dfff:fe3c:2720/64 
+br-5524a2bad55f  DOWN           172.20.0.1/16 
+veth3d9a647@if2  UP             fe80::68d4:60ff:fe0b:e4c4/64 
+vethc490986@if2  UP             fe80::d429:90ff:fe53:fd3a/64 
+veth5c2b9e5@if2  UP             fe80::bc2e:94ff:fe30:a7ae/64 
+veth40203c4@if2  UP             fe80::1cfa:dbff:fead:48fe/64 
+vethd7eff18@if2  UP             fe80::6c29:b2ff:feaa:2a38/64 
+veth6b0ce99@if2  UP             fe80::98b9:7eff:fe01:eb4b/64 
+veth4c54562@if2  UP             fe80::dccf:38ff:fed6:6d03/64 
+veth1d1536f@if2  UP             fe80::344f:c6ff:fe6e:17e0/64 
+veth6c58e32@if2  UP             fe80::18d5:b2ff:fe1c:237d/64 
+br-fafcc2e35af5  UP             172.21.0.1/16 fe80::ecee:c3ff:fe65:ccc2/64 
+veth6d7766e@if2  UP             fe80::d4b5:eff:fedf:d0f5/64 
+vethd2ff065@if2  UP             fe80::d09e:86ff:fe9e:9495/64 
+br-cb6137e00915  UP             172.23.0.1/16 fe80::7c5a:e2ff:fe2f:60f0/64 
+vethceefbe1@if2  UP             fe80::e0ff:71ff:fe90:e0a8/64 
+vethe156962@if2  UP             fe80::b07f:eff:fe65:b8a6/64 
+vethaca0b9c@if2  UP             fe80::e4ec:93ff:fe5f:5b79/64 
+veth9f3bee6@if2  UP             fe80::b499:59ff:fed4:d019/64 
+br-b7b6ad947901  UP             172.24.0.1/16 fe80::c8d2:dff:fe95:cbaf/64 
+vethaa7e979@if2  UP             fe80::e097:78ff:feb2:2a9f/64 
+vethdf48b6c@if2  UP             fe80::2032:52ff:fe84:d62c/64 
+br-2a03ea1c97ee  UP             172.22.0.1/16 fe80::e8e5:1eff:fee5:2272/64 
+vethdfbae9d@if2  UP             fe80::302c:39ff:fef0:ff0/64 
+vethb8b471e@if2  UP             fe80::f4ff:14ff:fee7:a5c4/64 
+br-a5f95d39cde7  UP             172.26.0.1/16 fe80::a878:25ff:fe8f:d597/64 
+veth78d5bdb@if2  UP             fe80::54dc:56ff:fe0b:562b/64 
+vethc671895@if2  UP             fe80::ecd2:bdff:fe45:3da1/64 
+br-a15a06f18a1b  UP             172.28.0.1/16 fe80::acd0:f9ff:fe5e:211/64 
+vethbbaf7e0@if2  UP             fe80::e079:5aff:feaf:4992/64 
+veth813e5cc@if2  UP             fe80::34b8:bbff:fe1b:d829/64 
+vethdafcbdb@if2  UP             fe80::94d9:94ff:fe87:ecbf/64 
+br-839a3077832d  UP             172.25.0.1/16 fe80::ecc0:4dff:fe73:e5a8/64 
+vethea4a40a@if2  UP             fe80::5009:56ff:feec:8f8f/64 
+vethd12600b@if2  UP             fe80::e0b3:e1ff:feb4:6b29/64 
+br-abf2b3be237c  UP             172.27.0.1/16 fe80::2cba:26ff:fe45:82b7/64 
+veth12a9da9@if2  UP             fe80::10c0:e0ff:fe33:73a4/64 
+veth645f0d2@if2  UP             fe80::d0b6:c1ff:fe42:2baa/64 
+veth14ccc8e@if2  UP             fe80::3851:21ff:fe7c:7deb/64 
+
+LISTEN 0      4096               *:8080             *:*          
+LISTEN 0      4096               *:3000             *:*          
+--- LOAD & UPTIME ---
+ 23:17:51 up 2 days, 23:55,  1 user,  load average: 3,20, 2,12, 2,20
+
+3.20 2.12 2.20 7/2021 94030
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service            loaded active running Docker Application Container Engine
+=== END NODE: vimage6 ===

@@ -1,0 +1,105 @@
+=== NODE: vimage5 ===
+--- OS ---
+NAME="Fedora Linux"
+VERSION="41 (Server Edition)"
+--- CPU ---
+Architecture:                            x86_64
+Model name:                              Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      4
+Socket(s):                               1
+CPU(s) scaling MHz:                      88%
+CPU max MHz:                             4400.0000
+CPU min MHz:                             800.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       1.8Gi        10Gi       8.8Mi        19Gi        29Gi
+Swap:          8.0Gi       223Mi       7.8Gi
+
+MemTotal:       32785408 kB
+MemFree:        11143192 kB
+MemAvailable:   30896252 kB
+SwapTotal:       8388604 kB
+SwapFree:        8160012 kB
+--- DISK ---
+Filesystem                       Size  Used Avail Use% Mounted on
+/dev/mapper/fedora_vimage4-root  230G  102G  129G  45% /
+/dev/nvme0n1p2                   960M  481M  480M  51% /boot
+/dev/nvme1n1p1                   916G  369G  501G  43% /opt
+vimage:/share/outputs/forge      880G  123G  712G  15% /opt/forge/outputs
+vimage:/share/outputs            880G  123G  712G  15% /share/outputs
+vimage2:/data/models             1.8T  1.1T  650G  63% /opt/forge/models
+--- GPU (nvidia-smi) ---
+0, NVIDIA GeForce RTX 3060, 580.105.08, 12288, 9, 11902, 0, 0, 36, 14.41, 170.00, Default, 1, 8
+
+--- GPU PROCESSES ---
+
+--- CUDA VERSION ---
+| NVIDIA-SMI 560.35.03              Driver Version: 580.105.08     CUDA Version: 13.0     |
+--- DOCKER ---
+Docker version: Docker version 29.3.0, build 5927d80
+
+Running containers:
+NAMES           IMAGE                             STATUS                   PORTS
+beszel-agent    henrygd/beszel-agent              Up 3 days                
+cadvisor        gcr.io/cadvisor/cadvisor:latest   Up 10 days (unhealthy)   
+node-exporter   prom/node-exporter:latest         Up 10 days               
+ollama          ollama/ollama:latest              Up 10 days               0.0.0.0:11434->11434/tcp, [::]:11434->11434/tcp
+portainer       fab249e1b82c                      Up 10 days               0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp
+
+All containers (including stopped):
+NAMES           IMAGE                              STATUS                     CREATED AT
+beszel-agent    henrygd/beszel-agent               Up 3 days                  2026-05-29 02:39:04 +0300 EEST
+cadvisor        gcr.io/cadvisor/cadvisor:latest    Up 10 days (unhealthy)     2026-05-22 02:22:12 +0300 EEST
+node-exporter   prom/node-exporter:latest          Up 10 days                 2026-05-22 02:15:54 +0300 EEST
+ollama          ollama/ollama:latest               Up 10 days                 2026-05-13 12:04:29 +0300 EEST
+tensorboard     tensorflow/tensorflow:latest-gpu   Exited (255) 10 days ago   2026-02-11 02:14:42 +0200 EET
+portainer       fab249e1b82c                       Up 10 days                 2025-03-26 19:58:53 +0200 EET
+
+Docker resource usage:
+NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O
+beszel-agent    0.00%     8.449MiB / 31.27GiB   0.03%     0B / 0B          5.92MB / 221kB
+cadvisor        5.57%     217MiB / 31.27GiB     0.68%     0B / 0B          129MB / 134MB
+node-exporter   0.00%     15.88MiB / 31.27GiB   0.05%     0B / 0B          23.2MB / 541kB
+ollama          0.44%     1.484GiB / 31.27GiB   4.75%     24.7GB / 694MB   159GB / 32GB
+portainer       0.00%     25.95MiB / 31.27GiB   0.08%     172MB / 2.26GB   104MB / 371MB
+
+Docker images:
+REPOSITORY                           TAG          SIZE      CREATED
+ollama/ollama                        latest       6.55GB    2 weeks ago
+prom/node-exporter                   latest       25.8MB    7 weeks ago
+henrygd/beszel-agent                 latest       9.26MB    8 weeks ago
+filebrowser/filebrowser              latest       29.8MB    3 months ago
+gcr.io/cadvisor/cadvisor             latest       75.1MB    5 months ago
+tensorflow/tensorflow                latest-gpu   7.55GB    9 months ago
+nykk3/stable-diffusion-webui-forge   latest       8.35GB    21 months ago
+--- OLLAMA ---
+Ollama running via Docker/service (no CLI)
+  qwen3.6:latest | 23938333577 bytes | modified: 2026-05-27T14:31:24.510253576Z
+  qwen3.6:27b | 17420432739 bytes | modified: 2026-05-15T01:14:20.01539737Z
+  qwen3.5:9b | 6594474711 bytes | modified: 2026-05-12T22:41:30.911269466Z
+  qwen3:8b | 5225388164 bytes | modified: 2026-04-18T00:28:49.452166085Z
+  llama3:8b | 4661224676 bytes | modified: 2026-04-18T00:24:39.508494671Z
+  qwen2.5-coder-32k:7b | 4683087653 bytes | modified: 2025-07-28T12:46:35.396388885Z
+  qwen2.5-coder:7b | 4683087561 bytes | modified: 2025-07-28T12:46:35.372388616Z
+--- LOCALAI ---
+LocalAI detected on port 8081
+--- NETWORK ---
+eno1             UP             192.168.2.104/24 fe80::d6bc:302:d268:4b03/64 
+br-29dc4d9f5997  UP             172.21.0.1/16 fe80::408b:b3ff:fe11:affa/64 
+br-37c4af3de530  DOWN           172.20.0.1/16 
+docker0          UP             172.17.0.1/16 fe80::d035:2bff:fe4b:b910/64 
+veth2f417f9@if2  UP             169.254.117.61/16 fe80::27cf:ce3f:1c41:bbd2/64 fe80::2884:4dff:fed9:8b74/64 
+vethba024a8@if2  UP             169.254.41.46/16 fe80::7b9:8bc2:eda1:c896/64 
+
+LISTEN 0      4096         0.0.0.0:11434      0.0.0.0:*          
+LISTEN 0      4096               *:8081             *:*          
+LISTEN 0      4096            [::]:11434         [::]:*          
+--- LOAD & UPTIME ---
+ 23:17:47 up 10 days,  8:00,  2 users,  load average: 0.01, 0.03, 0.10
+
+0.01 0.03 0.10 1/3305 3825932
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service                loaded active running Docker Application Container Engine
+  nvidia-metrics.service        loaded active running NVIDIA GPU Prometheus textfile exporter
+=== END NODE: vimage5 ===

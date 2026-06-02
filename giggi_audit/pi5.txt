@@ -1,0 +1,238 @@
+=== NODE: pi5 ===
+--- OS ---
+NAME="Debian GNU/Linux"
+VERSION="12 (bookworm)"
+--- CPU ---
+Architecture:                            aarch64
+Model name:                              Cortex-A76
+Thread(s) per core:                      1
+Core(s) per cluster:                     4
+Socket(s):                               -
+CPU(s) scaling MHz:                      67%
+CPU max MHz:                             2400.0000
+CPU min MHz:                             1500.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:           7.9Gi       6.3Gi       514Mi       605Mi       1.9Gi       1.6Gi
+Swap:          199Mi       199Mi          0B
+
+MemTotal:        8256576 kB
+MemFree:          526816 kB
+MemAvailable:    1662352 kB
+SwapTotal:        204784 kB
+SwapFree:              0 kB
+--- DISK ---
+Filesystem                          Size  Used Avail Use% Mounted on
+/dev/mmcblk0p2                      234G  108G  115G  49% /
+/dev/mmcblk0p1                      510M   78M  433M  16% /boot/firmware
+//192.168.2.3/share/externals/usb0  470G  409G   62G  88% /mnt/media
+192.168.2.100:/share                110G   63G   48G  57% /share/vimage1
+vimage4:/opt/outputs                916G  723G  148G  84% /share/outputs
+192.168.2.101:/share                110G  100G   11G  91% /share/vimage2
+--- GPU (nvidia-smi) ---
+nvidia-smi not found
+--- DOCKER ---
+Docker version: Docker version 29.4.0, build 9d7ad9f
+
+Running containers:
+NAMES                         IMAGE                                          STATUS                    PORTS
+docker-catalog-exporter       python:3-alpine                                Up 9 days                 
+cadvisor-scrape               gcr.io/cadvisor/cadvisor:latest                Up 29 hours (unhealthy)   
+node-exporter                 prom/node-exporter:latest                      Up 9 days                 
+invidious-invidious-1         quay.io/invidious/invidious:latest-arm64       Up 7 weeks (healthy)      0.0.0.0:3002->3000/tcp, [::]:3002->3000/tcp
+sonarr                        linuxserver/sonarr:latest                      Up 7 weeks                0.0.0.0:8989->8989/tcp, [::]:8989->8989/tcp
+transmission-openvpn-latest   haugene/transmission-openvpn:latest            Up 41 hours (healthy)     8118/tcp, 0.0.0.0:9091->9091/tcp, [::]:9091->9091/tcp
+invidious-invidious-db-1      postgres:14                                    Up 7 weeks (healthy)      5432/tcp
+invidious-companion-1         quay.io/invidious/invidious-companion:latest   Up 21 hours (healthy)     0.0.0.0:8282->8282/tcp, [::]:8282->8282/tcp
+beets                         linuxserver/beets:latest                       Up 7 weeks                0.0.0.0:8337->8337/tcp, [::]:8337->8337/tcp
+jackett                       linuxserver/jackett:latest                     Up 7 weeks                0.0.0.0:9117->9117/tcp, [::]:9117->9117/tcp
+beszel-agent                  henrygd/beszel-agent:latest                    Up 7 weeks                
+nzbhydra2                     linuxserver/nzbhydra2:latest                   Up 7 weeks                0.0.0.0:5076->5076/tcp, [::]:5076->5076/tcp
+mariadb                       linuxserver/mariadb:arm64v8-latest             Up 7 weeks                0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp
+jellyfin                      linuxserver/jellyfin:latest                    Up 7 weeks                0.0.0.0:8096->8096/tcp, [::]:8096->8096/tcp, 0.0.0.0:8920->8920/tcp, [::]:8920->8920/tcp
+radarr-old                    linuxserver/radarr:latest                      Up 7 weeks                0.0.0.0:7878->7878/tcp, [::]:7878->7878/tcp
+syncthing                     linuxserver/syncthing:latest                   Up 7 weeks                0.0.0.0:8384->8384/tcp, [::]:8384->8384/tcp, 0.0.0.0:22000->22000/tcp, [::]:22000->22000/tcp, 0.0.0.0:21027->21027/udp, [::]:21027->21027/udp, 22000/udp
+nzbget                        linuxserver/nzbget:latest                      Up 7 weeks                0.0.0.0:6789->6789/tcp, [::]:6789->6789/tcp
+funkwhale-postgres-1          postgres:15-alpine                             Up 7 weeks                5432/tcp
+lidarr                        70419ac6c662                                   Up 7 weeks                0.0.0.0:8686->8686/tcp, [::]:8686->8686/tcp
+prowlarr                      lscr.io/linuxserver/prowlarr:develop           Up 7 weeks                0.0.0.0:9696->9696/tcp, [::]:9696->9696/tcp
+portainer_agent               portainer/agent:latest                         Up 7 weeks                0.0.0.0:9001->9001/tcp, [::]:9001->9001/tcp
+portainer                     portainer/portainer-ce:lts                     Up 7 weeks                0.0.0.0:9000->9000/tcp, [::]:9000->9000/tcp, 8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp
+funkwhale-redis-1             redis:7-alpine                                 Up 7 weeks                0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp
+whisparr                      ghcr.io/hotio/whisparr:latest                  Up 7 weeks                0.0.0.0:6969->6969/tcp, [::]:6969->6969/tcp
+uptime-kuma                   louislam/uptime-kuma:latest                    Up 7 weeks (healthy)      0.0.0.0:3001->3001/tcp, [::]:3001->3001/tcp
+memos                         ghcr.io/usememos/memos:latest                  Up 7 weeks                0.0.0.0:5230->5230/tcp, [::]:5230->5230/tcp
+FlareSolverr                  ghcr.io/flaresolverr/flaresolverr:latest       Up 7 weeks                0.0.0.0:8191->8191/tcp, [::]:8191->8191/tcp, 8192/tcp
+funkwhale-api-1               funkwhale/api:1.4.0                            Up 7 weeks                0.0.0.0:5000->80/tcp
+funkwhale-front-1             funkwhale/front:1.4.0                          Up 7 weeks                0.0.0.0:5080->80/tcp
+headphones                    linuxserver/headphones:latest                  Up 7 weeks                0.0.0.0:8181->8181/tcp, [::]:8181->8181/tcp
+funkwhale-celeryworker-1      funkwhale/api:1.4.0                            Up 19 minutes             0.0.0.0:5001->80/tcp, [::]:5001->80/tcp
+huginn                        mjysci/huginn:arm32v7                          Up 7 weeks                0.0.0.0:3033->3000/tcp, [::]:3033->3000/tcp
+intelligent_roentgen          8641a2afc79f                                   Up 7 weeks                0.0.0.0:5678->8080/tcp, [::]:5678->8080/tcp
+sharp_shtern                  c46d78771ba3                                   Up 7 weeks                0.0.0.0:6080->8080/tcp, [::]:6080->8080/tcp
+
+All containers (including stopped):
+NAMES                         IMAGE                                          STATUS                    CREATED AT
+docker-catalog-exporter       python:3-alpine                                Up 9 days                 2026-05-23 01:34:53 +0300 EEST
+cadvisor-scrape               gcr.io/cadvisor/cadvisor:latest                Up 29 hours (unhealthy)   2026-05-23 01:30:52 +0300 EEST
+node-exporter                 prom/node-exporter:latest                      Up 9 days                 2026-05-23 01:30:46 +0300 EEST
+invidious-invidious-1         quay.io/invidious/invidious:latest-arm64       Up 7 weeks (healthy)      2026-04-08 01:39:42 +0300 EEST
+sonarr                        linuxserver/sonarr:latest                      Up 7 weeks                2026-04-08 01:35:04 +0300 EEST
+transmission-openvpn-latest   haugene/transmission-openvpn:latest            Up 41 hours (healthy)     2026-04-08 01:33:38 +0300 EEST
+invidious-invidious-db-1      postgres:14                                    Up 7 weeks (healthy)      2026-04-07 22:54:54 +0300 EEST
+invidious-companion-1         quay.io/invidious/invidious-companion:latest   Up 21 hours (healthy)     2026-04-07 22:54:46 +0300 EEST
+beets                         linuxserver/beets:latest                       Up 7 weeks                2026-02-23 02:43:45 +0200 EET
+jackett                       linuxserver/jackett:latest                     Up 7 weeks                2026-02-23 02:43:44 +0200 EET
+beszel-agent                  henrygd/beszel-agent:latest                    Up 7 weeks                2026-02-21 02:43:40 +0200 EET
+nzbhydra2                     linuxserver/nzbhydra2:latest                   Up 7 weeks                2026-02-19 02:43:27 +0200 EET
+mariadb                       linuxserver/mariadb:arm64v8-latest             Up 7 weeks                2026-02-18 02:44:03 +0200 EET
+jellyfin                      linuxserver/jellyfin:latest                    Up 7 weeks                2026-02-18 02:44:00 +0200 EET
+radarr-old                    linuxserver/radarr:latest                      Up 7 weeks                2026-02-16 02:43:01 +0200 EET
+syncthing                     linuxserver/syncthing:latest                   Up 7 weeks                2026-02-15 02:43:23 +0200 EET
+nzbget                        linuxserver/nzbget:latest                      Up 7 weeks                2026-02-14 02:44:59 +0200 EET
+funkwhale-postgres-1          postgres:15-alpine                             Up 7 weeks                2026-02-13 02:46:19 +0200 EET
+lidarr                        70419ac6c662                                   Up 7 weeks                2026-02-12 02:45:40 +0200 EET
+prowlarr                      lscr.io/linuxserver/prowlarr:develop           Up 7 weeks                2026-02-12 02:45:37 +0200 EET
+portainer_agent               portainer/agent:latest                         Up 7 weeks                2026-02-11 02:44:11 +0200 EET
+portainer                     portainer/portainer-ce:lts                     Up 7 weeks                2026-02-11 02:44:09 +0200 EET
+funkwhale-redis-1             redis:7-alpine                                 Up 7 weeks                2026-01-29 02:44:26 +0200 EET
+whisparr                      ghcr.io/hotio/whisparr:latest                  Up 7 weeks                2026-01-29 02:44:23 +0200 EET
+uptime-kuma                   louislam/uptime-kuma:latest                    Up 7 weeks (healthy)      2026-01-08 03:00:17 +0200 EET
+memos                         ghcr.io/usememos/memos:latest                  Up 7 weeks                2026-01-08 03:00:12 +0200 EET
+FlareSolverr                  ghcr.io/flaresolverr/flaresolverr:latest       Up 7 weeks                2026-01-08 02:59:11 +0200 EET
+funkwhale-api-1               funkwhale/api:1.4.0                            Up 7 weeks                2025-08-11 16:09:09 +0300 EEST
+funkwhale-front-1             funkwhale/front:1.4.0                          Up 7 weeks                2025-08-11 15:58:31 +0300 EEST
+headphones                    linuxserver/headphones:latest                  Up 7 weeks                2025-07-28 21:41:19 +0300 EEST
+funkwhale-celeryworker-1      funkwhale/api:1.4.0                            Up 19 minutes             2025-07-16 23:54:50 +0300 EEST
+huginn                        mjysci/huginn:arm32v7                          Up 7 weeks                2024-08-15 06:31:46 +0300 EEST
+intelligent_roentgen          8641a2afc79f                                   Up 7 weeks                2024-08-15 06:11:08 +0300 EEST
+sharp_shtern                  c46d78771ba3                                   Up 7 weeks                2024-08-08 01:37:01 +0300 EEST
+
+Docker resource usage:
+NAME                          CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O
+docker-catalog-exporter       0.01%     0B / 0B             0.00%     0B / 0B           5.79GB / 0B
+cadvisor-scrape               6.47%     0B / 0B             0.00%     0B / 0B           5.91GB / 0B
+node-exporter                 0.00%     0B / 0B             0.00%     0B / 0B           17.3GB / 0B
+invidious-invidious-1         0.00%     0B / 0B             0.00%     26.1GB / 12.3GB   13.4GB / 0B
+sonarr                        0.04%     0B / 0B             0.00%     1.92GB / 248MB    55.7GB / 0B
+transmission-openvpn-latest   0.34%     0B / 0B             0.00%     167MB / 205MB     5.74GB / 0B
+invidious-invidious-db-1      0.00%     0B / 0B             0.00%     7.33GB / 2.05GB   50.8GB / 12.3kB
+invidious-companion-1         0.01%     0B / 0B             0.00%     230MB / 12.6MB    2.38GB / 0B
+beets                         0.02%     0B / 0B             0.00%     314MB / 187kB     4.11GB / 0B
+jackett                       0.01%     0B / 0B             0.00%     4.52GB / 12.7GB   34.6GB / 0B
+beszel-agent                  0.00%     0B / 0B             0.00%     0B / 0B           12.8GB / 0B
+nzbhydra2                     0.05%     0B / 0B             0.00%     7.66GB / 519MB    2.05TB / 0B
+mariadb                       0.01%     0B / 0B             0.00%     314MB / 126B      4.36GB / 0B
+jellyfin                      0.04%     0B / 0B             0.00%     324MB / 510MB     32.7GB / 0B
+radarr-old                    0.08%     0B / 0B             0.00%     5.03GB / 252MB    41.8GB / 24.6kB
+syncthing                     0.03%     0B / 0B             0.00%     356MB / 49.5MB    39.4GB / 0B
+nzbget                        0.01%     0B / 0B             0.00%     553MB / 357MB     5.94GB / 0B
+funkwhale-postgres-1          0.00%     0B / 0B             0.00%     4.81MB / 161kB    20.7GB / 0B
+lidarr                        0.11%     0B / 0B             0.00%     319MB / 1.79MB    26.4GB / 0B
+prowlarr                      0.17%     0B / 0B             0.00%     870MB / 1.75GB    34.2GB / 0B
+portainer_agent               0.00%     0B / 0B             0.00%     1.72GB / 11.9GB   19GB / 0B
+portainer                     0.00%     0B / 0B             0.00%     720MB / 13.7GB    52.4GB / 0B
+funkwhale-redis-1             0.78%     0B / 0B             0.00%     184MB / 205MB     6.26GB / 0B
+whisparr                      0.04%     0B / 0B             0.00%     2.21GB / 120MB    37.7GB / 0B
+uptime-kuma                   0.15%     0B / 0B             0.00%     3.67GB / 313MB    59.6GB / 0B
+memos                         0.00%     0B / 0B             0.00%     317MB / 1.17MB    10.2GB / 0B
+FlareSolverr                  2.67%     0B / 0B             0.00%     4.11GB / 583MB    586GB / 45.1kB
+funkwhale-api-1               0.40%     0B / 0B             0.00%     5.45MB / 1.42MB   9.12GB / 4.1kB
+funkwhale-front-1             0.00%     0B / 0B             0.00%     18MB / 208MB      849MB / 0B
+headphones                    0.02%     0B / 0B             0.00%     746MB / 464MB     7.57GB / 0B
+funkwhale-celeryworker-1      0.00%     0B / 0B             0.00%     33.1kB / 19.3kB   48.6MB / 0B
+huginn                        0.17%     0B / 0B             0.00%     321MB / 1.13MB    32.9GB / 0B
+intelligent_roentgen          0.07%     0B / 0B             0.00%     314MB / 1.15MB    14.1GB / 0B
+sharp_shtern                  0.14%     0B / 0B             0.00%     321MB / 36.1MB    15.8GB / 0B
+
+Docker images:
+REPOSITORY                              TAG              SIZE      CREATED
+python                                  3-alpine         51.1MB    2 weeks ago
+gitea/act_runner                        latest           48.1MB    4 weeks ago
+postgres                                14               464MB     7 weeks ago
+quay.io/invidious/invidious-companion   latest           150MB     8 weeks ago
+linuxserver/sonarr                      latest           225MB     8 weeks ago
+haugene/transmission-openvpn            latest           359MB     2 months ago
+portainer/portainer-ce                  latest           173MB     2 months ago
+linuxserver/lidarr                      latest           299MB     2 months ago
+linuxserver/beets                       latest           611MB     3 months ago
+linuxserver/jackett                     latest           208MB     3 months ago
+henrygd/beszel-agent                    latest           8.54MB    3 months ago
+linuxserver/nzbhydra2                   latest           291MB     3 months ago
+linuxserver/jellyfin                    latest           507MB     3 months ago
+linuxserver/mariadb                     arm64v8-latest   358MB     3 months ago
+linuxserver/radarr                      latest           236MB     3 months ago
+linuxserver/syncthing                   latest           69.2MB    3 months ago
+linuxserver/nzbget                      latest           131MB     3 months ago
+postgres                                15-alpine        270MB     3 months ago
+grafana/grafana                         latest           702MB     3 months ago
+lscr.io/linuxserver/prowlarr            develop          215MB     3 months ago
+portainer/agent                         latest           130MB     3 months ago
+portainer/portainer-ce                  lts              176MB     3 months ago
+quay.io/invidious/invidious             latest-arm64     75.9MB    3 months ago
+ghcr.io/hotio/whisparr                  latest           269MB     4 months ago
+redis                                   7-alpine         41.8MB    4 months ago
+prom/prometheus                         latest           339MB     4 months ago
+gcr.io/cadvisor/cadvisor                latest           63.6MB    5 months ago
+ghcr.io/flaresolverr/flaresolverr       latest           722MB     6 months ago
+prom/node-exporter                      latest           24.5MB    7 months ago
+louislam/uptime-kuma                    latest           439MB     7 months ago
+ghcr.io/usememos/memos                  latest           64.2MB    16 months ago
+funkwhale/api                           1.4.0            469MB     2 years ago
+funkwhale/front                         1.4.0            72.5MB    2 years ago
+linuxserver/headphones                  latest           188MB     2 years ago
+zcube/cadvisor                          latest           63MB      3 years ago
+mjysci/huginn                           arm32v7          949MB     5 years ago
+--- OLLAMA ---
+Ollama not detected
+--- LOCALAI ---
+LocalAI detected on port 8081
+--- NETWORK ---
+eth0             UP             192.168.2.7/24 fe80::ff5c:9eff:ee3d:a074/64 
+wlan0            DOWN           
+br-26b575deb66b  DOWN           172.18.0.1/16 fe80::6015:f6ff:fe7f:e284/64 
+br-8bec0c058d68  UP             172.20.0.1/16 fe80::2811:32ff:fea2:1038/64 
+docker0          UP             172.17.0.1/16 fe80::4c24:1dff:fed9:a13e/64 
+br-0ce7feee5bd1  UP             172.19.0.1/16 fe80::f801:e2ff:feb5:4e39/64 
+veth6ea5508@if2  UP             fe80::98ac:99ff:fe87:d57/64 
+vethc2b30c8@if2  UP             fe80::406e:94ff:fe7f:3b54/64 
+veth548fa18@if2  UP             fe80::f803:b1ff:fe79:d00c/64 
+vetha8eaa68@if2  UP             fe80::88b4:19ff:fe83:de4b/64 
+veth966ee60@if2  UP             fe80::8c98:57ff:fed3:a133/64 
+veth3e19887@if2  UP             fe80::8827:e0ff:fe47:906e/64 
+vethef37bce@if2  UP             fe80::fc87:e1ff:fefe:b398/64 
+veth0b4388c@if2  UP             fe80::ecaf:49ff:feed:8219/64 
+veth18593c7@if2  UP             fe80::ac16:42ff:fe66:a8c1/64 
+vetha7a4c39@if2  UP             fe80::c86f:16ff:fe15:dc4b/64 
+vethfc72e43@if2  UP             fe80::6c76:abff:fe43:7e78/64 
+veth8212dea@if2  UP             fe80::cc0b:2aff:fecc:fbf0/64 
+veth73ef692@if2  UP             fe80::2ca2:5bff:fe2b:5f83/64 
+veth065b8db@if2  UP             fe80::b032:b1ff:fe6d:91d0/64 
+veth4f3ed51@if2  UP             fe80::a4de:2eff:fef5:1664/64 
+veth3f44981@if2  UP             fe80::e0c5:d9ff:fe90:2c8f/64 
+veth77bf835@if2  UP             fe80::e87d:58ff:feea:cfe5/64 
+veth1325a0e@if2  UP             fe80::282a:5aff:fe19:cba/64 
+vethaf346f1@if2  UP             fe80::8c87:58ff:fe27:86b4/64 
+veth9541dd3@if2  UP             fe80::8425:12ff:fe32:10bf/64 
+veth73dd2fc@if2  UP             fe80::342f:2eff:fe99:7bc5/64 
+vetha48843a@if2  UP             fe80::c4b4:c3ff:fe18:cc36/64 
+veth1bd95dd@if2  UP             fe80::40e4:eaff:fe7a:84ef/64 
+veth8ff68be@if2  UP             fe80::34c0:99ff:fe1f:8491/64 
+veth1e88ca4@if2  UP             fe80::f091:a1ff:fef8:30a6/64 
+veth1dbf295@if2  UP             fe80::386e:4bff:fef2:5082/64 
+vethd85bd24@if2  UP             fe80::58f8:c4ff:fe89:677a/64 
+veth5e23ab7@if2  UP             fe80::81:44ff:fecd:8498/64 
+veth60878fe@if2  UP             fe80::6435:eaff:fe85:1874/64 
+vethc12d09d@if2  UP             fe80::cea:a4ff:fe8d:d664/64 
+
+LISTEN 0      4096         0.0.0.0:9000       0.0.0.0:*          
+LISTEN 0      4096         0.0.0.0:5000       0.0.0.0:*          
+LISTEN 0      4096            [::]:9000          [::]:*          
+LISTEN 0      4096               *:8081             *:*          
+--- LOAD & UPTIME ---
+ 23:18:00 up 54 days, 23:55,  1 user,  load average: 0.57, 0.56, 0.57
+
+0.57 0.56 0.57 1/4339 1643696
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service                loaded active running Docker Application Container Engine
+=== END NODE: pi5 ===

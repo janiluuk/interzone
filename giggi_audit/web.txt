@@ -1,0 +1,59 @@
+=== NODE: web ===
+--- OS ---
+NAME="Debian GNU/Linux"
+VERSION="12 (bookworm)"
+--- CPU ---
+Architecture:                            aarch64
+Model name:                              Cortex-A72
+Thread(s) per core:                      1
+Core(s) per cluster:                     4
+Socket(s):                               -
+CPU(s) scaling MHz:                      100%
+CPU max MHz:                             1800.0000
+CPU min MHz:                             600.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       427Mi       1.7Gi        34Mi       1.7Gi       3.3Gi
+Swap:          511Mi          0B       511Mi
+
+MemTotal:        3887928 kB
+MemFree:         1749600 kB
+MemAvailable:    3449628 kB
+SwapTotal:        524284 kB
+SwapFree:         524284 kB
+--- DISK ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/mmcblk0p2   57G   13G   41G  25% /
+/dev/mmcblk0p1  510M   57M  454M  12% /boot/firmware
+--- GPU (nvidia-smi) ---
+nvidia-smi not found
+--- DOCKER ---
+Docker version: Docker version 20.10.24+dfsg1, build 297e128
+
+Running containers:
+NAMES     IMAGE     STATUS    PORTS
+
+All containers (including stopped):
+NAMES     IMAGE     STATUS    CREATED AT
+
+Docker resource usage:
+NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O
+
+Docker images:
+REPOSITORY   TAG       SIZE      CREATED
+--- OLLAMA ---
+Ollama not detected
+--- LOCALAI ---
+--- NETWORK ---
+eth0             UP             192.168.2.10/24 fe80::2c9e:6289:2ace:5596/64 
+wlan0            DOWN           
+docker0          DOWN           172.17.0.1/16 
+
+no known inference ports open
+--- LOAD & UPTIME ---
+ 23:18:02 up 38 days, 22:00,  0 user,  load average: 0.16, 0.03, 0.01
+
+0.16 0.03 0.01 1/208 197688
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service            loaded active running Docker Application Container Engine
+=== END NODE: web ===

@@ -1,0 +1,115 @@
+=== NODE: vimage3 ===
+--- OS ---
+NAME="Fedora Linux"
+VERSION="43 (Server Edition)"
+--- CPU ---
+Architecture:                            x86_64
+Model name:                              Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      4
+Socket(s):                               1
+CPU(s) scaling MHz:                      90%
+CPU max MHz:                             4500.0000
+CPU min MHz:                             800.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi       4.6Gi       6.8Gi        13Mi        52Gi        58Gi
+Swap:          8.0Gi        32Ki       8.0Gi
+
+MemTotal:       65757400 kB
+MemFree:         7149316 kB
+MemAvailable:   60979836 kB
+SwapTotal:       8388604 kB
+SwapFree:        8388572 kB
+--- DISK ---
+Filesystem                       Size  Used Avail Use% Mounted on
+/dev/mapper/fedora-root          111G   39G   72G  36% /
+efivarfs                         128K   79K   45K  64% /sys/firmware/efi/efivars
+/dev/sda3                        960M  726M  235M  76% /boot
+/dev/mapper/fedora_vimage2-root  464G  319G  146G  69% /opt
+/dev/sda1                        599M  7.5M  592M   2% /boot/efi
+/dev/nvme1n1p1                   916G  842G   29G  97% /data
+--- GPU (nvidia-smi) ---
+0, NVIDIA GeForce RTX 4060 Ti, 580.105.08, 16380, 1308, 14639, 0, 1, 42, 12.03, 165.00, Default, 1, 8
+1, Tesla P4, 580.105.08, 7680, 0, 7600, 0, 0, 35, 7.07, 75.00, Default, 1, 8
+
+--- GPU PROCESSES ---
+1853583, [No data], GPU-d25e34d9-0d67-6336-5138-e12dbf8138fa, 1298 MiB
+
+--- CUDA VERSION ---
+| NVIDIA-SMI 580.105.08             Driver Version: 580.105.08     CUDA Version: 13.0     |
+--- DOCKER ---
+Docker version: Docker version 29.1.2, build 890dcca
+
+Running containers:
+NAMES         IMAGE                                       STATUS                  PORTS
+ollama        ollama/ollama:latest                        Up 19 hours             0.0.0.0:11434->11434/tcp, [::]:11434->11434/tcp
+forge         nykk3/stable-diffusion-webui-forge:latest   Up 5 hours              0.0.0.0:7860->7860/tcp, [::]:7860->7860/tcp
+filebrowser   filebrowser/filebrowser                     Up 37 hours (healthy)   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+portainer     portainer/portainer-ce:lts                  Up 37 hours             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp
+
+All containers (including stopped):
+NAMES         IMAGE                                       STATUS                  CREATED AT
+ollama        ollama/ollama:latest                        Up 19 hours             2026-06-01 03:43:53 +0300 EEST
+forge         nykk3/stable-diffusion-webui-forge:latest   Up 5 hours              2026-05-30 20:55:49 +0300 EEST
+filebrowser   filebrowser/filebrowser                     Up 37 hours (healthy)   2026-05-25 23:25:29 +0300 EEST
+portainer     portainer/portainer-ce:lts                  Up 37 hours             2025-08-05 06:11:51 +0300 EEST
+
+Docker resource usage:
+NAME          CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O
+ollama        0.00%     55.52MiB / 62.71GiB   0.09%     18GB / 363MB      0B / 17.4GB
+forge         99.70%    2.11GiB / 58GiB       3.64%     9.37MB / 5.43MB   552MB / 209MB
+filebrowser   0.00%     22.82MiB / 62.71GiB   0.04%     8.05MB / 578MB    464MB / 197kB
+portainer     0.00%     11.29MiB / 62.71GiB   0.02%     1.47MB / 126B     101MB / 508kB
+
+Docker images:
+REPOSITORY                           TAG            SIZE      CREATED
+ollama/ollama                        latest         6.55GB    2 weeks ago
+ubuntu                               22.04          78.1MB    3 weeks ago
+curlimages/curl                      latest         23.8MB    4 weeks ago
+ubuntu                               latest         100MB     5 weeks ago
+prom/node-exporter                   latest         25.8MB    7 weeks ago
+filebrowser/filebrowser              latest         37.3MB    2 months ago
+gcr.io/cadvisor/cadvisor             latest         75.1MB    5 months ago
+rabbitmq                             3-management   252MB     6 months ago
+henrygd/beszel-agent                 latest         8.53MB    10 months ago
+portainer/portainer-ce               lts            268MB     11 months ago
+jrottenberg/ffmpeg                   4.4-alpine     167MB     20 months ago
+nykk3/stable-diffusion-webui-forge   latest         8.35GB    21 months ago
+--- OLLAMA ---
+Ollama running via Docker/service (no CLI)
+  Qwen3.6:27B | 17420432739 bytes | modified: 2026-06-01T00:57:37.782400799Z
+  gemma4:latest | 9608350718 bytes | modified: 2026-06-01T00:43:03.989442182Z
+  qwen3:latest | 5225388164 bytes | modified: 2026-06-01T00:37:01.995459326Z
+  dolphin-mixtral:8x7b | 26443614406 bytes | modified: 2026-01-03T08:27:32.112256701Z
+  dolphin-llama3:8b | 4661235994 bytes | modified: 2026-01-03T08:13:24.533353367Z
+  qwen3:14b | 9276198565 bytes | modified: 2025-11-05T23:36:35.800849785Z
+  gpt-oss:20b | 13793441244 bytes | modified: 2025-11-04T06:11:55.745687014Z
+  qwen2.5-coder:14b | 8988124298 bytes | modified: 2025-11-04T06:03:23.75799101Z
+--- LOCALAI ---
+LocalAI detected on port 8080
+--- NETWORK ---
+enp0s31f6        UP             192.168.2.102/24 fe80::25d2:6e90:1273:3522/64 
+wlp6s0           DOWN           
+br-9b97ded42cfd  UP             172.18.0.1/16 fe80::6c3f:96ff:fe26:1498/64 
+docker0          UP             172.17.0.1/16 fe80::6459:f8ff:fe29:415b/64 
+veth39f20ce@if2  UP             169.254.248.84/16 fe80::c694:fb9a:df9b:afdc/64 fe80::d4f4:e0ff:fe2b:5471/64 
+veth01d9905@if2  UP             169.254.223.40/16 fe80::ad4d:9019:94ca:e1b/64 fe80::2022:81ff:fe39:6fe5/64 
+br-3e329d711de1  UP             172.19.0.1/16 fe80::9cd0:d2ff:fea3:6fd9/64 
+veth2e767ee@if2  UP             169.254.223.113/16 fe80::809:2018:6f33:1f6a/64 
+veth52db51c@if2  UP             169.254.95.172/16 fe80::3743:2e9c:f5f:2f06/64 
+
+LISTEN 0      4096         0.0.0.0:11434      0.0.0.0:*          
+LISTEN 0      4096         0.0.0.0:7860       0.0.0.0:*          
+LISTEN 0      4096         0.0.0.0:8080       0.0.0.0:*          
+LISTEN 0      4096            [::]:11434         [::]:*          
+LISTEN 0      4096            [::]:7860          [::]:*          
+LISTEN 0      4096            [::]:8080          [::]:*          
+--- LOAD & UPTIME ---
+ 23:13:20 up 1 day, 12:31,  4 users,  load average: 1.07, 1.05, 1.01
+
+1.07 1.05 1.01 3/510 2070580
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service            loaded active running Docker Application Container Engine
+  nvidia-metrics.service    loaded active running NVIDIA GPU Prometheus textfile exporter
+=== END NODE: vimage3 ===

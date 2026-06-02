@@ -1,0 +1,292 @@
+=== NODE: vimage ===
+--- OS ---
+NAME="Fedora Linux"
+VERSION="41 (Server Edition)"
+--- CPU ---
+Architecture:                            x86_64
+Model name:                              Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      14
+Socket(s):                               1
+CPU(s) scaling MHz:                      55%
+CPU max MHz:                             3300.0000
+CPU min MHz:                             1200.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:           102Gi        11Gi        15Gi       591Mi        76Gi        90Gi
+Swap:          8.0Gi        14Mi       8.0Gi
+
+MemTotal:       106998984 kB
+MemFree:        16263308 kB
+MemAvailable:   94941724 kB
+SwapTotal:       8388604 kB
+SwapFree:        8373352 kB
+--- DISK ---
+Filesystem                        Size  Used Avail Use% Mounted on
+/dev/mapper/fedora_vimage00-root  110G   63G   48G  57% /
+/dev/mapper/main_vg-big_disk      1.9T  634G  1.2T  36% /share/models
+/dev/sde2                         871M  380M  491M  44% /boot
+/dev/sdc1                         880G  495G  340G  60% /share/photos
+/dev/sdd1                         880G   40G  796G   5% /opt
+/dev/sda1                         880G  123G  712G  15% /share/disk1
+/dev/sdb1                         293G  242G   36G  88% /share/disk5
+/dev/sdf1                         916G   56G  815G   7% /share/disk2
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/e935f69141cbc6f4afe0d159703f044020aba77f3ec302433ba763cc52f31436/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/09e35aac26c3f00ef103d0c89ba8450b79c9ad107be460a5d0ab606aa57d8cc4/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/d05ea78c318658b51cea23b2b4c0ad11a9db5ac13e67c56e4231fc68221c21f8/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/aab019390ff265e52839fe33d71c1e42e551f92078c1c3181c5acb92218769c2/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/6ff715f5b4e62c5e428d5e700e7febf74a6cd81c21025d3a96164af5a9a1d627/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/8f0905e4ab41e3bccd8897887a1a65175ad394ead1530d7840903ccfa76273a3/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/8965413beb3e1f3f960e4e964622b743e7b78c220a7302e701fa7ab531ecdc16/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/090c02af8ec803fe2c48488810040084b14fe31289f6e953d482e57691744d4f/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/d15dfdc45f800fdbbfbb8a24d25f95ac7e655b01c3c29d2137191bbfce241f36/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/339fbded13d47b2fe93ce3407020c0e4130bff06f67f90bf37d2c50d687c125d/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/66cf0caf1df966b930f5e4642b06371e6649c9e3d434d103bb74faac7f6e1511/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/bd9c85d817e3e3a83ff9fc2d796f40725bfa9ef58800780eb9c0260d43f595d4/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/c3df599a015ed2005180cdfc648f466a4652195a50b2d33392681d362b955d1f/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/ed887a765b2d75b07c20008a400a21168992506df21bb5ec481d6e538e7ba5f5/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/14023d352d897208e641e791687c2139133ffaef37183b72adbb9d89824a3e01/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/b0af0c4b396f32b3285c11bce3ab276235c37f7c4511bd3180df1c36ffc749f5/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/7a9a769f81ee238a735802eaf6e1363cd163a9c52a3b2347f58def438e06a3ea/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/911d59fc7562bd350588fa2c514f6e9416fcc9df47bfb58b9444d51435bdef39/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/c45eff8ca0e96638efe783c9cea9cba215ed2e3334a0f3b72f5cfed91f249fc3/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/490c998a664ca2e8bcb28aaa4404c7e22ed00377259b3530e13cf9f0ff86bf23/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/d80b61a5d3ffd4dc0fa7789aa32fcf32a04c5f4dd2aa999220c7c50153dd20c0/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/cbbac4b2d387cbe66badc61fcf6654d76fd404cf2fbd4b0ae39318e0f1445f16/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/51558179a7ec8e20d48e062e82806c701caa21c84cf332dd91f675c203b963a4/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/bb5bbc27d018325045619e87f0cbc848bc0d0070d19e6d69f4dda4046bb7b9ed/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/882cd59c0e3bd98af0281d8944d6d0b7183bdf588deb5e530e3cc0ae8b05c05f/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/6d4256de8c633a789c7e439ae0e852c4d0d356e7d3033e50dd1e6f280cba7905/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/a38fdc8f3a7352bff94f4392fcec926c1d11ed40df41f90bf2f0501eb906456f/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/d9cf17bba373ad165d3dec768bd005cbf53458ca191926eeeaaca1f7d2843144/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/377eae43b56b935bf60bd7d2f08c8a2e66bdd3cb243518d8d3735308ff4fbe9d/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/86a4bae98fd5531c24462eca49664653ee3f72907681bfb7ddd5c66beb873f33/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/58a93a47c362a94b7d68ad85bd167644c268cfdbbb7edfe1d78e03cd582e797e/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/7689313e9552a2152faeb71a5cc165b1af4dedc6f00a575198a26b30317d1bfb/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/8950a1dbd096bdded8bc3cdceb92cee43b3f56c10c9e8fcd26943c0b6db361e1/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/e00b84ce8189a7e05f9af96cfefd099dc813900572e828f436769851445ad565/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/642b0d9a2da96bc7a13c2d62a5009e226ea7b9d5b658b569f1c3c54da341b0c7/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/iqbdcni2wzstcta8iaeqk1tn6/merged
+--- GPU (nvidia-smi) ---
+nvidia-smi not found
+--- DOCKER ---
+Docker version: Docker version 28.5.1, build 2.fc41
+
+Running containers:
+NAMES                     IMAGE                                                            STATUS                    PORTS
+giggi-preprod-app-1       giggi/web:local                                                  Up 3 minutes (healthy)    0.0.0.0:3100->3000/tcp, [::]:3100->3000/tcp
+docker-catalog-exporter   python:3-alpine                                                  Up 13 minutes             
+giggi-preprod-redis-1     redis:7-alpine                                                   Up 20 minutes (healthy)   0.0.0.0:6381->6379/tcp, [::]:6381->6379/tcp
+giggi-preprod-db-1        postgres:16-alpine                                               Up 20 minutes (healthy)   0.0.0.0:5534->5432/tcp, [::]:5534->5432/tcp
+defora-encoder-1          jrottenberg/ffmpeg:4.4-alpine                                    Up 3 hours                
+defora-control-bridge-1   defora-control-bridge                                            Up 3 hours                
+defora-web-1              defora-web                                                       Up 3 hours (healthy)      1935/tcp, 0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+defora-mq-1               rabbitmq:3-management                                            Up 3 hours (healthy)      4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, [::]:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp, [::]:15672->15672/tcp
+defora-mediator-1         defora-mediator                                                  Up 3 hours (healthy)      0.0.0.0:8765-8766->8765-8766/tcp, [::]:8765-8766->8765-8766/tcp
+giggi-app-1               9be961637e58                                                     Up 5 hours (healthy)      0.0.0.0:3001->3000/tcp, [::]:3001->3000/tcp
+sparkki-web-1             sparkki-web                                                      Up 6 days (healthy)       0.0.0.0:1337->3000/tcp, [::]:1337->3000/tcp
+sparkki-db-1              postgres:16-alpine                                               Up 6 days (healthy)       0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+giggi-ci-db-1             postgres:16-alpine                                               Up 10 days (healthy)      0.0.0.0:5434->5432/tcp, [::]:5434->5432/tcp
+giggi-ci-redis-1          redis:7-alpine                                                   Up 10 days (healthy)      0.0.0.0:6380->6379/tcp, [::]:6380->6379/tcp
+giggi-db-1                postgres:16-alpine                                               Up 10 days (healthy)      0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp
+giggi-redis-1             redis:7-alpine                                                   Up 10 days (healthy)      0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp
+cadvisor                  gcr.io/cadvisor/cadvisor:latest                                  Up 10 days (healthy)      
+node-exporter             prom/node-exporter:latest                                        Up 10 days                
+tahti-website             tahti/website:latest                                             Up 12 days (healthy)      0.0.0.0:8090->80/tcp, [::]:8090->80/tcp
+searxng-core              searxng/searxng:latest                                           Up 2 weeks                8080/tcp, 192.168.2.100:9017->9017/tcp
+searxng-valkey            valkey/valkey:9-alpine                                           Up 2 weeks                6379/tcp
+netalertx                 ghcr.io/netalertx/netalertx:latest                               Up 3 weeks (healthy)      
+dockge-dockge-1           louislam/dockge:1                                                Up 3 weeks (healthy)      0.0.0.0:9999->5001/tcp, [::]:9999->5001/tcp
+komodo-core-1             ghcr.io/moghtech/komodo-core:latest                              Up 3 weeks                0.0.0.0:9120->9120/tcp, [::]:9120->9120/tcp
+komodo-mongo-1            mongo                                                            Up 3 weeks                27017/tcp
+komodo-periphery-1        ghcr.io/moghtech/komodo-periphery:latest                         Up 3 weeks                8120/tcp
+Nextcloud                 linuxserver/nextcloud:latest                                     Up 3 weeks                80/tcp, 0.0.0.0:5443->443/tcp, [::]:5443->443/tcp
+netbootxyz                ghcr.io/netbootxyz/netbootxyz                                    Up 3 weeks (healthy)      0.0.0.0:69->69/udp, [::]:69->69/udp, 0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp, 0.0.0.0:8088->80/tcp, [::]:8088->80/tcp
+immich_server             ghcr.io/immich-app/immich-server:release                         Up 3 weeks (healthy)      0.0.0.0:2283->2283/tcp, [::]:2283->2283/tcp
+photoprism-mariadb-1      mariadb:10.6                                                     Up 3 weeks                3306/tcp
+immich_postgres           ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0   Up 3 weeks (healthy)      5432/tcp
+immich_machine_learning   ghcr.io/immich-app/immich-machine-learning:release               Up 3 weeks (healthy)      
+immich_redis              valkey/valkey:8-bookworm                                         Up 3 weeks (healthy)      6379/tcp
+portainer                 portainer/portainer-ce:lts                                       Up 3 weeks                0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp
+beszel-agent              henrygd/beszel-agent                                             Up 3 weeks                
+
+All containers (including stopped):
+NAMES                     IMAGE                                                            STATUS                    CREATED AT
+giggi-preprod-app-1       giggi/web:local                                                  Up 3 minutes (healthy)    2026-06-01 23:14:26 +0300 EEST
+docker-catalog-exporter   python:3-alpine                                                  Up 13 minutes             2026-06-01 23:04:09 +0300 EEST
+giggi-preprod-redis-1     redis:7-alpine                                                   Up 20 minutes (healthy)   2026-06-01 22:56:49 +0300 EEST
+giggi-preprod-db-1        postgres:16-alpine                                               Up 20 minutes (healthy)   2026-06-01 22:56:49 +0300 EEST
+defora-encoder-1          jrottenberg/ffmpeg:4.4-alpine                                    Up 3 hours                2026-06-01 19:51:48 +0300 EEST
+defora-control-bridge-1   defora-control-bridge                                            Up 3 hours                2026-06-01 19:51:48 +0300 EEST
+defora-web-1              defora-web                                                       Up 3 hours (healthy)      2026-06-01 19:51:48 +0300 EEST
+defora-mq-1               rabbitmq:3-management                                            Up 3 hours (healthy)      2026-06-01 19:51:48 +0300 EEST
+defora-mediator-1         defora-mediator                                                  Up 3 hours (healthy)      2026-06-01 19:51:48 +0300 EEST
+giggi-app-1               9be961637e58                                                     Up 5 hours (healthy)      2026-06-01 18:43:06 +0300 EEST
+sparkki-web-1             sparkki-web                                                      Up 6 days (healthy)       2026-05-26 12:38:34 +0300 EEST
+sparkki-db-1              postgres:16-alpine                                               Up 6 days (healthy)       2026-05-26 12:38:31 +0300 EEST
+giggi-ci-db-1             postgres:16-alpine                                               Up 10 days (healthy)      2026-05-22 14:37:46 +0300 EEST
+giggi-ci-redis-1          redis:7-alpine                                                   Up 10 days (healthy)      2026-05-22 14:37:46 +0300 EEST
+giggi-db-1                postgres:16-alpine                                               Up 10 days (healthy)      2026-05-22 06:31:07 +0300 EEST
+giggi-redis-1             redis:7-alpine                                                   Up 10 days (healthy)      2026-05-22 06:31:07 +0300 EEST
+cadvisor                  gcr.io/cadvisor/cadvisor:latest                                  Up 10 days (healthy)      2026-05-22 02:34:59 +0300 EEST
+node-exporter             prom/node-exporter:latest                                        Up 10 days                2026-05-22 02:34:06 +0300 EEST
+tahti-website             tahti/website:latest                                             Up 12 days (healthy)      2026-05-20 23:28:09 +0300 EEST
+searxng-core              searxng/searxng:latest                                           Up 2 weeks                2026-05-15 05:44:04 +0300 EEST
+searxng-valkey            valkey/valkey:9-alpine                                           Up 2 weeks                2026-05-15 05:43:12 +0300 EEST
+netalertx                 ghcr.io/netalertx/netalertx:latest                               Up 3 weeks (healthy)      2026-03-27 19:47:19 +0200 EET
+dockge-dockge-1           louislam/dockge:1                                                Up 3 weeks (healthy)      2026-02-04 07:24:22 +0200 EET
+komodo-core-1             ghcr.io/moghtech/komodo-core:latest                              Up 3 weeks                2026-02-04 04:57:34 +0200 EET
+komodo-mongo-1            mongo                                                            Up 3 weeks                2026-02-04 04:57:07 +0200 EET
+komodo-periphery-1        ghcr.io/moghtech/komodo-periphery:latest                         Up 3 weeks                2026-02-04 04:57:07 +0200 EET
+Nextcloud                 linuxserver/nextcloud:latest                                     Up 3 weeks                2025-11-24 01:44:18 +0200 EET
+netbootxyz                ghcr.io/netbootxyz/netbootxyz                                    Up 3 weeks (healthy)      2025-10-30 12:59:26 +0200 EET
+immich_server             ghcr.io/immich-app/immich-server:release                         Up 3 weeks (healthy)      2025-10-30 12:28:19 +0200 EET
+photoprism-mariadb-1      mariadb:10.6                                                     Up 3 weeks                2025-10-30 12:17:24 +0200 EET
+immich_postgres           ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0   Up 3 weeks (healthy)      2025-10-27 07:13:26 +0200 EET
+immich_machine_learning   ghcr.io/immich-app/immich-machine-learning:release               Up 3 weeks (healthy)      2025-10-27 07:13:26 +0200 EET
+immich_redis              valkey/valkey:8-bookworm                                         Up 3 weeks (healthy)      2025-10-27 07:13:26 +0200 EET
+portainer                 portainer/portainer-ce:lts                                       Up 3 weeks                2025-10-27 07:11:32 +0200 EET
+beszel-agent              henrygd/beszel-agent                                             Up 3 weeks                2025-10-27 05:58:57 +0200 EET
+
+Docker resource usage:
+NAME                      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O
+giggi-preprod-app-1       0.25%     181.4MiB / 102GiB   0.17%     7.42MB / 428kB    4.1kB / 26.5MB
+docker-catalog-exporter   0.01%     14.33MiB / 102GiB   0.01%     0B / 0B           16.4kB / 1.96MB
+giggi-preprod-redis-1     3.96%     6.254MiB / 102GiB   0.01%     118kB / 51.3kB    610kB / 12.3kB
+giggi-preprod-db-1        0.01%     40.32MiB / 102GiB   0.04%     620kB / 498kB     10.4MB / 95MB
+defora-encoder-1          0.78%     1.586MiB / 102GiB   0.00%     81.9kB / 126B     8.19kB / 0B
+defora-control-bridge-1   1.21%     22.14MiB / 102GiB   0.02%     91.7MB / 76.9MB   0B / 32.8kB
+defora-web-1              0.24%     36.25MiB / 102GiB   0.03%     68.1MB / 83.2MB   0B / 5.06MB
+defora-mq-1               0.22%     156.8MiB / 102GiB   0.15%     18.4MB / 21.7MB   17MB / 655kB
+defora-mediator-1         0.00%     17.16MiB / 102GiB   0.02%     83.8kB / 1.53kB   0B / 4.1kB
+giggi-app-1               1.35%     171.2MiB / 102GiB   0.16%     12.2MB / 25.1MB   0B / 8.19kB
+sparkki-web-1             0.00%     210MiB / 102GiB     0.20%     12.3MB / 37.5MB   22.2MB / 147kB
+sparkki-db-1              3.65%     41.05MiB / 102GiB   0.04%     3.32MB / 3.36MB   733kB / 1.92MB
+giggi-ci-db-1             3.66%     29.69MiB / 102GiB   0.03%     24.4MB / 117MB    3.87MB / 30.5MB
+giggi-ci-redis-1          3.85%     4.801MiB / 102GiB   0.00%     4.22MB / 46.8kB   1.38MB / 1.18MB
+giggi-db-1                3.73%     86.35MiB / 102GiB   0.08%     282MB / 1.86GB    9.24MB / 244MB
+giggi-redis-1             3.64%     6.43MiB / 102GiB    0.01%     13.2MB / 4.74MB   2.83MB / 2.28MB
+cadvisor                  18.72%    121.4MiB / 102GiB   0.12%     0B / 0B           6.75MB / 0B
+node-exporter             0.00%     21.99MiB / 102GiB   0.02%     0B / 0B           6.88MB / 0B
+tahti-website             0.00%     22.77MiB / 102GiB   0.02%     273MB / 26.1GB    12.3kB / 8.19kB
+searxng-core              0.00%     209.8MiB / 102GiB   0.20%     15.4MB / 20MB     274kB / 2.59MB
+searxng-valkey            0.28%     3.988MiB / 102GiB   0.00%     6.79MB / 126B     0B / 0B
+netalertx                 0.03%     273.7MiB / 102GiB   0.26%     0B / 0B           30.2MB / 49.3GB
+dockge-dockge-1           0.31%     211.9MiB / 102GiB   0.20%     8.34MB / 1.79MB   84.2MB / 266kB
+komodo-core-1             0.13%     13.8MiB / 102GiB    0.01%     6.86GB / 770MB    15.9MB / 130MB
+komodo-mongo-1            1.02%     177.4MiB / 102GiB   0.17%     633MB / 1.69GB    5.08MB / 29.7GB
+komodo-periphery-1        0.51%     22.43MiB / 102GiB   0.02%     153MB / 5.17GB    4.96MB / 0B
+Nextcloud                 0.00%     7.912GiB / 102GiB   7.75%     273MB / 109MB     797MB / 213GB
+netbootxyz                0.01%     60.12MiB / 102GiB   0.06%     8.55MB / 7.57MB   18.3MB / 495MB
+immich_server             0.36%     1.603GiB / 102GiB   1.57%     5.09GB / 6.24GB   305MB / 1.78GB
+photoprism-mariadb-1      0.01%     91.57MiB / 102GiB   0.09%     8.08MB / 126B     77.6MB / 25.6kB
+immich_postgres           0.00%     259.4MiB / 102GiB   0.25%     49.7MB / 2.91GB   617MB / 6.03GB
+immich_machine_learning   0.14%     244.1MiB / 102GiB   0.23%     187MB / 59.9MB    617MB / 3.56MB
+immich_redis              0.42%     13.47MiB / 102GiB   0.01%     5.58GB / 1.3GB    1.15MB / 9.35GB
+portainer                 0.00%     19.82MiB / 102GiB   0.02%     8.22MB / 5.04kB   831kB / 1.06GB
+beszel-agent              0.00%     8.855MiB / 102GiB   0.01%     0B / 0B           0B / 296MB
+
+Docker images:
+REPOSITORY                                   TAG            SIZE      CREATED
+giggi/web                                    local          454MB     3 minutes ago
+<none>                                       <none>         454MB     3 minutes ago
+<none>                                       <none>         454MB     11 minutes ago
+<none>                                       <none>         454MB     20 minutes ago
+defora-web                                   latest         544MB     3 hours ago
+defora-control-bridge                        latest         138MB     3 hours ago
+defora-mediator                              latest         136MB     3 hours ago
+<none>                                       <none>         465MB     5 hours ago
+git.dudeisland.eu/janiluuk/giggi             latest         453MB     23 hours ago
+git.dudeisland.eu/janiluuk/giggi             sha-0a07fcf    453MB     23 hours ago
+<none>                                       <none>         544MB     26 hours ago
+<none>                                       <none>         138MB     3 days ago
+<none>                                       <none>         136MB     6 days ago
+sparkki-web                                  latest         629MB     6 days ago
+tahti/website                                latest         95.3MB    12 days ago
+postgres                                     16-alpine      276MB     2 weeks ago
+searxng/searxng                              latest         257MB     2 weeks ago
+python                                       3-alpine       47.7MB    2 weeks ago
+redis                                        7-alpine       39.1MB    3 weeks ago
+valkey/valkey                                9-alpine       43.5MB    3 weeks ago
+prom/node-exporter                           latest         25.8MB    7 weeks ago
+ghcr.io/netalertx/netalertx                  latest         310MB     2 months ago
+mongo                                        latest         923MB     4 months ago
+gcr.io/cadvisor/cadvisor                     latest         75.1MB    5 months ago
+rabbitmq                                     3-management   252MB     6 months ago
+linuxserver/nextcloud                        latest         1.13GB    6 months ago
+henrygd/beszel-agent                         latest         8.46MB    7 months ago
+ghcr.io/netbootxyz/netbootxyz                latest         165MB     7 months ago
+ghcr.io/immich-app/immich-server             release        1.75GB    7 months ago
+ghcr.io/immich-app/immich-machine-learning   release        947MB     7 months ago
+ghcr.io/moghtech/komodo-periphery            latest         434MB     8 months ago
+ghcr.io/moghtech/komodo-core                 latest         639MB     8 months ago
+portainer/portainer-ce                       lts            186MB     8 months ago
+valkey/valkey                                <none>         113MB     9 months ago
+mariadb                                      10.6           305MB     9 months ago
+ghcr.io/immich-app/postgres                  <none>         754MB     10 months ago
+louislam/dockge                              1              755MB     14 months ago
+jrottenberg/ffmpeg                           4.4-alpine     167MB     20 months ago
+--- OLLAMA ---
+Ollama not detected
+--- LOCALAI ---
+LocalAI detected on port 8080
+LocalAI detected on port 8081
+--- NETWORK ---
+eno1             UP             192.168.2.100/24 fe80::ec4:7aff:fe6a:542/64 
+eno2             DOWN           
+docker0          UP             172.17.0.1/16 fe80::89:baff:fe92:2225/64 
+br-67f166cab055  UP             172.25.0.1/16 fe80::f0d3:63ff:fe20:3bd6/64 
+br-11ec2ba344c9  UP             172.24.0.1/16 fe80::46b:a1ff:fe62:317b/64 
+br-47686d219a78  UP             172.20.0.1/16 fe80::d059:b0ff:fe04:f0f6/64 
+br-014cfde12260  UP             172.21.0.1/16 fe80::3e:20ff:fee9:b0a1/64 
+veth7dbdde1@if2  UP             fe80::54d8:29ff:fe5d:a56f/64 
+veth53db320@if2  UP             fe80::c001:7eff:fe87:ff8f/64 
+vethd8d0838@if2  UP             fe80::803d:16ff:fe94:37f6/64 
+veth0d15efc@if2  UP             fe80::44f:48ff:fe7b:b183/64 
+veth635be5d@if2  UP             fe80::c470:80ff:fe8b:63e1/64 
+vethc55e3da@if2  UP             fe80::549f:6cff:fe2a:9337/64 
+veth675b14b@if2  UP             fe80::8800:5eff:fe13:ab1e/64 
+veth3f698bd@if2  UP             fe80::208f:dcff:fea4:207c/64 
+vethb47eaee@if2  UP             fe80::782a:a8ff:fe9c:c332/64 
+veth5e0d695@if2  UP             fe80::7ca6:c5ff:febe:1a0/64 
+veth73ea7b6@if2  UP             fe80::f438:7bff:fed6:caaf/64 
+veth6a4b3bf@if2  UP             fe80::6c02:77ff:fed7:854a/64 
+br-857cf55a3a0c  UP             172.18.0.1/16 fe80::896:36ff:feda:6025/64 
+br-aa4b1e4e177a  UP             172.27.0.1/16 fe80::bc93:2bff:fe60:c5d1/64 
+veth21d0f39@if2  UP             fe80::74e2:7cff:fee4:a10a/64 
+veth50c631e@if2  UP             fe80::e8d1:37ff:feff:40d9/64 
+br-755f09710e8f  UP             172.29.0.1/16 fe80::ec0b:b4ff:fe99:ea57/64 
+vethc5cc2bc@if2  UP             fe80::d860:18ff:fee4:67a/64 
+br-9295c76cf639  UP             192.168.16.1/20 fe80::9871:8dff:fe86:a450/64 
+vethcc2387f@if2  UP             fe80::d820:30ff:fe91:c553/64 
+veth9dbc8e5@if2  UP             fe80::2421:25ff:fe9e:3aab/64 
+vethd225d6c@if2  UP             fe80::8c90:c6ff:fe17:a451/64 
+veth502a968@if2  UP             fe80::dc73:ff:fec6:1b10/64 
+br-0601259fafa0  UP             172.26.0.1/16 fe80::2c57:99ff:fe1a:b5a3/64 
+vethb43fc06@if2  UP             fe80::1078:adff:fe97:6d00/64 
+vethed9ad9c@if2  UP             fe80::8080:d7ff:fe8b:2d0f/64 
+veth261cdc9@if2  UP             fe80::a0ca:8dff:fea9:b91/64 
+br-806390b01b26  UP             172.19.0.1/16 fe80::78a0:c1ff:fe54:df6c/64 
+veth6ddebb6@if2  UP             fe80::906d:2aff:fe8d:dcac/64 
+veth39dcc5a@if2  UP             fe80::443f:dff:fe5a:235e/64 
+vethfa1bdd8@if2  UP             fe80::e0be:88ff:fe9b:7e3b/64 
+veth4d2800e@if2  UP             fe80::f040:7cff:feb4:51a7/64 
+vethc80110c@if2  UP             fe80::e4e4:b2ff:fefa:a632/64 
+br-11d7c85f6150  UP             172.22.0.1/16 fe80::4011:87ff:fea3:73b8/64 
+veth294fcd9@if2  UP             fe80::7c4d:b5ff:fef4:cf91/64 
+veth81d391e@if2  UP             fe80::f3:69ff:fecc:507f/64 
+vethcec3ef8@if2  UP             fe80::c4e0:a2ff:fe44:6beb/64 
+veth4928ec0@if3384 UP             fe80::88e4:33ff:fe55:9506/64 
+
+LISTEN 0      4096         0.0.0.0:8080       0.0.0.0:*    users:(("docker-proxy",pid=3026339,fd=7))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+LISTEN 0      4096         0.0.0.0:3000       0.0.0.0:*    users:(("docker-proxy",pid=1707854,fd=7))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+LISTEN 0      4096            [::]:8080          [::]:*    users:(("docker-proxy",pid=3026347,fd=7))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+LISTEN 0      4096               *:8081             *:*    users:(("cadvisor",pid=988574,fd=12))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+LISTEN 0      4096            [::]:3000          [::]:*    users:(("docker-proxy",pid=1707861,fd=7))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+--- LOAD & UPTIME ---
+ 23:17:37 up 72 days, 20:21,  5 users,  load average: 5.39, 4.16, 2.60
+
+5.39 4.16 2.60 5/2535 3819629
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service            loaded active running Docker Application Container Engine
+=== END NODE: vimage ===

@@ -1,0 +1,35 @@
+=== NODE: 192.168.2.12 (Windows / no SSH) ===
+--- OS ---
+Windows (version unknown — update manually)
+
+--- CPU ---
+Model: Intel Core i7-8700
+Cores: 6 cores / 12 threads
+Base clock: 3.20 GHz
+Boost clock: 4.60 GHz
+Architecture: Coffee Lake (x86_64)
+TDP: 65W
+
+--- MEMORY ---
+Total: 32 GB DDR4
+(available/used: unknown at audit time)
+
+--- GPU ---
+Name: NVIDIA GeForce RTX 4070 Ti
+VRAM: 12 GB GDDR6X
+Architecture: Ada Lovelace
+CUDA capability: 8.9
+TDP: 285W
+(driver version / utilization: unknown at audit time)
+
+--- INFERENCE ---
+Ollama: running on http://192.168.2.12:11434 (assumed)
+Backend: Windows native Ollama
+Models: (unknown — query manually or enable API)
+
+--- NOTES ---
+- No SSH access; specs provided manually
+- i7-8700 is 6th-gen Coffee Lake, no AVX-512
+- 4070 Ti is Ada Lovelace, CUDA 8.9 — full FP8 support
+- 32 GB RAM is adequate for model offloading to system RAM
+- Recommend enabling Ollama API remote access for dispatcher health polling

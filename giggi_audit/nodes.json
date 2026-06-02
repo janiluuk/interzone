@@ -1,0 +1,28 @@
+{
+  "audit_time": "2026-06-01T20:18:02Z",
+  "nodes": [
+        { "host": "vimage", "type": "linux", "status": "ok", "backend": "unknown", "gpu": "unknown" },
+    { "host": "vimage2", "type": "linux", "status": "ok", "backend": "unknown", "gpu": "unknown" },
+    { "host": "vimage3", "type": "linux", "status": "ok", "backend": "unknown", "gpu": "unknown" },
+    { "host": "vimage4", "type": "linux", "status": "ok", "backend": "unknown", "gpu": "unknown" },
+    { "host": "vimage5", "type": "linux", "status": "ok", "backend": "unknown", "gpu": "unknown" },
+    { "host": "vimage6", "type": "linux", "status": "ok", "backend": "unknown", "gpu": "unknown" },
+    { "host": "pi4", "type": "linux", "status": "ok", "backend": "unknown", "gpu": "unknown" },
+    { "host": "pi5", "type": "linux", "status": "ok", "backend": "unknown", "gpu": "unknown" },
+    { "host": "web", "type": "linux", "status": "ok", "backend": "unknown", "gpu": "unknown" }
+    ,
+    {
+      "host": "192.168.2.12",
+      "type": "windows",
+      "status": "hardcoded",
+      "cpu": "Intel i7-8700",
+      "ram_gb": 32,
+      "gpu": "RTX 4070 Ti",
+      "gpu_vram_gb": 12,
+      "gpu_arch": "ada_lovelace",
+      "cuda_capability": "8.9",
+      "backend": "ollama",
+      "backend_port": 11434
+    }
+  ]
+}

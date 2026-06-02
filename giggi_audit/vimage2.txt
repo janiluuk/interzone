@@ -1,0 +1,137 @@
+=== NODE: vimage2 ===
+--- OS ---
+NAME="Fedora Linux"
+VERSION="43 (Server Edition)"
+--- CPU ---
+Architecture:                            x86_64
+Model name:                              Intel(R) Xeon(R) CPU E5-1620 v3 @ 3.50GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      4
+Socket(s):                               1
+CPU(s) scaling MHz:                      83%
+CPU max MHz:                             3500.0000
+CPU min MHz:                             1200.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi       9.6Gi       1.2Gi       455Mi        53Gi        53Gi
+Swap:           31Gi       396Ki        31Gi
+
+MemTotal:       65700348 kB
+MemFree:         1272276 kB
+MemAvailable:   55672056 kB
+SwapTotal:      33554428 kB
+SwapFree:       33554032 kB
+--- DISK ---
+Filesystem                                 Size  Used Avail Use% Mounted on
+/dev/mapper/fedora_localhost--live01-root  110G  100G   11G  91% /
+/dev/sda2                                  960M  830M  131M  87% /boot
+/dev/nvme0n1p1                             916G  489G  382G  57% /opt
+/dev/nvme1n1p1                             1.8T  1.1T  650G  63% /data
+vimage:/share/outputs                      880G  123G  712G  15% /share/outputs
+--- GPU (nvidia-smi) ---
+0, NVIDIA GeForce RTX 5060 Ti, 580.159.03, 16311, 14429, 1420, 0, 0, 33, 5.96, 180.00, Default, 1, 8
+1, NVIDIA GeForce RTX 3060, 580.159.03, 12288, 7043, 4867, 0, 3, 54, 11.25, 170.00, Default, 1, 4
+
+--- GPU PROCESSES ---
+1049093, /backends/cuda12-llama-cpp/lib/ld.so, GPU-26c3a5f8-49e9-0785-a9f5-ac56733e5806, 7458 MiB
+1049934, /backends/cuda12-llama-cpp/lib/ld.so, GPU-26c3a5f8-49e9-0785-a9f5-ac56733e5806, 6956 MiB
+1050768, venv/bin/python, GPU-efabb3a5-b114-2e06-c0de-9722fdb8a576, 7026 MiB
+
+--- CUDA VERSION ---
+| NVIDIA-SMI 580.159.03             Driver Version: 580.159.03     CUDA Version: 13.0     |
+--- DOCKER ---
+Docker version: Docker version 29.5.2, build 79eb04c
+
+Running containers:
+NAMES              IMAGE                                                  STATUS                 PORTS
+localai-api-1      quay.io/go-skynet/local-ai:master-gpu-nvidia-cuda-12   Up 2 hours (healthy)   0.0.0.0:8181->8080/tcp, [::]:8181->8080/tcp
+forge              nykk3/stable-diffusion-webui-forge:latest              Up 2 hours             
+node-exporter      prom/node-exporter:latest                              Up 2 days              
+cadvisor           gcr.io/cadvisor/cadvisor:latest                        Up 2 days (healthy)    
+open-webui         ghcr.io/open-webui/open-webui:main                     Up 2 days (healthy)    0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp
+portainer          portainer/portainer-ce:sts                             Up 2 days              0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp
+jani-periphery-1   ghcr.io/moghtech/komodo-periphery:latest               Up 2 days              8120/tcp
+beszel-agent       henrygd/beszel-agent                                   Up 2 days              
+
+All containers (including stopped):
+NAMES              IMAGE                                                  STATUS                     CREATED AT
+ollama             ollama/ollama:latest                                   Created                    2026-06-01 18:30:52 +0300 EEST
+localai-api-1      quay.io/go-skynet/local-ai:master-gpu-nvidia-cuda-12   Up 2 hours (healthy)       2026-06-01 18:23:52 +0300 EEST
+swarmui            swarmui                                                Exited (137) 5 hours ago   2026-05-30 04:07:30 +0300 EEST
+forge              nykk3/stable-diffusion-webui-forge:latest              Up 2 hours                 2026-05-29 06:43:14 +0300 EEST
+node-exporter      prom/node-exporter:latest                              Up 2 days                  2026-05-22 02:15:52 +0300 EEST
+cadvisor           gcr.io/cadvisor/cadvisor:latest                        Up 2 days (healthy)        2026-05-22 02:13:20 +0300 EEST
+open-webui         ghcr.io/open-webui/open-webui:main                     Up 2 days (healthy)        2026-05-15 05:21:10 +0300 EEST
+portainer          portainer/portainer-ce:sts                             Up 2 days                  2026-03-20 08:57:37 +0200 EET
+jani-periphery-1   ghcr.io/moghtech/komodo-periphery:latest               Up 2 days                  2026-02-04 05:12:43 +0200 EET
+beszel-agent       henrygd/beszel-agent                                   Up 2 days                  2026-02-04 05:12:43 +0200 EET
+
+Docker resource usage:
+NAME               CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O
+localai-api-1      0.61%     10.11GiB / 62.66GiB   16.14%    5.46MB / 735kB   8.46GB / 7.18MB
+forge              0.52%     8.863GiB / 62.66GiB   14.14%    0B / 0B          7.75GB / 5.91MB
+node-exporter      0.00%     18.41MiB / 62.66GiB   0.03%     0B / 0B          16MB / 20.5kB
+cadvisor           4.72%     113.4MiB / 62.66GiB   0.18%     0B / 0B          37.2MB / 0B
+open-webui         0.08%     694.8MiB / 62.66GiB   1.08%     514kB / 2.25MB   640MB / 75.7MB
+portainer          0.00%     19.26MiB / 62.66GiB   0.03%     173kB / 126B     66.3MB / 87.2MB
+jani-periphery-1   0.00%     9.598MiB / 62.66GiB   0.01%     173kB / 126B     40.5MB / 0B
+beszel-agent       0.00%     8.969MiB / 62.66GiB   0.01%     0B / 0B          8.8MB / 0B
+
+Docker images:
+REPOSITORY                            TAG                                   SIZE      CREATED
+swarmui                               latest                                2.97GB    2 days ago
+quay.io/go-skynet/local-ai            master-gpu-nvidia-cuda-12             6.31GB    6 days ago
+quay.io/go-skynet/local-ai            master                                817MB     9 days ago
+quay.io/go-skynet/local-ai-backends   master-gpu-nvidia-cuda-12-llama-cpp   3.31GB    10 days ago
+ghcr.io/open-webui/open-webui         main                                  4.76GB    2 weeks ago
+ollama/ollama                         latest                                6.55GB    2 weeks ago
+ghcr.io/open-webui/open-webui         latest                                4.76GB    3 weeks ago
+ubuntu                                22.04                                 78.1MB    3 weeks ago
+ubuntu                                latest                                100MB     5 weeks ago
+alpine                                latest                                8.45MB    6 weeks ago
+prom/node-exporter                    latest                                25.8MB    7 weeks ago
+quay.io/go-skynet/local-ai            master-aio-gpu-nvidia-cuda-12         6.34GB    2 months ago
+portainer/portainer-ce                sts                                   183MB     3 months ago
+henrygd/beszel-agent                  latest                                8.89MB    4 months ago
+gcr.io/cadvisor/cadvisor              latest                                75.1MB    5 months ago
+ghcr.io/moghtech/komodo-periphery     latest                                434MB     8 months ago
+quay.io/go-skynet/local-ai            master-cublas-cuda12                  12.5GB    11 months ago
+quay.io/go-skynet/local-ai            master-cublas-cuda12-ffmpeg           45.8GB    13 months ago
+nykk3/stable-diffusion-webui-forge    latest                                8.35GB    21 months ago
+--- OLLAMA ---
+Ollama version: ollama version is 0.23.1
+Loaded models:
+NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL 
+Available models:
+NAME              ID              SIZE      MODIFIED    
+qwen3.6:latest    07d35212591f    23 GB     2 weeks ago    
+qwen3.5:9b        6488c96fa5fa    6.6 GB    3 weeks ago    
+qwen2.5:14b       7cdf5a0187d5    9.0 GB    3 weeks ago    
+--- LOCALAI ---
+LocalAI detected on port 8080
+--- NETWORK ---
+enp0s25          UP             192.168.2.101/24 fe80::921b:eff:fe58:d7dd/64 
+br-d10be1275fcd  UP             172.21.0.1/16 fe80::f0b1:5fff:fe72:1812/64 
+docker0          UP             172.17.0.1/16 fe80::fc9d:bbff:fefc:7b56/64 
+br-5c378ba6a5cb  UP             172.20.0.1/16 fe80::943b:30ff:fe89:3fd/64 
+br-6a55604dd892  UP             172.18.0.1/16 fe80::4470:38ff:fe6f:df0f/64 
+vethb0e7686@if2  UP             fe80::14ac:50ff:fec3:83d6/64 
+veth72e3aa0@if2  UP             fe80::f80d:1ff:fe63:85b2/64 
+vethdae48e3@if2  UP             fe80::4802:95ff:fe18:2a5e/64 
+br-0c6817fec297  DOWN           172.19.0.1/16 fe80::88b6:b0ff:fe2b:1d61/64 
+veth4de8a9d@if2  UP             fe80::806f:57ff:fe13:320/64 
+
+LISTEN 0      4096         0.0.0.0:3000       0.0.0.0:*                                                
+LISTEN 0      2048         0.0.0.0:7860       0.0.0.0:*    users:(("pt_main_thread",pid=1050768,fd=70))
+LISTEN 0      4096            [::]:3000          [::]:*                                                
+LISTEN 0      4096               *:8080             *:*                                                
+LISTEN 0      4096               *:11434            *:*                                                
+--- LOAD & UPTIME ---
+ 23:17:39 up 2 days, 15:39,  2 users,  load average: 0.04, 0.08, 0.12
+
+0.04 0.08 0.12 1/717 1083102
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service                loaded active running Docker Application Container Engine
+  nvidia-metrics.service        loaded active running NVIDIA GPU Prometheus textfile exporter
+  ollama.service                loaded active running Ollama Service
+=== END NODE: vimage2 ===

@@ -1,0 +1,140 @@
+=== NODE: vimage4 ===
+--- OS ---
+NAME="Fedora Linux"
+VERSION="43 (Server Edition)"
+--- CPU ---
+Architecture:                            x86_64
+Model name:                              Intel(R) Xeon(R) CPU E3-1231 v3 @ 3.40GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      4
+Socket(s):                               1
+CPU(s) scaling MHz:                      85%
+CPU max MHz:                             3800.0000
+CPU min MHz:                             800.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:            29Gi       2.7Gi        18Gi        10Mi       8.4Gi        26Gi
+Swap:           31Gi          0B        31Gi
+
+MemTotal:       30599852 kB
+MemFree:        19458348 kB
+MemAvailable:   27760344 kB
+SwapTotal:      33554428 kB
+SwapFree:       33554428 kB
+--- DISK ---
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/fedora-root  110G   71G   40G  65% /
+efivarfs                 128K  123K   353 100% /sys/firmware/efi/efivars
+/dev/nvme0n1p1           916G  723G  148G  84% /opt
+/dev/sdc2                960M  725M  236M  76% /boot
+/dev/sdc1                599M  7.6M  592M   2% /boot/efi
+/dev/sdb1                1.8T  1.3T  451G  75% /share/disk2
+/dev/sda1                1.4T  594G  804G  43% /share/disk1
+vimage2:/data            1.8T  1.1T  650G  63% /data
+--- GPU (nvidia-smi) ---
+0, Tesla P100-PCIE-16GB, 580.159.03, 16384, 279, 15992, 0, 0, 42, 33.87, 250.00, Default, 3, 8
+1, NVIDIA GeForce GTX 1050 Ti, 580.159.03, 4096, 3, 4028, 0, 2, 33, [N/A], 75.00, Default, 1, 8
+
+--- GPU PROCESSES ---
+2302, venv/bin/python, GPU-234843f4-074a-90e8-2b38-4473e998d178, 276 MiB
+
+--- CUDA VERSION ---
+| NVIDIA-SMI 580.159.03             Driver Version: 580.159.03     CUDA Version: 13.0     |
+--- DOCKER ---
+Docker version: Docker version 29.5.0, build 98f1464
+
+Running containers:
+NAMES             IMAGE                                       STATUS                  PORTS
+defora-stream-1   defora-stream                               Up 29 hours (healthy)   0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:1935->1935/tcp, [::]:1935->1935/tcp
+ollama            ollama/ollama:latest                        Up 29 hours             0.0.0.0:11434->11434/tcp, [::]:11434->11434/tcp
+cadvisor          gcr.io/cadvisor/cadvisor:latest             Up 29 hours (healthy)   
+node-exporter     prom/node-exporter:latest                   Up 29 hours             
+filebrowser       filebrowser/filebrowser                     Up 29 hours (healthy)   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+forge             nykk3/stable-diffusion-webui-forge:latest   Up 29 hours             0.0.0.0:7860->7860/tcp, [::]:7860->7860/tcp
+beszel-agent      henrygd/beszel-agent                        Up 29 hours             
+portainer         portainer/portainer-ce:lts                  Up 29 hours             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp
+
+All containers (including stopped):
+NAMES             IMAGE                                                  STATUS                    CREATED AT
+localai-api-1     quay.io/go-skynet/local-ai:master-gpu-nvidia-cuda-12   Exited (0) 37 hours ago   2026-05-28 19:40:57 +0300 EEST
+defora-stream-1   defora-stream                                          Up 29 hours (healthy)     2026-05-27 21:45:29 +0300 EEST
+ollama            ollama/ollama:latest                                   Up 29 hours               2026-05-23 02:46:00 +0300 EEST
+cadvisor          gcr.io/cadvisor/cadvisor:latest                        Up 29 hours (healthy)     2026-05-22 02:22:12 +0300 EEST
+node-exporter     prom/node-exporter:latest                              Up 29 hours               2026-05-22 02:15:53 +0300 EEST
+kohya-ss-gui      ghcr.io/bmaltais/kohya-ss-gui:latest                   Exited (0) 37 hours ago   2026-05-19 03:11:24 +0300 EEST
+tensorboard       tensorflow/tensorflow:latest-gpu                       Created                   2026-05-19 03:11:24 +0300 EEST
+filebrowser       filebrowser/filebrowser                                Up 29 hours (healthy)     2026-01-08 00:01:22 +0200 EET
+forge             nykk3/stable-diffusion-webui-forge:latest              Up 29 hours               2026-01-08 00:01:22 +0200 EET
+beszel-agent      henrygd/beszel-agent                                   Up 29 hours               2025-07-28 10:11:19 +0300 EEST
+portainer         portainer/portainer-ce:lts                             Up 29 hours               2025-03-16 03:42:49 +0200 EET
+
+Docker resource usage:
+NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O
+defora-stream-1   0.00%     8.465MiB / 29.18GiB   0.03%     29.5MB / 27.2MB   5.78MB / 43.8MB
+ollama            0.00%     340.9MiB / 29.18GiB   1.14%     4.82GB / 83.2MB   231MB / 4.68GB
+cadvisor          4.91%     126.1MiB / 29.18GiB   0.42%     0B / 0B           46.1MB / 0B
+node-exporter     0.00%     24.9MiB / 29.18GiB    0.08%     0B / 0B           15.3MB / 0B
+filebrowser       0.00%     28.3MiB / 29.18GiB    0.09%     2.02MB / 22.1MB   17.9MB / 16.4kB
+forge             1.00%     1.481GiB / 28GiB      5.29%     501kB / 28.7kB    825MB / 180MB
+beszel-agent      0.00%     14.23MiB / 29.18GiB   0.05%     0B / 0B           8.24MB / 0B
+portainer         0.00%     60.44MiB / 29.18GiB   0.20%     84kB / 126B       50.4MB / 77.7MB
+
+Docker images:
+REPOSITORY                           TAG                                SIZE      CREATED
+quay.io/go-skynet/local-ai           master-gpu-nvidia-cuda-12          6.31GB    4 days ago
+defora-stream                        latest                             138MB     5 days ago
+ghcr.io/bmaltais/kohya-ss-gui        latest                             11.6GB    13 days ago
+ollama/ollama                        latest                             6.55GB    2 weeks ago
+ubuntu                               22.04                              78.1MB    3 weeks ago
+ubuntu                               latest                             100MB     5 weeks ago
+prom/node-exporter                   latest                             25.8MB    7 weeks ago
+tensorflow/tensorflow                latest-gpu                         7.56GB    2 months ago
+gcr.io/cadvisor/cadvisor             latest                             75.1MB    5 months ago
+swarmui                              latest                             2.25GB    5 months ago
+filebrowser/filebrowser              latest                             24.7MB    5 months ago
+henrygd/beszel-agent                 latest                             8.53MB    10 months ago
+quay.io/go-skynet/local-ai           master-cublas-cuda12-ffmpeg-core   10.9GB    13 months ago
+portainer/portainer-ce               lts                                268MB     15 months ago
+nykk3/stable-diffusion-webui-forge   latest                             8.35GB    21 months ago
+--- OLLAMA ---
+Ollama version: ollama version is 0.24.0
+Loaded models:
+NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL 
+Available models:
+NAME            ID              SIZE      MODIFIED     
+qwen2.5:7b      845dbda0ea48    4.7 GB    5 hours ago     
+qwen3-vl:30b    eda0be100877    19 GB     9 days ago      
+qwen3-vl:8b     901cae732162    6.1 GB    6 months ago    
+gemma3:4b       a2af6cc3eb7f    3.3 GB    6 months ago    
+--- LOCALAI ---
+LocalAI detected on port 8080
+LocalAI detected on port 8081
+--- NETWORK ---
+eno1             UP             192.168.2.103/24 fe80::4216:7eff:fea9:4a6f/64 
+br-08ac6cacd8a8  UP             172.21.0.1/16 fe80::ac4a:7cff:fe1f:5a32/64 
+br-34a514e1c9ab  DOWN           172.20.0.1/16 
+br-6fe2d5823ede  UP             172.22.0.1/16 fe80::50c9:d2ff:fe58:a0b9/64 
+br-c4257cd1a17f  DOWN           172.18.0.1/16 
+br-c4b10080d01f  UP             172.19.0.1/16 fe80::84d5:c3ff:fe1a:a1c3/64 
+docker0          UP             172.17.0.1/16 fe80::5045:b2ff:fed5:c654/64 
+veth029d693@if2  UP             fe80::a460:3fff:fe78:d355/64 
+vethc51cf84@if2  UP             fe80::fcbc:6ff:fe92:1142/64 
+veth19fe940@if2  UP             fe80::4fe:1dff:fe15:ef98/64 
+veth496332d@if2  UP             fe80::38e2:a7ff:fe8b:ec8/64 
+veth5a52aec@if2  UP             fe80::6886:46ff:fe84:786a/64 
+
+LISTEN 0      4096         0.0.0.0:11434      0.0.0.0:*          
+LISTEN 0      4096         0.0.0.0:8080       0.0.0.0:*          
+LISTEN 0      4096         0.0.0.0:7860       0.0.0.0:*          
+LISTEN 0      4096            [::]:11434         [::]:*          
+LISTEN 0      4096            [::]:8080          [::]:*          
+LISTEN 0      4096               *:8081             *:*          
+LISTEN 0      4096            [::]:7860          [::]:*          
+--- LOAD & UPTIME ---
+ 23:17:45 up 1 day,  5:04,  2 users,  load average: 0.05, 0.09, 0.09
+
+0.05 0.09 0.09 1/692 1341068
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service            loaded active running Docker Application Container Engine
+  nvidia-metrics.service    loaded active running NVIDIA GPU Prometheus textfile exporter
+=== END NODE: vimage4 ===

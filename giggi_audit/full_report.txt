@@ -1,0 +1,1670 @@
+============================================================
+ GIGGI NODE AUDIT — 2026-06-01T23:17:33 EEST
+============================================================
+
+------------------------------------------------------------
+ Probing: vimage
+------------------------------------------------------------
+=== NODE: vimage ===
+--- OS ---
+NAME="Fedora Linux"
+VERSION="41 (Server Edition)"
+--- CPU ---
+Architecture:                            x86_64
+Model name:                              Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      14
+Socket(s):                               1
+CPU(s) scaling MHz:                      55%
+CPU max MHz:                             3300.0000
+CPU min MHz:                             1200.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:           102Gi        11Gi        15Gi       591Mi        76Gi        90Gi
+Swap:          8.0Gi        14Mi       8.0Gi
+
+MemTotal:       106998984 kB
+MemFree:        16263308 kB
+MemAvailable:   94941724 kB
+SwapTotal:       8388604 kB
+SwapFree:        8373352 kB
+--- DISK ---
+Filesystem                        Size  Used Avail Use% Mounted on
+/dev/mapper/fedora_vimage00-root  110G   63G   48G  57% /
+/dev/mapper/main_vg-big_disk      1.9T  634G  1.2T  36% /share/models
+/dev/sde2                         871M  380M  491M  44% /boot
+/dev/sdc1                         880G  495G  340G  60% /share/photos
+/dev/sdd1                         880G   40G  796G   5% /opt
+/dev/sda1                         880G  123G  712G  15% /share/disk1
+/dev/sdb1                         293G  242G   36G  88% /share/disk5
+/dev/sdf1                         916G   56G  815G   7% /share/disk2
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/e935f69141cbc6f4afe0d159703f044020aba77f3ec302433ba763cc52f31436/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/09e35aac26c3f00ef103d0c89ba8450b79c9ad107be460a5d0ab606aa57d8cc4/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/d05ea78c318658b51cea23b2b4c0ad11a9db5ac13e67c56e4231fc68221c21f8/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/aab019390ff265e52839fe33d71c1e42e551f92078c1c3181c5acb92218769c2/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/6ff715f5b4e62c5e428d5e700e7febf74a6cd81c21025d3a96164af5a9a1d627/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/8f0905e4ab41e3bccd8897887a1a65175ad394ead1530d7840903ccfa76273a3/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/8965413beb3e1f3f960e4e964622b743e7b78c220a7302e701fa7ab531ecdc16/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/090c02af8ec803fe2c48488810040084b14fe31289f6e953d482e57691744d4f/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/d15dfdc45f800fdbbfbb8a24d25f95ac7e655b01c3c29d2137191bbfce241f36/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/339fbded13d47b2fe93ce3407020c0e4130bff06f67f90bf37d2c50d687c125d/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/66cf0caf1df966b930f5e4642b06371e6649c9e3d434d103bb74faac7f6e1511/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/bd9c85d817e3e3a83ff9fc2d796f40725bfa9ef58800780eb9c0260d43f595d4/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/c3df599a015ed2005180cdfc648f466a4652195a50b2d33392681d362b955d1f/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/ed887a765b2d75b07c20008a400a21168992506df21bb5ec481d6e538e7ba5f5/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/14023d352d897208e641e791687c2139133ffaef37183b72adbb9d89824a3e01/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/b0af0c4b396f32b3285c11bce3ab276235c37f7c4511bd3180df1c36ffc749f5/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/7a9a769f81ee238a735802eaf6e1363cd163a9c52a3b2347f58def438e06a3ea/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/911d59fc7562bd350588fa2c514f6e9416fcc9df47bfb58b9444d51435bdef39/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/c45eff8ca0e96638efe783c9cea9cba215ed2e3334a0f3b72f5cfed91f249fc3/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/490c998a664ca2e8bcb28aaa4404c7e22ed00377259b3530e13cf9f0ff86bf23/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/d80b61a5d3ffd4dc0fa7789aa32fcf32a04c5f4dd2aa999220c7c50153dd20c0/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/cbbac4b2d387cbe66badc61fcf6654d76fd404cf2fbd4b0ae39318e0f1445f16/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/51558179a7ec8e20d48e062e82806c701caa21c84cf332dd91f675c203b963a4/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/bb5bbc27d018325045619e87f0cbc848bc0d0070d19e6d69f4dda4046bb7b9ed/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/882cd59c0e3bd98af0281d8944d6d0b7183bdf588deb5e530e3cc0ae8b05c05f/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/6d4256de8c633a789c7e439ae0e852c4d0d356e7d3033e50dd1e6f280cba7905/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/a38fdc8f3a7352bff94f4392fcec926c1d11ed40df41f90bf2f0501eb906456f/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/d9cf17bba373ad165d3dec768bd005cbf53458ca191926eeeaaca1f7d2843144/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/377eae43b56b935bf60bd7d2f08c8a2e66bdd3cb243518d8d3735308ff4fbe9d/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/86a4bae98fd5531c24462eca49664653ee3f72907681bfb7ddd5c66beb873f33/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/58a93a47c362a94b7d68ad85bd167644c268cfdbbb7edfe1d78e03cd582e797e/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/7689313e9552a2152faeb71a5cc165b1af4dedc6f00a575198a26b30317d1bfb/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/8950a1dbd096bdded8bc3cdceb92cee43b3f56c10c9e8fcd26943c0b6db361e1/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/e00b84ce8189a7e05f9af96cfefd099dc813900572e828f436769851445ad565/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/642b0d9a2da96bc7a13c2d62a5009e226ea7b9d5b658b569f1c3c54da341b0c7/merged
+overlay                           880G   40G  796G   5% /opt/docker/overlay2/iqbdcni2wzstcta8iaeqk1tn6/merged
+--- GPU (nvidia-smi) ---
+nvidia-smi not found
+--- DOCKER ---
+Docker version: Docker version 28.5.1, build 2.fc41
+
+Running containers:
+NAMES                     IMAGE                                                            STATUS                    PORTS
+giggi-preprod-app-1       giggi/web:local                                                  Up 3 minutes (healthy)    0.0.0.0:3100->3000/tcp, [::]:3100->3000/tcp
+docker-catalog-exporter   python:3-alpine                                                  Up 13 minutes             
+giggi-preprod-redis-1     redis:7-alpine                                                   Up 20 minutes (healthy)   0.0.0.0:6381->6379/tcp, [::]:6381->6379/tcp
+giggi-preprod-db-1        postgres:16-alpine                                               Up 20 minutes (healthy)   0.0.0.0:5534->5432/tcp, [::]:5534->5432/tcp
+defora-encoder-1          jrottenberg/ffmpeg:4.4-alpine                                    Up 3 hours                
+defora-control-bridge-1   defora-control-bridge                                            Up 3 hours                
+defora-web-1              defora-web                                                       Up 3 hours (healthy)      1935/tcp, 0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+defora-mq-1               rabbitmq:3-management                                            Up 3 hours (healthy)      4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, [::]:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp, [::]:15672->15672/tcp
+defora-mediator-1         defora-mediator                                                  Up 3 hours (healthy)      0.0.0.0:8765-8766->8765-8766/tcp, [::]:8765-8766->8765-8766/tcp
+giggi-app-1               9be961637e58                                                     Up 5 hours (healthy)      0.0.0.0:3001->3000/tcp, [::]:3001->3000/tcp
+sparkki-web-1             sparkki-web                                                      Up 6 days (healthy)       0.0.0.0:1337->3000/tcp, [::]:1337->3000/tcp
+sparkki-db-1              postgres:16-alpine                                               Up 6 days (healthy)       0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+giggi-ci-db-1             postgres:16-alpine                                               Up 10 days (healthy)      0.0.0.0:5434->5432/tcp, [::]:5434->5432/tcp
+giggi-ci-redis-1          redis:7-alpine                                                   Up 10 days (healthy)      0.0.0.0:6380->6379/tcp, [::]:6380->6379/tcp
+giggi-db-1                postgres:16-alpine                                               Up 10 days (healthy)      0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp
+giggi-redis-1             redis:7-alpine                                                   Up 10 days (healthy)      0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp
+cadvisor                  gcr.io/cadvisor/cadvisor:latest                                  Up 10 days (healthy)      
+node-exporter             prom/node-exporter:latest                                        Up 10 days                
+tahti-website             tahti/website:latest                                             Up 12 days (healthy)      0.0.0.0:8090->80/tcp, [::]:8090->80/tcp
+searxng-core              searxng/searxng:latest                                           Up 2 weeks                8080/tcp, 192.168.2.100:9017->9017/tcp
+searxng-valkey            valkey/valkey:9-alpine                                           Up 2 weeks                6379/tcp
+netalertx                 ghcr.io/netalertx/netalertx:latest                               Up 3 weeks (healthy)      
+dockge-dockge-1           louislam/dockge:1                                                Up 3 weeks (healthy)      0.0.0.0:9999->5001/tcp, [::]:9999->5001/tcp
+komodo-core-1             ghcr.io/moghtech/komodo-core:latest                              Up 3 weeks                0.0.0.0:9120->9120/tcp, [::]:9120->9120/tcp
+komodo-mongo-1            mongo                                                            Up 3 weeks                27017/tcp
+komodo-periphery-1        ghcr.io/moghtech/komodo-periphery:latest                         Up 3 weeks                8120/tcp
+Nextcloud                 linuxserver/nextcloud:latest                                     Up 3 weeks                80/tcp, 0.0.0.0:5443->443/tcp, [::]:5443->443/tcp
+netbootxyz                ghcr.io/netbootxyz/netbootxyz                                    Up 3 weeks (healthy)      0.0.0.0:69->69/udp, [::]:69->69/udp, 0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp, 0.0.0.0:8088->80/tcp, [::]:8088->80/tcp
+immich_server             ghcr.io/immich-app/immich-server:release                         Up 3 weeks (healthy)      0.0.0.0:2283->2283/tcp, [::]:2283->2283/tcp
+photoprism-mariadb-1      mariadb:10.6                                                     Up 3 weeks                3306/tcp
+immich_postgres           ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0   Up 3 weeks (healthy)      5432/tcp
+immich_machine_learning   ghcr.io/immich-app/immich-machine-learning:release               Up 3 weeks (healthy)      
+immich_redis              valkey/valkey:8-bookworm                                         Up 3 weeks (healthy)      6379/tcp
+portainer                 portainer/portainer-ce:lts                                       Up 3 weeks                0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp
+beszel-agent              henrygd/beszel-agent                                             Up 3 weeks                
+
+All containers (including stopped):
+NAMES                     IMAGE                                                            STATUS                    CREATED AT
+giggi-preprod-app-1       giggi/web:local                                                  Up 3 minutes (healthy)    2026-06-01 23:14:26 +0300 EEST
+docker-catalog-exporter   python:3-alpine                                                  Up 13 minutes             2026-06-01 23:04:09 +0300 EEST
+giggi-preprod-redis-1     redis:7-alpine                                                   Up 20 minutes (healthy)   2026-06-01 22:56:49 +0300 EEST
+giggi-preprod-db-1        postgres:16-alpine                                               Up 20 minutes (healthy)   2026-06-01 22:56:49 +0300 EEST
+defora-encoder-1          jrottenberg/ffmpeg:4.4-alpine                                    Up 3 hours                2026-06-01 19:51:48 +0300 EEST
+defora-control-bridge-1   defora-control-bridge                                            Up 3 hours                2026-06-01 19:51:48 +0300 EEST
+defora-web-1              defora-web                                                       Up 3 hours (healthy)      2026-06-01 19:51:48 +0300 EEST
+defora-mq-1               rabbitmq:3-management                                            Up 3 hours (healthy)      2026-06-01 19:51:48 +0300 EEST
+defora-mediator-1         defora-mediator                                                  Up 3 hours (healthy)      2026-06-01 19:51:48 +0300 EEST
+giggi-app-1               9be961637e58                                                     Up 5 hours (healthy)      2026-06-01 18:43:06 +0300 EEST
+sparkki-web-1             sparkki-web                                                      Up 6 days (healthy)       2026-05-26 12:38:34 +0300 EEST
+sparkki-db-1              postgres:16-alpine                                               Up 6 days (healthy)       2026-05-26 12:38:31 +0300 EEST
+giggi-ci-db-1             postgres:16-alpine                                               Up 10 days (healthy)      2026-05-22 14:37:46 +0300 EEST
+giggi-ci-redis-1          redis:7-alpine                                                   Up 10 days (healthy)      2026-05-22 14:37:46 +0300 EEST
+giggi-db-1                postgres:16-alpine                                               Up 10 days (healthy)      2026-05-22 06:31:07 +0300 EEST
+giggi-redis-1             redis:7-alpine                                                   Up 10 days (healthy)      2026-05-22 06:31:07 +0300 EEST
+cadvisor                  gcr.io/cadvisor/cadvisor:latest                                  Up 10 days (healthy)      2026-05-22 02:34:59 +0300 EEST
+node-exporter             prom/node-exporter:latest                                        Up 10 days                2026-05-22 02:34:06 +0300 EEST
+tahti-website             tahti/website:latest                                             Up 12 days (healthy)      2026-05-20 23:28:09 +0300 EEST
+searxng-core              searxng/searxng:latest                                           Up 2 weeks                2026-05-15 05:44:04 +0300 EEST
+searxng-valkey            valkey/valkey:9-alpine                                           Up 2 weeks                2026-05-15 05:43:12 +0300 EEST
+netalertx                 ghcr.io/netalertx/netalertx:latest                               Up 3 weeks (healthy)      2026-03-27 19:47:19 +0200 EET
+dockge-dockge-1           louislam/dockge:1                                                Up 3 weeks (healthy)      2026-02-04 07:24:22 +0200 EET
+komodo-core-1             ghcr.io/moghtech/komodo-core:latest                              Up 3 weeks                2026-02-04 04:57:34 +0200 EET
+komodo-mongo-1            mongo                                                            Up 3 weeks                2026-02-04 04:57:07 +0200 EET
+komodo-periphery-1        ghcr.io/moghtech/komodo-periphery:latest                         Up 3 weeks                2026-02-04 04:57:07 +0200 EET
+Nextcloud                 linuxserver/nextcloud:latest                                     Up 3 weeks                2025-11-24 01:44:18 +0200 EET
+netbootxyz                ghcr.io/netbootxyz/netbootxyz                                    Up 3 weeks (healthy)      2025-10-30 12:59:26 +0200 EET
+immich_server             ghcr.io/immich-app/immich-server:release                         Up 3 weeks (healthy)      2025-10-30 12:28:19 +0200 EET
+photoprism-mariadb-1      mariadb:10.6                                                     Up 3 weeks                2025-10-30 12:17:24 +0200 EET
+immich_postgres           ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0   Up 3 weeks (healthy)      2025-10-27 07:13:26 +0200 EET
+immich_machine_learning   ghcr.io/immich-app/immich-machine-learning:release               Up 3 weeks (healthy)      2025-10-27 07:13:26 +0200 EET
+immich_redis              valkey/valkey:8-bookworm                                         Up 3 weeks (healthy)      2025-10-27 07:13:26 +0200 EET
+portainer                 portainer/portainer-ce:lts                                       Up 3 weeks                2025-10-27 07:11:32 +0200 EET
+beszel-agent              henrygd/beszel-agent                                             Up 3 weeks                2025-10-27 05:58:57 +0200 EET
+
+Docker resource usage:
+NAME                      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O
+giggi-preprod-app-1       0.25%     181.4MiB / 102GiB   0.17%     7.42MB / 428kB    4.1kB / 26.5MB
+docker-catalog-exporter   0.01%     14.33MiB / 102GiB   0.01%     0B / 0B           16.4kB / 1.96MB
+giggi-preprod-redis-1     3.96%     6.254MiB / 102GiB   0.01%     118kB / 51.3kB    610kB / 12.3kB
+giggi-preprod-db-1        0.01%     40.32MiB / 102GiB   0.04%     620kB / 498kB     10.4MB / 95MB
+defora-encoder-1          0.78%     1.586MiB / 102GiB   0.00%     81.9kB / 126B     8.19kB / 0B
+defora-control-bridge-1   1.21%     22.14MiB / 102GiB   0.02%     91.7MB / 76.9MB   0B / 32.8kB
+defora-web-1              0.24%     36.25MiB / 102GiB   0.03%     68.1MB / 83.2MB   0B / 5.06MB
+defora-mq-1               0.22%     156.8MiB / 102GiB   0.15%     18.4MB / 21.7MB   17MB / 655kB
+defora-mediator-1         0.00%     17.16MiB / 102GiB   0.02%     83.8kB / 1.53kB   0B / 4.1kB
+giggi-app-1               1.35%     171.2MiB / 102GiB   0.16%     12.2MB / 25.1MB   0B / 8.19kB
+sparkki-web-1             0.00%     210MiB / 102GiB     0.20%     12.3MB / 37.5MB   22.2MB / 147kB
+sparkki-db-1              3.65%     41.05MiB / 102GiB   0.04%     3.32MB / 3.36MB   733kB / 1.92MB
+giggi-ci-db-1             3.66%     29.69MiB / 102GiB   0.03%     24.4MB / 117MB    3.87MB / 30.5MB
+giggi-ci-redis-1          3.85%     4.801MiB / 102GiB   0.00%     4.22MB / 46.8kB   1.38MB / 1.18MB
+giggi-db-1                3.73%     86.35MiB / 102GiB   0.08%     282MB / 1.86GB    9.24MB / 244MB
+giggi-redis-1             3.64%     6.43MiB / 102GiB    0.01%     13.2MB / 4.74MB   2.83MB / 2.28MB
+cadvisor                  18.72%    121.4MiB / 102GiB   0.12%     0B / 0B           6.75MB / 0B
+node-exporter             0.00%     21.99MiB / 102GiB   0.02%     0B / 0B           6.88MB / 0B
+tahti-website             0.00%     22.77MiB / 102GiB   0.02%     273MB / 26.1GB    12.3kB / 8.19kB
+searxng-core              0.00%     209.8MiB / 102GiB   0.20%     15.4MB / 20MB     274kB / 2.59MB
+searxng-valkey            0.28%     3.988MiB / 102GiB   0.00%     6.79MB / 126B     0B / 0B
+netalertx                 0.03%     273.7MiB / 102GiB   0.26%     0B / 0B           30.2MB / 49.3GB
+dockge-dockge-1           0.31%     211.9MiB / 102GiB   0.20%     8.34MB / 1.79MB   84.2MB / 266kB
+komodo-core-1             0.13%     13.8MiB / 102GiB    0.01%     6.86GB / 770MB    15.9MB / 130MB
+komodo-mongo-1            1.02%     177.4MiB / 102GiB   0.17%     633MB / 1.69GB    5.08MB / 29.7GB
+komodo-periphery-1        0.51%     22.43MiB / 102GiB   0.02%     153MB / 5.17GB    4.96MB / 0B
+Nextcloud                 0.00%     7.912GiB / 102GiB   7.75%     273MB / 109MB     797MB / 213GB
+netbootxyz                0.01%     60.12MiB / 102GiB   0.06%     8.55MB / 7.57MB   18.3MB / 495MB
+immich_server             0.36%     1.603GiB / 102GiB   1.57%     5.09GB / 6.24GB   305MB / 1.78GB
+photoprism-mariadb-1      0.01%     91.57MiB / 102GiB   0.09%     8.08MB / 126B     77.6MB / 25.6kB
+immich_postgres           0.00%     259.4MiB / 102GiB   0.25%     49.7MB / 2.91GB   617MB / 6.03GB
+immich_machine_learning   0.14%     244.1MiB / 102GiB   0.23%     187MB / 59.9MB    617MB / 3.56MB
+immich_redis              0.42%     13.47MiB / 102GiB   0.01%     5.58GB / 1.3GB    1.15MB / 9.35GB
+portainer                 0.00%     19.82MiB / 102GiB   0.02%     8.22MB / 5.04kB   831kB / 1.06GB
+beszel-agent              0.00%     8.855MiB / 102GiB   0.01%     0B / 0B           0B / 296MB
+
+Docker images:
+REPOSITORY                                   TAG            SIZE      CREATED
+giggi/web                                    local          454MB     3 minutes ago
+<none>                                       <none>         454MB     3 minutes ago
+<none>                                       <none>         454MB     11 minutes ago
+<none>                                       <none>         454MB     20 minutes ago
+defora-web                                   latest         544MB     3 hours ago
+defora-control-bridge                        latest         138MB     3 hours ago
+defora-mediator                              latest         136MB     3 hours ago
+<none>                                       <none>         465MB     5 hours ago
+git.dudeisland.eu/janiluuk/giggi             latest         453MB     23 hours ago
+git.dudeisland.eu/janiluuk/giggi             sha-0a07fcf    453MB     23 hours ago
+<none>                                       <none>         544MB     26 hours ago
+<none>                                       <none>         138MB     3 days ago
+<none>                                       <none>         136MB     6 days ago
+sparkki-web                                  latest         629MB     6 days ago
+tahti/website                                latest         95.3MB    12 days ago
+postgres                                     16-alpine      276MB     2 weeks ago
+searxng/searxng                              latest         257MB     2 weeks ago
+python                                       3-alpine       47.7MB    2 weeks ago
+redis                                        7-alpine       39.1MB    3 weeks ago
+valkey/valkey                                9-alpine       43.5MB    3 weeks ago
+prom/node-exporter                           latest         25.8MB    7 weeks ago
+ghcr.io/netalertx/netalertx                  latest         310MB     2 months ago
+mongo                                        latest         923MB     4 months ago
+gcr.io/cadvisor/cadvisor                     latest         75.1MB    5 months ago
+rabbitmq                                     3-management   252MB     6 months ago
+linuxserver/nextcloud                        latest         1.13GB    6 months ago
+henrygd/beszel-agent                         latest         8.46MB    7 months ago
+ghcr.io/netbootxyz/netbootxyz                latest         165MB     7 months ago
+ghcr.io/immich-app/immich-server             release        1.75GB    7 months ago
+ghcr.io/immich-app/immich-machine-learning   release        947MB     7 months ago
+ghcr.io/moghtech/komodo-periphery            latest         434MB     8 months ago
+ghcr.io/moghtech/komodo-core                 latest         639MB     8 months ago
+portainer/portainer-ce                       lts            186MB     8 months ago
+valkey/valkey                                <none>         113MB     9 months ago
+mariadb                                      10.6           305MB     9 months ago
+ghcr.io/immich-app/postgres                  <none>         754MB     10 months ago
+louislam/dockge                              1              755MB     14 months ago
+jrottenberg/ffmpeg                           4.4-alpine     167MB     20 months ago
+--- OLLAMA ---
+Ollama not detected
+--- LOCALAI ---
+LocalAI detected on port 8080
+LocalAI detected on port 8081
+--- NETWORK ---
+eno1             UP             192.168.2.100/24 fe80::ec4:7aff:fe6a:542/64 
+eno2             DOWN           
+docker0          UP             172.17.0.1/16 fe80::89:baff:fe92:2225/64 
+br-67f166cab055  UP             172.25.0.1/16 fe80::f0d3:63ff:fe20:3bd6/64 
+br-11ec2ba344c9  UP             172.24.0.1/16 fe80::46b:a1ff:fe62:317b/64 
+br-47686d219a78  UP             172.20.0.1/16 fe80::d059:b0ff:fe04:f0f6/64 
+br-014cfde12260  UP             172.21.0.1/16 fe80::3e:20ff:fee9:b0a1/64 
+veth7dbdde1@if2  UP             fe80::54d8:29ff:fe5d:a56f/64 
+veth53db320@if2  UP             fe80::c001:7eff:fe87:ff8f/64 
+vethd8d0838@if2  UP             fe80::803d:16ff:fe94:37f6/64 
+veth0d15efc@if2  UP             fe80::44f:48ff:fe7b:b183/64 
+veth635be5d@if2  UP             fe80::c470:80ff:fe8b:63e1/64 
+vethc55e3da@if2  UP             fe80::549f:6cff:fe2a:9337/64 
+veth675b14b@if2  UP             fe80::8800:5eff:fe13:ab1e/64 
+veth3f698bd@if2  UP             fe80::208f:dcff:fea4:207c/64 
+vethb47eaee@if2  UP             fe80::782a:a8ff:fe9c:c332/64 
+veth5e0d695@if2  UP             fe80::7ca6:c5ff:febe:1a0/64 
+veth73ea7b6@if2  UP             fe80::f438:7bff:fed6:caaf/64 
+veth6a4b3bf@if2  UP             fe80::6c02:77ff:fed7:854a/64 
+br-857cf55a3a0c  UP             172.18.0.1/16 fe80::896:36ff:feda:6025/64 
+br-aa4b1e4e177a  UP             172.27.0.1/16 fe80::bc93:2bff:fe60:c5d1/64 
+veth21d0f39@if2  UP             fe80::74e2:7cff:fee4:a10a/64 
+veth50c631e@if2  UP             fe80::e8d1:37ff:feff:40d9/64 
+br-755f09710e8f  UP             172.29.0.1/16 fe80::ec0b:b4ff:fe99:ea57/64 
+vethc5cc2bc@if2  UP             fe80::d860:18ff:fee4:67a/64 
+br-9295c76cf639  UP             192.168.16.1/20 fe80::9871:8dff:fe86:a450/64 
+vethcc2387f@if2  UP             fe80::d820:30ff:fe91:c553/64 
+veth9dbc8e5@if2  UP             fe80::2421:25ff:fe9e:3aab/64 
+vethd225d6c@if2  UP             fe80::8c90:c6ff:fe17:a451/64 
+veth502a968@if2  UP             fe80::dc73:ff:fec6:1b10/64 
+br-0601259fafa0  UP             172.26.0.1/16 fe80::2c57:99ff:fe1a:b5a3/64 
+vethb43fc06@if2  UP             fe80::1078:adff:fe97:6d00/64 
+vethed9ad9c@if2  UP             fe80::8080:d7ff:fe8b:2d0f/64 
+veth261cdc9@if2  UP             fe80::a0ca:8dff:fea9:b91/64 
+br-806390b01b26  UP             172.19.0.1/16 fe80::78a0:c1ff:fe54:df6c/64 
+veth6ddebb6@if2  UP             fe80::906d:2aff:fe8d:dcac/64 
+veth39dcc5a@if2  UP             fe80::443f:dff:fe5a:235e/64 
+vethfa1bdd8@if2  UP             fe80::e0be:88ff:fe9b:7e3b/64 
+veth4d2800e@if2  UP             fe80::f040:7cff:feb4:51a7/64 
+vethc80110c@if2  UP             fe80::e4e4:b2ff:fefa:a632/64 
+br-11d7c85f6150  UP             172.22.0.1/16 fe80::4011:87ff:fea3:73b8/64 
+veth294fcd9@if2  UP             fe80::7c4d:b5ff:fef4:cf91/64 
+veth81d391e@if2  UP             fe80::f3:69ff:fecc:507f/64 
+vethcec3ef8@if2  UP             fe80::c4e0:a2ff:fe44:6beb/64 
+veth4928ec0@if3384 UP             fe80::88e4:33ff:fe55:9506/64 
+
+LISTEN 0      4096         0.0.0.0:8080       0.0.0.0:*    users:(("docker-proxy",pid=3026339,fd=7))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+LISTEN 0      4096         0.0.0.0:3000       0.0.0.0:*    users:(("docker-proxy",pid=1707854,fd=7))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+LISTEN 0      4096            [::]:8080          [::]:*    users:(("docker-proxy",pid=3026347,fd=7))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+LISTEN 0      4096               *:8081             *:*    users:(("cadvisor",pid=988574,fd=12))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+LISTEN 0      4096            [::]:3000          [::]:*    users:(("docker-proxy",pid=1707861,fd=7))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+--- LOAD & UPTIME ---
+ 23:17:37 up 72 days, 20:21,  5 users,  load average: 5.39, 4.16, 2.60
+
+5.39 4.16 2.60 5/2535 3819629
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service            loaded active running Docker Application Container Engine
+=== END NODE: vimage ===
+
+------------------------------------------------------------
+ Probing: vimage2
+------------------------------------------------------------
+=== NODE: vimage2 ===
+--- OS ---
+NAME="Fedora Linux"
+VERSION="43 (Server Edition)"
+--- CPU ---
+Architecture:                            x86_64
+Model name:                              Intel(R) Xeon(R) CPU E5-1620 v3 @ 3.50GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      4
+Socket(s):                               1
+CPU(s) scaling MHz:                      83%
+CPU max MHz:                             3500.0000
+CPU min MHz:                             1200.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi       9.6Gi       1.2Gi       455Mi        53Gi        53Gi
+Swap:           31Gi       396Ki        31Gi
+
+MemTotal:       65700348 kB
+MemFree:         1272276 kB
+MemAvailable:   55672056 kB
+SwapTotal:      33554428 kB
+SwapFree:       33554032 kB
+--- DISK ---
+Filesystem                                 Size  Used Avail Use% Mounted on
+/dev/mapper/fedora_localhost--live01-root  110G  100G   11G  91% /
+/dev/sda2                                  960M  830M  131M  87% /boot
+/dev/nvme0n1p1                             916G  489G  382G  57% /opt
+/dev/nvme1n1p1                             1.8T  1.1T  650G  63% /data
+vimage:/share/outputs                      880G  123G  712G  15% /share/outputs
+--- GPU (nvidia-smi) ---
+0, NVIDIA GeForce RTX 5060 Ti, 580.159.03, 16311, 14429, 1420, 0, 0, 33, 5.96, 180.00, Default, 1, 8
+1, NVIDIA GeForce RTX 3060, 580.159.03, 12288, 7043, 4867, 0, 3, 54, 11.25, 170.00, Default, 1, 4
+
+--- GPU PROCESSES ---
+1049093, /backends/cuda12-llama-cpp/lib/ld.so, GPU-26c3a5f8-49e9-0785-a9f5-ac56733e5806, 7458 MiB
+1049934, /backends/cuda12-llama-cpp/lib/ld.so, GPU-26c3a5f8-49e9-0785-a9f5-ac56733e5806, 6956 MiB
+1050768, venv/bin/python, GPU-efabb3a5-b114-2e06-c0de-9722fdb8a576, 7026 MiB
+
+--- CUDA VERSION ---
+| NVIDIA-SMI 580.159.03             Driver Version: 580.159.03     CUDA Version: 13.0     |
+--- DOCKER ---
+Docker version: Docker version 29.5.2, build 79eb04c
+
+Running containers:
+NAMES              IMAGE                                                  STATUS                 PORTS
+localai-api-1      quay.io/go-skynet/local-ai:master-gpu-nvidia-cuda-12   Up 2 hours (healthy)   0.0.0.0:8181->8080/tcp, [::]:8181->8080/tcp
+forge              nykk3/stable-diffusion-webui-forge:latest              Up 2 hours             
+node-exporter      prom/node-exporter:latest                              Up 2 days              
+cadvisor           gcr.io/cadvisor/cadvisor:latest                        Up 2 days (healthy)    
+open-webui         ghcr.io/open-webui/open-webui:main                     Up 2 days (healthy)    0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp
+portainer          portainer/portainer-ce:sts                             Up 2 days              0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp
+jani-periphery-1   ghcr.io/moghtech/komodo-periphery:latest               Up 2 days              8120/tcp
+beszel-agent       henrygd/beszel-agent                                   Up 2 days              
+
+All containers (including stopped):
+NAMES              IMAGE                                                  STATUS                     CREATED AT
+ollama             ollama/ollama:latest                                   Created                    2026-06-01 18:30:52 +0300 EEST
+localai-api-1      quay.io/go-skynet/local-ai:master-gpu-nvidia-cuda-12   Up 2 hours (healthy)       2026-06-01 18:23:52 +0300 EEST
+swarmui            swarmui                                                Exited (137) 5 hours ago   2026-05-30 04:07:30 +0300 EEST
+forge              nykk3/stable-diffusion-webui-forge:latest              Up 2 hours                 2026-05-29 06:43:14 +0300 EEST
+node-exporter      prom/node-exporter:latest                              Up 2 days                  2026-05-22 02:15:52 +0300 EEST
+cadvisor           gcr.io/cadvisor/cadvisor:latest                        Up 2 days (healthy)        2026-05-22 02:13:20 +0300 EEST
+open-webui         ghcr.io/open-webui/open-webui:main                     Up 2 days (healthy)        2026-05-15 05:21:10 +0300 EEST
+portainer          portainer/portainer-ce:sts                             Up 2 days                  2026-03-20 08:57:37 +0200 EET
+jani-periphery-1   ghcr.io/moghtech/komodo-periphery:latest               Up 2 days                  2026-02-04 05:12:43 +0200 EET
+beszel-agent       henrygd/beszel-agent                                   Up 2 days                  2026-02-04 05:12:43 +0200 EET
+
+Docker resource usage:
+NAME               CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O
+localai-api-1      0.61%     10.11GiB / 62.66GiB   16.14%    5.46MB / 735kB   8.46GB / 7.18MB
+forge              0.52%     8.863GiB / 62.66GiB   14.14%    0B / 0B          7.75GB / 5.91MB
+node-exporter      0.00%     18.41MiB / 62.66GiB   0.03%     0B / 0B          16MB / 20.5kB
+cadvisor           4.72%     113.4MiB / 62.66GiB   0.18%     0B / 0B          37.2MB / 0B
+open-webui         0.08%     694.8MiB / 62.66GiB   1.08%     514kB / 2.25MB   640MB / 75.7MB
+portainer          0.00%     19.26MiB / 62.66GiB   0.03%     173kB / 126B     66.3MB / 87.2MB
+jani-periphery-1   0.00%     9.598MiB / 62.66GiB   0.01%     173kB / 126B     40.5MB / 0B
+beszel-agent       0.00%     8.969MiB / 62.66GiB   0.01%     0B / 0B          8.8MB / 0B
+
+Docker images:
+REPOSITORY                            TAG                                   SIZE      CREATED
+swarmui                               latest                                2.97GB    2 days ago
+quay.io/go-skynet/local-ai            master-gpu-nvidia-cuda-12             6.31GB    6 days ago
+quay.io/go-skynet/local-ai            master                                817MB     9 days ago
+quay.io/go-skynet/local-ai-backends   master-gpu-nvidia-cuda-12-llama-cpp   3.31GB    10 days ago
+ghcr.io/open-webui/open-webui         main                                  4.76GB    2 weeks ago
+ollama/ollama                         latest                                6.55GB    2 weeks ago
+ghcr.io/open-webui/open-webui         latest                                4.76GB    3 weeks ago
+ubuntu                                22.04                                 78.1MB    3 weeks ago
+ubuntu                                latest                                100MB     5 weeks ago
+alpine                                latest                                8.45MB    6 weeks ago
+prom/node-exporter                    latest                                25.8MB    7 weeks ago
+quay.io/go-skynet/local-ai            master-aio-gpu-nvidia-cuda-12         6.34GB    2 months ago
+portainer/portainer-ce                sts                                   183MB     3 months ago
+henrygd/beszel-agent                  latest                                8.89MB    4 months ago
+gcr.io/cadvisor/cadvisor              latest                                75.1MB    5 months ago
+ghcr.io/moghtech/komodo-periphery     latest                                434MB     8 months ago
+quay.io/go-skynet/local-ai            master-cublas-cuda12                  12.5GB    11 months ago
+quay.io/go-skynet/local-ai            master-cublas-cuda12-ffmpeg           45.8GB    13 months ago
+nykk3/stable-diffusion-webui-forge    latest                                8.35GB    21 months ago
+--- OLLAMA ---
+Ollama version: ollama version is 0.23.1
+Loaded models:
+NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL 
+Available models:
+NAME              ID              SIZE      MODIFIED    
+qwen3.6:latest    07d35212591f    23 GB     2 weeks ago    
+qwen3.5:9b        6488c96fa5fa    6.6 GB    3 weeks ago    
+qwen2.5:14b       7cdf5a0187d5    9.0 GB    3 weeks ago    
+--- LOCALAI ---
+LocalAI detected on port 8080
+--- NETWORK ---
+enp0s25          UP             192.168.2.101/24 fe80::921b:eff:fe58:d7dd/64 
+br-d10be1275fcd  UP             172.21.0.1/16 fe80::f0b1:5fff:fe72:1812/64 
+docker0          UP             172.17.0.1/16 fe80::fc9d:bbff:fefc:7b56/64 
+br-5c378ba6a5cb  UP             172.20.0.1/16 fe80::943b:30ff:fe89:3fd/64 
+br-6a55604dd892  UP             172.18.0.1/16 fe80::4470:38ff:fe6f:df0f/64 
+vethb0e7686@if2  UP             fe80::14ac:50ff:fec3:83d6/64 
+veth72e3aa0@if2  UP             fe80::f80d:1ff:fe63:85b2/64 
+vethdae48e3@if2  UP             fe80::4802:95ff:fe18:2a5e/64 
+br-0c6817fec297  DOWN           172.19.0.1/16 fe80::88b6:b0ff:fe2b:1d61/64 
+veth4de8a9d@if2  UP             fe80::806f:57ff:fe13:320/64 
+
+LISTEN 0      4096         0.0.0.0:3000       0.0.0.0:*                                                
+LISTEN 0      2048         0.0.0.0:7860       0.0.0.0:*    users:(("pt_main_thread",pid=1050768,fd=70))
+LISTEN 0      4096            [::]:3000          [::]:*                                                
+LISTEN 0      4096               *:8080             *:*                                                
+LISTEN 0      4096               *:11434            *:*                                                
+--- LOAD & UPTIME ---
+ 23:17:39 up 2 days, 15:39,  2 users,  load average: 0.04, 0.08, 0.12
+
+0.04 0.08 0.12 1/717 1083102
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service                loaded active running Docker Application Container Engine
+  nvidia-metrics.service        loaded active running NVIDIA GPU Prometheus textfile exporter
+  ollama.service                loaded active running Ollama Service
+=== END NODE: vimage2 ===
+
+------------------------------------------------------------
+ Probing: vimage3
+------------------------------------------------------------
+=== NODE: vimage3 ===
+--- OS ---
+NAME="Fedora Linux"
+VERSION="43 (Server Edition)"
+--- CPU ---
+Architecture:                            x86_64
+Model name:                              Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      4
+Socket(s):                               1
+CPU(s) scaling MHz:                      90%
+CPU max MHz:                             4500.0000
+CPU min MHz:                             800.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi       4.6Gi       6.8Gi        13Mi        52Gi        58Gi
+Swap:          8.0Gi        32Ki       8.0Gi
+
+MemTotal:       65757400 kB
+MemFree:         7149316 kB
+MemAvailable:   60979836 kB
+SwapTotal:       8388604 kB
+SwapFree:        8388572 kB
+--- DISK ---
+Filesystem                       Size  Used Avail Use% Mounted on
+/dev/mapper/fedora-root          111G   39G   72G  36% /
+efivarfs                         128K   79K   45K  64% /sys/firmware/efi/efivars
+/dev/sda3                        960M  726M  235M  76% /boot
+/dev/mapper/fedora_vimage2-root  464G  319G  146G  69% /opt
+/dev/sda1                        599M  7.5M  592M   2% /boot/efi
+/dev/nvme1n1p1                   916G  842G   29G  97% /data
+--- GPU (nvidia-smi) ---
+0, NVIDIA GeForce RTX 4060 Ti, 580.105.08, 16380, 1308, 14639, 0, 1, 42, 12.03, 165.00, Default, 1, 8
+1, Tesla P4, 580.105.08, 7680, 0, 7600, 0, 0, 35, 7.07, 75.00, Default, 1, 8
+
+--- GPU PROCESSES ---
+1853583, [No data], GPU-d25e34d9-0d67-6336-5138-e12dbf8138fa, 1298 MiB
+
+--- CUDA VERSION ---
+| NVIDIA-SMI 580.105.08             Driver Version: 580.105.08     CUDA Version: 13.0     |
+--- DOCKER ---
+Docker version: Docker version 29.1.2, build 890dcca
+
+Running containers:
+NAMES         IMAGE                                       STATUS                  PORTS
+ollama        ollama/ollama:latest                        Up 19 hours             0.0.0.0:11434->11434/tcp, [::]:11434->11434/tcp
+forge         nykk3/stable-diffusion-webui-forge:latest   Up 5 hours              0.0.0.0:7860->7860/tcp, [::]:7860->7860/tcp
+filebrowser   filebrowser/filebrowser                     Up 37 hours (healthy)   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+portainer     portainer/portainer-ce:lts                  Up 37 hours             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp
+
+All containers (including stopped):
+NAMES         IMAGE                                       STATUS                  CREATED AT
+ollama        ollama/ollama:latest                        Up 19 hours             2026-06-01 03:43:53 +0300 EEST
+forge         nykk3/stable-diffusion-webui-forge:latest   Up 5 hours              2026-05-30 20:55:49 +0300 EEST
+filebrowser   filebrowser/filebrowser                     Up 37 hours (healthy)   2026-05-25 23:25:29 +0300 EEST
+portainer     portainer/portainer-ce:lts                  Up 37 hours             2025-08-05 06:11:51 +0300 EEST
+
+Docker resource usage:
+NAME          CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O
+ollama        0.00%     55.52MiB / 62.71GiB   0.09%     18GB / 363MB      0B / 17.4GB
+forge         99.70%    2.11GiB / 58GiB       3.64%     9.37MB / 5.43MB   552MB / 209MB
+filebrowser   0.00%     22.82MiB / 62.71GiB   0.04%     8.05MB / 578MB    464MB / 197kB
+portainer     0.00%     11.29MiB / 62.71GiB   0.02%     1.47MB / 126B     101MB / 508kB
+
+Docker images:
+REPOSITORY                           TAG            SIZE      CREATED
+ollama/ollama                        latest         6.55GB    2 weeks ago
+ubuntu                               22.04          78.1MB    3 weeks ago
+curlimages/curl                      latest         23.8MB    4 weeks ago
+ubuntu                               latest         100MB     5 weeks ago
+prom/node-exporter                   latest         25.8MB    7 weeks ago
+filebrowser/filebrowser              latest         37.3MB    2 months ago
+gcr.io/cadvisor/cadvisor             latest         75.1MB    5 months ago
+rabbitmq                             3-management   252MB     6 months ago
+henrygd/beszel-agent                 latest         8.53MB    10 months ago
+portainer/portainer-ce               lts            268MB     11 months ago
+jrottenberg/ffmpeg                   4.4-alpine     167MB     20 months ago
+nykk3/stable-diffusion-webui-forge   latest         8.35GB    21 months ago
+--- OLLAMA ---
+Ollama running via Docker/service (no CLI)
+  Qwen3.6:27B | 17420432739 bytes | modified: 2026-06-01T00:57:37.782400799Z
+  gemma4:latest | 9608350718 bytes | modified: 2026-06-01T00:43:03.989442182Z
+  qwen3:latest | 5225388164 bytes | modified: 2026-06-01T00:37:01.995459326Z
+  dolphin-mixtral:8x7b | 26443614406 bytes | modified: 2026-01-03T08:27:32.112256701Z
+  dolphin-llama3:8b | 4661235994 bytes | modified: 2026-01-03T08:13:24.533353367Z
+  qwen3:14b | 9276198565 bytes | modified: 2025-11-05T23:36:35.800849785Z
+  gpt-oss:20b | 13793441244 bytes | modified: 2025-11-04T06:11:55.745687014Z
+  qwen2.5-coder:14b | 8988124298 bytes | modified: 2025-11-04T06:03:23.75799101Z
+--- LOCALAI ---
+LocalAI detected on port 8080
+--- NETWORK ---
+enp0s31f6        UP             192.168.2.102/24 fe80::25d2:6e90:1273:3522/64 
+wlp6s0           DOWN           
+br-9b97ded42cfd  UP             172.18.0.1/16 fe80::6c3f:96ff:fe26:1498/64 
+docker0          UP             172.17.0.1/16 fe80::6459:f8ff:fe29:415b/64 
+veth39f20ce@if2  UP             169.254.248.84/16 fe80::c694:fb9a:df9b:afdc/64 fe80::d4f4:e0ff:fe2b:5471/64 
+veth01d9905@if2  UP             169.254.223.40/16 fe80::ad4d:9019:94ca:e1b/64 fe80::2022:81ff:fe39:6fe5/64 
+br-3e329d711de1  UP             172.19.0.1/16 fe80::9cd0:d2ff:fea3:6fd9/64 
+veth2e767ee@if2  UP             169.254.223.113/16 fe80::809:2018:6f33:1f6a/64 
+veth52db51c@if2  UP             169.254.95.172/16 fe80::3743:2e9c:f5f:2f06/64 
+
+LISTEN 0      4096         0.0.0.0:11434      0.0.0.0:*          
+LISTEN 0      4096         0.0.0.0:7860       0.0.0.0:*          
+LISTEN 0      4096         0.0.0.0:8080       0.0.0.0:*          
+LISTEN 0      4096            [::]:11434         [::]:*          
+LISTEN 0      4096            [::]:7860          [::]:*          
+LISTEN 0      4096            [::]:8080          [::]:*          
+--- LOAD & UPTIME ---
+ 23:13:20 up 1 day, 12:31,  4 users,  load average: 1.07, 1.05, 1.01
+
+1.07 1.05 1.01 3/510 2070580
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service            loaded active running Docker Application Container Engine
+  nvidia-metrics.service    loaded active running NVIDIA GPU Prometheus textfile exporter
+=== END NODE: vimage3 ===
+
+------------------------------------------------------------
+ Probing: vimage4
+------------------------------------------------------------
+=== NODE: vimage4 ===
+--- OS ---
+NAME="Fedora Linux"
+VERSION="43 (Server Edition)"
+--- CPU ---
+Architecture:                            x86_64
+Model name:                              Intel(R) Xeon(R) CPU E3-1231 v3 @ 3.40GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      4
+Socket(s):                               1
+CPU(s) scaling MHz:                      85%
+CPU max MHz:                             3800.0000
+CPU min MHz:                             800.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:            29Gi       2.7Gi        18Gi        10Mi       8.4Gi        26Gi
+Swap:           31Gi          0B        31Gi
+
+MemTotal:       30599852 kB
+MemFree:        19458348 kB
+MemAvailable:   27760344 kB
+SwapTotal:      33554428 kB
+SwapFree:       33554428 kB
+--- DISK ---
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/fedora-root  110G   71G   40G  65% /
+efivarfs                 128K  123K   353 100% /sys/firmware/efi/efivars
+/dev/nvme0n1p1           916G  723G  148G  84% /opt
+/dev/sdc2                960M  725M  236M  76% /boot
+/dev/sdc1                599M  7.6M  592M   2% /boot/efi
+/dev/sdb1                1.8T  1.3T  451G  75% /share/disk2
+/dev/sda1                1.4T  594G  804G  43% /share/disk1
+vimage2:/data            1.8T  1.1T  650G  63% /data
+--- GPU (nvidia-smi) ---
+0, Tesla P100-PCIE-16GB, 580.159.03, 16384, 279, 15992, 0, 0, 42, 33.87, 250.00, Default, 3, 8
+1, NVIDIA GeForce GTX 1050 Ti, 580.159.03, 4096, 3, 4028, 0, 2, 33, [N/A], 75.00, Default, 1, 8
+
+--- GPU PROCESSES ---
+2302, venv/bin/python, GPU-234843f4-074a-90e8-2b38-4473e998d178, 276 MiB
+
+--- CUDA VERSION ---
+| NVIDIA-SMI 580.159.03             Driver Version: 580.159.03     CUDA Version: 13.0     |
+--- DOCKER ---
+Docker version: Docker version 29.5.0, build 98f1464
+
+Running containers:
+NAMES             IMAGE                                       STATUS                  PORTS
+defora-stream-1   defora-stream                               Up 29 hours (healthy)   0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:1935->1935/tcp, [::]:1935->1935/tcp
+ollama            ollama/ollama:latest                        Up 29 hours             0.0.0.0:11434->11434/tcp, [::]:11434->11434/tcp
+cadvisor          gcr.io/cadvisor/cadvisor:latest             Up 29 hours (healthy)   
+node-exporter     prom/node-exporter:latest                   Up 29 hours             
+filebrowser       filebrowser/filebrowser                     Up 29 hours (healthy)   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+forge             nykk3/stable-diffusion-webui-forge:latest   Up 29 hours             0.0.0.0:7860->7860/tcp, [::]:7860->7860/tcp
+beszel-agent      henrygd/beszel-agent                        Up 29 hours             
+portainer         portainer/portainer-ce:lts                  Up 29 hours             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp
+
+All containers (including stopped):
+NAMES             IMAGE                                                  STATUS                    CREATED AT
+localai-api-1     quay.io/go-skynet/local-ai:master-gpu-nvidia-cuda-12   Exited (0) 37 hours ago   2026-05-28 19:40:57 +0300 EEST
+defora-stream-1   defora-stream                                          Up 29 hours (healthy)     2026-05-27 21:45:29 +0300 EEST
+ollama            ollama/ollama:latest                                   Up 29 hours               2026-05-23 02:46:00 +0300 EEST
+cadvisor          gcr.io/cadvisor/cadvisor:latest                        Up 29 hours (healthy)     2026-05-22 02:22:12 +0300 EEST
+node-exporter     prom/node-exporter:latest                              Up 29 hours               2026-05-22 02:15:53 +0300 EEST
+kohya-ss-gui      ghcr.io/bmaltais/kohya-ss-gui:latest                   Exited (0) 37 hours ago   2026-05-19 03:11:24 +0300 EEST
+tensorboard       tensorflow/tensorflow:latest-gpu                       Created                   2026-05-19 03:11:24 +0300 EEST
+filebrowser       filebrowser/filebrowser                                Up 29 hours (healthy)     2026-01-08 00:01:22 +0200 EET
+forge             nykk3/stable-diffusion-webui-forge:latest              Up 29 hours               2026-01-08 00:01:22 +0200 EET
+beszel-agent      henrygd/beszel-agent                                   Up 29 hours               2025-07-28 10:11:19 +0300 EEST
+portainer         portainer/portainer-ce:lts                             Up 29 hours               2025-03-16 03:42:49 +0200 EET
+
+Docker resource usage:
+NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O
+defora-stream-1   0.00%     8.465MiB / 29.18GiB   0.03%     29.5MB / 27.2MB   5.78MB / 43.8MB
+ollama            0.00%     340.9MiB / 29.18GiB   1.14%     4.82GB / 83.2MB   231MB / 4.68GB
+cadvisor          4.91%     126.1MiB / 29.18GiB   0.42%     0B / 0B           46.1MB / 0B
+node-exporter     0.00%     24.9MiB / 29.18GiB    0.08%     0B / 0B           15.3MB / 0B
+filebrowser       0.00%     28.3MiB / 29.18GiB    0.09%     2.02MB / 22.1MB   17.9MB / 16.4kB
+forge             1.00%     1.481GiB / 28GiB      5.29%     501kB / 28.7kB    825MB / 180MB
+beszel-agent      0.00%     14.23MiB / 29.18GiB   0.05%     0B / 0B           8.24MB / 0B
+portainer         0.00%     60.44MiB / 29.18GiB   0.20%     84kB / 126B       50.4MB / 77.7MB
+
+Docker images:
+REPOSITORY                           TAG                                SIZE      CREATED
+quay.io/go-skynet/local-ai           master-gpu-nvidia-cuda-12          6.31GB    4 days ago
+defora-stream                        latest                             138MB     5 days ago
+ghcr.io/bmaltais/kohya-ss-gui        latest                             11.6GB    13 days ago
+ollama/ollama                        latest                             6.55GB    2 weeks ago
+ubuntu                               22.04                              78.1MB    3 weeks ago
+ubuntu                               latest                             100MB     5 weeks ago
+prom/node-exporter                   latest                             25.8MB    7 weeks ago
+tensorflow/tensorflow                latest-gpu                         7.56GB    2 months ago
+gcr.io/cadvisor/cadvisor             latest                             75.1MB    5 months ago
+swarmui                              latest                             2.25GB    5 months ago
+filebrowser/filebrowser              latest                             24.7MB    5 months ago
+henrygd/beszel-agent                 latest                             8.53MB    10 months ago
+quay.io/go-skynet/local-ai           master-cublas-cuda12-ffmpeg-core   10.9GB    13 months ago
+portainer/portainer-ce               lts                                268MB     15 months ago
+nykk3/stable-diffusion-webui-forge   latest                             8.35GB    21 months ago
+--- OLLAMA ---
+Ollama version: ollama version is 0.24.0
+Loaded models:
+NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL 
+Available models:
+NAME            ID              SIZE      MODIFIED     
+qwen2.5:7b      845dbda0ea48    4.7 GB    5 hours ago     
+qwen3-vl:30b    eda0be100877    19 GB     9 days ago      
+qwen3-vl:8b     901cae732162    6.1 GB    6 months ago    
+gemma3:4b       a2af6cc3eb7f    3.3 GB    6 months ago    
+--- LOCALAI ---
+LocalAI detected on port 8080
+LocalAI detected on port 8081
+--- NETWORK ---
+eno1             UP             192.168.2.103/24 fe80::4216:7eff:fea9:4a6f/64 
+br-08ac6cacd8a8  UP             172.21.0.1/16 fe80::ac4a:7cff:fe1f:5a32/64 
+br-34a514e1c9ab  DOWN           172.20.0.1/16 
+br-6fe2d5823ede  UP             172.22.0.1/16 fe80::50c9:d2ff:fe58:a0b9/64 
+br-c4257cd1a17f  DOWN           172.18.0.1/16 
+br-c4b10080d01f  UP             172.19.0.1/16 fe80::84d5:c3ff:fe1a:a1c3/64 
+docker0          UP             172.17.0.1/16 fe80::5045:b2ff:fed5:c654/64 
+veth029d693@if2  UP             fe80::a460:3fff:fe78:d355/64 
+vethc51cf84@if2  UP             fe80::fcbc:6ff:fe92:1142/64 
+veth19fe940@if2  UP             fe80::4fe:1dff:fe15:ef98/64 
+veth496332d@if2  UP             fe80::38e2:a7ff:fe8b:ec8/64 
+veth5a52aec@if2  UP             fe80::6886:46ff:fe84:786a/64 
+
+LISTEN 0      4096         0.0.0.0:11434      0.0.0.0:*          
+LISTEN 0      4096         0.0.0.0:8080       0.0.0.0:*          
+LISTEN 0      4096         0.0.0.0:7860       0.0.0.0:*          
+LISTEN 0      4096            [::]:11434         [::]:*          
+LISTEN 0      4096            [::]:8080          [::]:*          
+LISTEN 0      4096               *:8081             *:*          
+LISTEN 0      4096            [::]:7860          [::]:*          
+--- LOAD & UPTIME ---
+ 23:17:45 up 1 day,  5:04,  2 users,  load average: 0.05, 0.09, 0.09
+
+0.05 0.09 0.09 1/692 1341068
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service            loaded active running Docker Application Container Engine
+  nvidia-metrics.service    loaded active running NVIDIA GPU Prometheus textfile exporter
+=== END NODE: vimage4 ===
+
+------------------------------------------------------------
+ Probing: vimage5
+------------------------------------------------------------
+=== NODE: vimage5 ===
+--- OS ---
+NAME="Fedora Linux"
+VERSION="41 (Server Edition)"
+--- CPU ---
+Architecture:                            x86_64
+Model name:                              Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      4
+Socket(s):                               1
+CPU(s) scaling MHz:                      88%
+CPU max MHz:                             4400.0000
+CPU min MHz:                             800.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       1.8Gi        10Gi       8.8Mi        19Gi        29Gi
+Swap:          8.0Gi       223Mi       7.8Gi
+
+MemTotal:       32785408 kB
+MemFree:        11143192 kB
+MemAvailable:   30896252 kB
+SwapTotal:       8388604 kB
+SwapFree:        8160012 kB
+--- DISK ---
+Filesystem                       Size  Used Avail Use% Mounted on
+/dev/mapper/fedora_vimage4-root  230G  102G  129G  45% /
+/dev/nvme0n1p2                   960M  481M  480M  51% /boot
+/dev/nvme1n1p1                   916G  369G  501G  43% /opt
+vimage:/share/outputs/forge      880G  123G  712G  15% /opt/forge/outputs
+vimage:/share/outputs            880G  123G  712G  15% /share/outputs
+vimage2:/data/models             1.8T  1.1T  650G  63% /opt/forge/models
+--- GPU (nvidia-smi) ---
+0, NVIDIA GeForce RTX 3060, 580.105.08, 12288, 9, 11902, 0, 0, 36, 14.41, 170.00, Default, 1, 8
+
+--- GPU PROCESSES ---
+
+--- CUDA VERSION ---
+| NVIDIA-SMI 560.35.03              Driver Version: 580.105.08     CUDA Version: 13.0     |
+--- DOCKER ---
+Docker version: Docker version 29.3.0, build 5927d80
+
+Running containers:
+NAMES           IMAGE                             STATUS                   PORTS
+beszel-agent    henrygd/beszel-agent              Up 3 days                
+cadvisor        gcr.io/cadvisor/cadvisor:latest   Up 10 days (unhealthy)   
+node-exporter   prom/node-exporter:latest         Up 10 days               
+ollama          ollama/ollama:latest              Up 10 days               0.0.0.0:11434->11434/tcp, [::]:11434->11434/tcp
+portainer       fab249e1b82c                      Up 10 days               0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 9000/tcp
+
+All containers (including stopped):
+NAMES           IMAGE                              STATUS                     CREATED AT
+beszel-agent    henrygd/beszel-agent               Up 3 days                  2026-05-29 02:39:04 +0300 EEST
+cadvisor        gcr.io/cadvisor/cadvisor:latest    Up 10 days (unhealthy)     2026-05-22 02:22:12 +0300 EEST
+node-exporter   prom/node-exporter:latest          Up 10 days                 2026-05-22 02:15:54 +0300 EEST
+ollama          ollama/ollama:latest               Up 10 days                 2026-05-13 12:04:29 +0300 EEST
+tensorboard     tensorflow/tensorflow:latest-gpu   Exited (255) 10 days ago   2026-02-11 02:14:42 +0200 EET
+portainer       fab249e1b82c                       Up 10 days                 2025-03-26 19:58:53 +0200 EET
+
+Docker resource usage:
+NAME            CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O
+beszel-agent    0.00%     8.449MiB / 31.27GiB   0.03%     0B / 0B          5.92MB / 221kB
+cadvisor        5.57%     217MiB / 31.27GiB     0.68%     0B / 0B          129MB / 134MB
+node-exporter   0.00%     15.88MiB / 31.27GiB   0.05%     0B / 0B          23.2MB / 541kB
+ollama          0.44%     1.484GiB / 31.27GiB   4.75%     24.7GB / 694MB   159GB / 32GB
+portainer       0.00%     25.95MiB / 31.27GiB   0.08%     172MB / 2.26GB   104MB / 371MB
+
+Docker images:
+REPOSITORY                           TAG          SIZE      CREATED
+ollama/ollama                        latest       6.55GB    2 weeks ago
+prom/node-exporter                   latest       25.8MB    7 weeks ago
+henrygd/beszel-agent                 latest       9.26MB    8 weeks ago
+filebrowser/filebrowser              latest       29.8MB    3 months ago
+gcr.io/cadvisor/cadvisor             latest       75.1MB    5 months ago
+tensorflow/tensorflow                latest-gpu   7.55GB    9 months ago
+nykk3/stable-diffusion-webui-forge   latest       8.35GB    21 months ago
+--- OLLAMA ---
+Ollama running via Docker/service (no CLI)
+  qwen3.6:latest | 23938333577 bytes | modified: 2026-05-27T14:31:24.510253576Z
+  qwen3.6:27b | 17420432739 bytes | modified: 2026-05-15T01:14:20.01539737Z
+  qwen3.5:9b | 6594474711 bytes | modified: 2026-05-12T22:41:30.911269466Z
+  qwen3:8b | 5225388164 bytes | modified: 2026-04-18T00:28:49.452166085Z
+  llama3:8b | 4661224676 bytes | modified: 2026-04-18T00:24:39.508494671Z
+  qwen2.5-coder-32k:7b | 4683087653 bytes | modified: 2025-07-28T12:46:35.396388885Z
+  qwen2.5-coder:7b | 4683087561 bytes | modified: 2025-07-28T12:46:35.372388616Z
+--- LOCALAI ---
+LocalAI detected on port 8081
+--- NETWORK ---
+eno1             UP             192.168.2.104/24 fe80::d6bc:302:d268:4b03/64 
+br-29dc4d9f5997  UP             172.21.0.1/16 fe80::408b:b3ff:fe11:affa/64 
+br-37c4af3de530  DOWN           172.20.0.1/16 
+docker0          UP             172.17.0.1/16 fe80::d035:2bff:fe4b:b910/64 
+veth2f417f9@if2  UP             169.254.117.61/16 fe80::27cf:ce3f:1c41:bbd2/64 fe80::2884:4dff:fed9:8b74/64 
+vethba024a8@if2  UP             169.254.41.46/16 fe80::7b9:8bc2:eda1:c896/64 
+
+LISTEN 0      4096         0.0.0.0:11434      0.0.0.0:*          
+LISTEN 0      4096               *:8081             *:*          
+LISTEN 0      4096            [::]:11434         [::]:*          
+--- LOAD & UPTIME ---
+ 23:17:47 up 10 days,  8:00,  2 users,  load average: 0.01, 0.03, 0.10
+
+0.01 0.03 0.10 1/3305 3825932
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service                loaded active running Docker Application Container Engine
+  nvidia-metrics.service        loaded active running NVIDIA GPU Prometheus textfile exporter
+=== END NODE: vimage5 ===
+
+------------------------------------------------------------
+ Probing: vimage6
+------------------------------------------------------------
+=== NODE: vimage6 ===
+--- OS ---
+NAME="Linux Mint"
+VERSION="22.2 (Zara)"
+--- CPU ---
+Architecture:                            x86_64
+Model name:                              Intel(R) Xeon(R) CPU E5-1650 v2 @ 3.50GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      6
+Socket(s):                               1
+CPU(s) scaling MHz:                      90%
+CPU max MHz:                             3900,0000
+CPU min MHz:                             1200,0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       5,7Gi       978Mi       186Mi        25Gi        25Gi
+Swap:          2,0Gi        16Ki       2,0Gi
+
+MemTotal:       32793896 kB
+MemFree:         1001504 kB
+MemAvailable:   26833276 kB
+SwapTotal:       2097148 kB
+SwapFree:        2097132 kB
+--- DISK ---
+Filesystem      Size  Used Avail Use% Mounted on
+efivarfs        128K   87K   37K  71% /sys/firmware/efi/efivars
+/dev/sda3       468G  177G  268G  40% /
+/dev/sda2       512M  6,2M  506M   2% /boot/efi
+--- GPU (nvidia-smi) ---
+nvidia-smi not found
+--- DOCKER ---
+Docker version: Docker version 29.5.2, build 79eb04c
+
+Running containers:
+NAMES                                                                                                                IMAGE                                                STATUS                             PORTS
+giggi-e2e-app-496                                                                                                    giggi/web:ci-25e081d64002                            Up 49 seconds (health: starting)   3000/tcp, 0.0.0.0:13017->13017/tcp, [::]:13017->13017/tcp
+giggi-ci-496-db-1                                                                                                    postgres:16-alpine                                   Up About a minute (healthy)        0.0.0.0:5451->5432/tcp, [::]:5451->5432/tcp
+giggi-ci-496-redis-1                                                                                                 redis:7-alpine                                       Up About a minute (healthy)        0.0.0.0:6397->6379/tcp, [::]:6397->6379/tcp
+GITEA-ACTIONS-TASK-1408-WORKFLOW-CI-JOB-E2E-tests-5475bf022c9f48f5029b39d73d80de063212043fd7c737482ce8f370c4059922   git.dudeisland.eu/janiluuk/giggi-ci-runner:latest    Up 3 minutes                       
+docker-catalog-exporter                                                                                              python:3-alpine                                      Up 8 minutes                       
+giggi-ci-473-db-1                                                                                                    postgres:16-alpine                                   Up 28 hours (healthy)              0.0.0.0:5468->5432/tcp, [::]:5468->5432/tcp
+giggi-ci-473-redis-1                                                                                                 redis:7-alpine                                       Up 28 hours (healthy)              0.0.0.0:6414->6379/tcp, [::]:6414->6379/tcp
+giggi-ci-457-db-1                                                                                                    postgres:16-alpine                                   Up 34 hours (healthy)              0.0.0.0:5452->5432/tcp, [::]:5452->5432/tcp
+giggi-ci-457-redis-1                                                                                                 redis:7-alpine                                       Up 34 hours (healthy)              0.0.0.0:6398->6379/tcp, [::]:6398->6379/tcp
+giggi-ci-423-db-1                                                                                                    postgres:16-alpine                                   Up 39 hours (healthy)              0.0.0.0:5458->5432/tcp, [::]:5458->5432/tcp
+giggi-ci-423-redis-1                                                                                                 redis:7-alpine                                       Up 39 hours (healthy)              0.0.0.0:6404->6379/tcp, [::]:6404->6379/tcp
+giggi-ci-364-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                0.0.0.0:5439->5432/tcp, [::]:5439->5432/tcp
+giggi-ci-364-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                0.0.0.0:6385->6379/tcp, [::]:6385->6379/tcp
+giggi-ci-352-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                0.0.0.0:5467->5432/tcp, [::]:5467->5432/tcp
+giggi-ci-352-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                0.0.0.0:6413->6379/tcp, [::]:6413->6379/tcp
+buildx_buildkit_builder-c9ea4482-6898-477a-a51f-e1ab2b036c7e0                                                        moby/buildkit:buildx-stable-1                        Up 2 days                          
+buildx_buildkit_builder-d933bc11-4622-4a73-9489-78badf55486b0                                                        moby/buildkit:buildx-stable-1                        Up 2 days                          
+giggi-ci-325-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                0.0.0.0:5440->5432/tcp, [::]:5440->5432/tcp
+giggi-ci-325-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                0.0.0.0:6386->6379/tcp, [::]:6386->6379/tcp
+giggi-ci-309-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                0.0.0.0:5464->5432/tcp, [::]:5464->5432/tcp
+giggi-ci-309-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                0.0.0.0:6410->6379/tcp, [::]:6410->6379/tcp
+gitea-runner-sparkki                                                                                                 gitea/act_runner:latest                              Up 3 days                          
+buildx_buildkit_builder-cb232c76-3ae8-47ee-8f9d-2c845fbe984e0                                                        moby/buildkit:buildx-stable-1                        Up 3 days                          
+giggi-ci-db-1                                                                                                        postgres:16-alpine                                   Up 3 days (healthy)                0.0.0.0:5434->5432/tcp, [::]:5434->5432/tcp
+monitoring-loki                                                                                                      grafana/loki:3.4                                     Up 3 days                          
+vimage6-mailserver                                                                                                   ghcr.io/docker-mailserver/docker-mailserver:latest   Up 3 days (healthy)                0.0.0.0:25->25/tcp, [::]:25->25/tcp, 0.0.0.0:143->143/tcp, [::]:143->143/tcp, 0.0.0.0:465->465/tcp, [::]:465->465/tcp, 0.0.0.0:587->587/tcp, [::]:587->587/tcp, 110/tcp, 995/tcp, 0.0.0.0:993->993/tcp, [::]:993->993/tcp, 4190/tcp
+vimage6-roundcube                                                                                                    roundcube/roundcubemail:latest                       Up 3 days                          80/tcp
+vimage6-caddy                                                                                                        caddy:2-alpine                                       Up 3 days                          0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp, 443/udp, 2019/tcp
+vimage6-mariadb                                                                                                      mariadb:11                                           Up 3 days (healthy)                3306/tcp
+gitea                                                                                                                gitea/gitea:1.26                                     Up 3 days                          0.0.0.0:4322->22/tcp, [::]:4322->22/tcp, 0.0.0.0:3080->3000/tcp, [::]:3080->3000/tcp
+giggi-ci-redis-1                                                                                                     redis:7-alpine                                       Up 3 days (healthy)                0.0.0.0:6380->6379/tcp, [::]:6380->6379/tcp
+monitoring-grafana                                                                                                   grafana/grafana:latest                               Up 8 minutes                       
+monitoring-prometheus                                                                                                prom/prometheus:latest                               Up 3 days                          
+cadvisor                                                                                                             gcr.io/cadvisor/cadvisor:latest                      Up 3 days (healthy)                
+node-exporter                                                                                                        prom/node-exporter:latest                            Up 3 days                          
+gitea-runner-giggi                                                                                                   gitea/act_runner:latest                              Up 33 hours                        
+
+All containers (including stopped):
+NAMES                                                                                                                IMAGE                                                STATUS                             CREATED AT
+giggi-e2e-app-496                                                                                                    giggi/web:ci-25e081d64002                            Up 49 seconds (health: starting)   2026-06-01 23:16:57 +0300 EEST
+giggi-ci-496-db-1                                                                                                    postgres:16-alpine                                   Up About a minute (healthy)        2026-06-01 23:16:15 +0300 EEST
+giggi-ci-496-redis-1                                                                                                 redis:7-alpine                                       Up About a minute (healthy)        2026-06-01 23:16:15 +0300 EEST
+GITEA-ACTIONS-TASK-1408-WORKFLOW-CI-JOB-E2E-tests-5475bf022c9f48f5029b39d73d80de063212043fd7c737482ce8f370c4059922   git.dudeisland.eu/janiluuk/giggi-ci-runner:latest    Up 3 minutes                       2026-06-01 23:14:38 +0300 EEST
+docker-catalog-exporter                                                                                              python:3-alpine                                      Up 8 minutes                       2026-06-01 23:09:41 +0300 EEST
+giggi-e2e-app-473                                                                                                    giggi/web:ci-5e16a511ed0e                            Exited (0) 5 hours ago             2026-05-31 19:37:30 +0300 EEST
+giggi-ci-473-db-1                                                                                                    postgres:16-alpine                                   Up 28 hours (healthy)              2026-05-31 19:36:46 +0300 EEST
+giggi-ci-473-redis-1                                                                                                 redis:7-alpine                                       Up 28 hours (healthy)              2026-05-31 19:36:46 +0300 EEST
+giggi-e2e-app-457                                                                                                    giggi/web:ci-e4fd91760f7f                            Exited (0) 5 hours ago             2026-05-31 13:04:10 +0300 EEST
+giggi-ci-457-db-1                                                                                                    postgres:16-alpine                                   Up 34 hours (healthy)              2026-05-31 13:03:20 +0300 EEST
+giggi-ci-457-redis-1                                                                                                 redis:7-alpine                                       Up 34 hours (healthy)              2026-05-31 13:03:20 +0300 EEST
+giggi-e2e-app-423                                                                                                    giggi/web:ci-fed51ee21980                            Exited (0) 5 hours ago             2026-05-31 08:42:50 +0300 EEST
+giggi-ci-423-db-1                                                                                                    postgres:16-alpine                                   Up 39 hours (healthy)              2026-05-31 08:42:07 +0300 EEST
+giggi-ci-423-redis-1                                                                                                 redis:7-alpine                                       Up 39 hours (healthy)              2026-05-31 08:42:07 +0300 EEST
+giggi-e2e-app-364                                                                                                    giggi/web:ci-b94892d7c5cc                            Exited (0) 5 hours ago             2026-05-30 05:22:08 +0300 EEST
+giggi-ci-364-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                2026-05-30 05:21:30 +0300 EEST
+giggi-ci-364-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                2026-05-30 05:21:30 +0300 EEST
+giggi-ci-352-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                2026-05-30 04:20:03 +0300 EEST
+giggi-ci-352-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                2026-05-30 04:20:03 +0300 EEST
+buildx_buildkit_builder-c9ea4482-6898-477a-a51f-e1ab2b036c7e0                                                        moby/buildkit:buildx-stable-1                        Up 2 days                          2026-05-30 02:59:59 +0300 EEST
+buildx_buildkit_builder-d933bc11-4622-4a73-9489-78badf55486b0                                                        moby/buildkit:buildx-stable-1                        Up 2 days                          2026-05-30 02:59:57 +0300 EEST
+giggi-e2e-app-325                                                                                                    giggi/web:ci-dd605b93f2b0                            Exited (0) 5 hours ago             2026-05-30 02:33:43 +0300 EEST
+giggi-ci-325-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                2026-05-30 02:32:53 +0300 EEST
+giggi-ci-325-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                2026-05-30 02:32:53 +0300 EEST
+giggi-e2e-app-309                                                                                                    giggi/web:ci-6acab4ff0d7b                            Exited (0) 5 hours ago             2026-05-30 01:20:41 +0300 EEST
+giggi-ci-309-db-1                                                                                                    postgres:16-alpine                                   Up 2 days (healthy)                2026-05-30 01:20:04 +0300 EEST
+giggi-ci-309-redis-1                                                                                                 redis:7-alpine                                       Up 2 days (healthy)                2026-05-30 01:20:04 +0300 EEST
+gitea-runner-sparkki                                                                                                 gitea/act_runner:latest                              Up 3 days                          2026-05-29 20:24:13 +0300 EEST
+buildx_buildkit_builder-cb232c76-3ae8-47ee-8f9d-2c845fbe984e0                                                        moby/buildkit:buildx-stable-1                        Up 3 days                          2026-05-28 20:43:51 +0300 EEST
+giggi-ci-db-1                                                                                                        postgres:16-alpine                                   Up 3 days (healthy)                2026-05-23 09:51:02 +0300 EEST
+monitoring-loki                                                                                                      grafana/loki:3.4                                     Up 3 days                          2026-05-23 02:32:43 +0300 EEST
+vimage6-mailserver                                                                                                   ghcr.io/docker-mailserver/docker-mailserver:latest   Up 3 days (healthy)                2026-05-22 22:17:54 +0300 EEST
+vimage6-roundcube                                                                                                    roundcube/roundcubemail:latest                       Up 3 days                          2026-05-22 21:24:49 +0300 EEST
+vimage6-caddy                                                                                                        caddy:2-alpine                                       Up 3 days                          2026-05-22 17:49:13 +0300 EEST
+vimage6-mariadb                                                                                                      mariadb:11                                           Up 3 days (healthy)                2026-05-22 17:49:04 +0300 EEST
+gitea                                                                                                                gitea/gitea:1.26                                     Up 3 days                          2026-05-22 05:12:08 +0300 EEST
+giggi-ci-redis-1                                                                                                     redis:7-alpine                                       Up 3 days (healthy)                2026-05-22 03:17:28 +0300 EEST
+monitoring-grafana                                                                                                   grafana/grafana:latest                               Up 8 minutes                       2026-05-22 02:20:25 +0300 EEST
+monitoring-prometheus                                                                                                prom/prometheus:latest                               Up 3 days                          2026-05-22 02:19:11 +0300 EEST
+cadvisor                                                                                                             gcr.io/cadvisor/cadvisor:latest                      Up 3 days (healthy)                2026-05-22 02:14:11 +0300 EEST
+node-exporter                                                                                                        prom/node-exporter:latest                            Up 3 days                          2026-05-22 02:14:05 +0300 EEST
+gitea-runner-giggi                                                                                                   gitea/act_runner:latest                              Up 33 hours                        2026-05-22 01:55:12 +0300 EEST
+
+Docker resource usage:
+NAME                                                                                                                 CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O
+giggi-e2e-app-496                                                                                                    96.79%    306.3MiB / 31.27GiB   0.96%     10.4MB / 33.6MB   459kB / 0B
+giggi-ci-496-db-1                                                                                                    8.72%     75.59MiB / 31.27GiB   0.24%     1.3MB / 7.5MB     1.62MB / 64.2MB
+giggi-ci-496-redis-1                                                                                                 0.74%     3.801MiB / 31.27GiB   0.01%     16.4kB / 3.79kB   77.8kB / 90.1kB
+GITEA-ACTIONS-TASK-1408-WORKFLOW-CI-JOB-E2E-tests-5475bf022c9f48f5029b39d73d80de063212043fd7c737482ce8f370c4059922   201.43%   920MiB / 31.27GiB     2.87%     0B / 0B           34.3MB / 3.13GB
+docker-catalog-exporter                                                                                              0.01%     14.12MiB / 31.27GiB   0.04%     0B / 0B           311kB / 1.96MB
+giggi-ci-473-db-1                                                                                                    0.01%     30.34MiB / 31.27GiB   0.09%     3.1MB / 17.6MB    2.22MB / 91.6MB
+giggi-ci-473-redis-1                                                                                                 0.68%     4.062MiB / 31.27GiB   0.01%     85.8kB / 50kB     225kB / 250kB
+giggi-ci-457-db-1                                                                                                    0.00%     29.69MiB / 31.27GiB   0.09%     1.28MB / 5.98MB   3.29MB / 69.9MB
+giggi-ci-457-redis-1                                                                                                 0.73%     3.84MiB / 31.27GiB    0.01%     86.6kB / 57.1kB   139kB / 98.3kB
+giggi-ci-423-db-1                                                                                                    0.00%     30.77MiB / 31.27GiB   0.10%     7.9MB / 48.7MB    2.38MB / 98.1MB
+giggi-ci-423-redis-1                                                                                                 0.63%     4.316MiB / 31.27GiB   0.01%     134kB / 78kB      561kB / 590kB
+giggi-ci-364-db-1                                                                                                    0.00%     29.41MiB / 31.27GiB   0.09%     969kB / 3.84MB    2.89MB / 69.4MB
+giggi-ci-364-redis-1                                                                                                 0.60%     3.535MiB / 31.27GiB   0.01%     157kB / 114kB     36.9kB / 53.2kB
+giggi-ci-352-db-1                                                                                                    0.00%     22.54MiB / 31.27GiB   0.07%     34.1kB / 416B     127kB / 54.1MB
+giggi-ci-352-redis-1                                                                                                 0.50%     3.363MiB / 31.27GiB   0.01%     34.4kB / 416B     77.8kB / 8.19kB
+buildx_buildkit_builder-c9ea4482-6898-477a-a51f-e1ab2b036c7e0                                                        0.00%     9.922MiB / 31.27GiB   0.03%     44.9kB / 126B     73.7kB / 115kB
+buildx_buildkit_builder-d933bc11-4622-4a73-9489-78badf55486b0                                                        0.00%     10.57MiB / 31.27GiB   0.03%     45kB / 126B       22.9MB / 115kB
+giggi-ci-325-db-1                                                                                                    0.00%     30.86MiB / 31.27GiB   0.10%     8.61MB / 52.8MB   131kB / 98.9MB
+giggi-ci-325-redis-1                                                                                                 0.57%     4.051MiB / 31.27GiB   0.01%     208kB / 136kB     754kB / 651kB
+giggi-ci-309-db-1                                                                                                    0.00%     30.43MiB / 31.27GiB   0.10%     4.41MB / 24.9MB   680kB / 92.7MB
+giggi-ci-309-redis-1                                                                                                 3.43%     4.273MiB / 31.27GiB   0.01%     192kB / 130kB     479kB / 373kB
+gitea-runner-sparkki                                                                                                 0.00%     15.22MiB / 31.27GiB   0.05%     20MB / 18.6MB     6.03MB / 0B
+buildx_buildkit_builder-cb232c76-3ae8-47ee-8f9d-2c845fbe984e0                                                        0.01%     12.79MiB / 31.27GiB   0.04%     54.4kB / 126B     49MB / 1.14MB
+giggi-ci-db-1                                                                                                        0.00%     37.13MiB / 31.27GiB   0.12%     35.7kB / 126B     24.2MB / 700kB
+monitoring-loki                                                                                                      0.42%     101.5MiB / 31.27GiB   0.32%     0B / 0B           104MB / 134MB
+vimage6-mailserver                                                                                                   40.02%    407MiB / 31.27GiB     1.27%     3.05MB / 3.55MB   185MB / 4.67GB
+vimage6-roundcube                                                                                                    0.00%     67.57MiB / 31.27GiB   0.21%     117kB / 295kB     84.6MB / 20.5kB
+vimage6-caddy                                                                                                        0.00%     10.7MiB / 31.27GiB    0.03%     413kB / 376kB     42.3MB / 24.6kB
+vimage6-mariadb                                                                                                      0.01%     122.4MiB / 31.27GiB   0.38%     52.7kB / 11.3kB   52.8MB / 102kB
+gitea                                                                                                                0.90%     303MiB / 31.27GiB     0.95%     2.52GB / 47.4GB   1.71GB / 13.3GB
+giggi-ci-redis-1                                                                                                     0.64%     10.25MiB / 31.27GiB   0.03%     35.9kB / 126B     10.8MB / 4.1kB
+monitoring-grafana                                                                                                   0.78%     133.8MiB / 31.27GiB   0.42%     0B / 0B           5.39MB / 668kB
+monitoring-prometheus                                                                                                12.27%    792.1MiB / 31.27GiB   2.47%     0B / 0B           2.36GB / 13.2GB
+cadvisor                                                                                                             6.06%     420MiB / 31.27GiB     1.31%     0B / 0B           291MB / 438MB
+node-exporter                                                                                                        0.00%     12.42MiB / 31.27GiB   0.04%     0B / 0B           15.5MB / 0B
+gitea-runner-giggi                                                                                                   0.02%     16.98MiB / 31.27GiB   0.05%     57.4MB / 20.2MB   123MB / 544MB
+
+Docker images:
+REPOSITORY                                    TAG                                           SIZE      CREATED
+giggi/web                                     ci-3b466add4b49                               655MB     27 minutes ago
+git.dudeisland.eu/janiluuk/giggi              ci-3b466add4b49a18fb233930070b935385d74d172   655MB     27 minutes ago
+giggi/web                                     ci-25e081d64002                               655MB     27 minutes ago
+git.dudeisland.eu/janiluuk/giggi              ci-25e081d64002ba1e340d578797ff1b4f0c6ee08e   655MB     27 minutes ago
+git.dudeisland.eu/janiluuk/giggi              ci-e832fad3f33a3fd6ad9e8d88c09948cb796f1330   655MB     33 minutes ago
+giggi/web                                     ci-e832fad3f33a                               655MB     33 minutes ago
+giggi/web                                     ci-22cfd69874c1                               655MB     About an hour ago
+git.dudeisland.eu/janiluuk/giggi              ci-22cfd69874c1f074f95f09a8916ce460dc4973ba   655MB     About an hour ago
+giggi/web                                     ci-1aeec5d903aa                               655MB     About an hour ago
+git.dudeisland.eu/janiluuk/giggi              ci-1aeec5d903aac81ded33958bfaa26c7c4f1dfd04   655MB     About an hour ago
+giggi/web                                     ci-cc189d220163                               655MB     About an hour ago
+git.dudeisland.eu/janiluuk/giggi              ci-cc189d22016379632d85455a03b10667f9ebcd41   655MB     About an hour ago
+giggi/web                                     ci-25b5a2053f8f                               655MB     2 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-25b5a2053f8f15253a6c585cab2f5097c063f97b   655MB     2 hours ago
+giggi/web                                     ci-1a03da985108                               654MB     5 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-1a03da98510811410dc63dceeb6e752f3f9554b6   654MB     5 hours ago
+giggi/web                                     ci-3d1642ae7a1b                               654MB     6 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-3d1642ae7a1b4e313b69fea2a10b66906be74627   654MB     6 hours ago
+giggi/web                                     ci-ee7446946ef4                               654MB     7 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-ee7446946ef4ce260474300316220a30fd60f8ec   654MB     7 hours ago
+giggi/web                                     ci-ef654273d8f3                               654MB     7 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-ef654273d8f36ba820d33229311eb70b82e7b83b   654MB     7 hours ago
+giggi/web                                     ci-418dc81185cd                               654MB     8 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-418dc81185cd4dd308727915c633bc68fcdb5ffd   654MB     8 hours ago
+giggi/web                                     ci-23905a40527b                               654MB     9 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-23905a40527b3635ac0962fbaa65c6531f1563b5   654MB     9 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-f10aaf5b5c2815ded23140a01ad163d960d27886   654MB     23 hours ago
+giggi/web                                     ci-f10aaf5b5c28                               654MB     23 hours ago
+giggi/web                                     ci-0a07fcfd03ff                               654MB     23 hours ago
+git.dudeisland.eu/janiluuk/giggi              20260531-205318                               654MB     23 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-0a07fcfd03fff62cf16840e2ce578bf07f88896a   654MB     23 hours ago
+git.dudeisland.eu/janiluuk/giggi              latest                                        654MB     23 hours ago
+git.dudeisland.eu/janiluuk/giggi              main                                          654MB     23 hours ago
+git.dudeisland.eu/janiluuk/giggi              sha-0a07fcf                                   654MB     23 hours ago
+giggi/web                                     ci-39592136a549                               654MB     28 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-39592136a549f708fea492871200c75a42a32809   654MB     28 hours ago
+giggi/web                                     ci-45b7995b2c7f                               654MB     28 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-45b7995b2c7f159bd2ca0f580bcc3853b07b3a06   654MB     28 hours ago
+giggi/web                                     ci-5e16a511ed0e                               654MB     28 hours ago
+git.dudeisland.eu/janiluuk/giggi              ci-5e16a511ed0ecb0420ff5e4ff63b644ae10edadf   654MB     28 hours ago
+giggi/web                                     ci-e4fd91760f7f                               654MB     34 hours ago
+giggi/web                                     ci-fed51ee21980                               654MB     39 hours ago
+giggi/web                                     ci-b94892d7c5cc                               652MB     2 days ago
+giggi/web                                     ci-dd605b93f2b0                               652MB     2 days ago
+giggi/web                                     ci-6acab4ff0d7b                               652MB     2 days ago
+ghcr.io/catthehacker/ubuntu                   act-latest                                    2.29GB    3 days ago
+git.dudeisland.eu/janiluuk/giggi-ci-runner    latest                                        2.71GB    10 days ago
+mariadb                                       11                                            458MB     12 days ago
+gitea/gitea                                   1.26                                          245MB     12 days ago
+roundcube/roundcubemail                       latest                                        1.12GB    13 days ago
+postgres                                      16-alpine                                     396MB     2 weeks ago
+node                                          22-alpine                                     230MB     2 weeks ago
+moby/buildkit                                 buildx-stable-1                               355MB     2 weeks ago
+caddy                                         2-alpine                                      89MB      2 weeks ago
+grafana/grafana                               latest                                        1.46GB    2 weeks ago
+python                                        3-alpine                                      73.6MB    2 weeks ago
+redis                                         7-alpine                                      57.8MB    3 weeks ago
+gitea/act_runner                              latest                                        68.6MB    4 weeks ago
+prom/prometheus                               latest                                        578MB     5 weeks ago
+prom/node-exporter                            latest                                        40.7MB    7 weeks ago
+gcr.io/cadvisor/cadvisor                      latest                                        107MB     5 months ago
+ghcr.io/docker-mailserver/docker-mailserver   latest                                        1.22GB    9 months ago
+grafana/loki                                  3.4                                           151MB     14 months ago
+--- OLLAMA ---
+Ollama not detected
+--- LOCALAI ---
+LocalAI detected on port 8080
+--- NETWORK ---
+eno1             UP             192.168.2.105/24 fe80::116c:8333:2cfb:cddd/64 
+docker0          UP             172.17.0.1/16 fe80::181e:ff:fe30:2e5/64 
+br-3f0cfbec750b  UP             172.18.0.1/16 fe80::7c07:82ff:fe80:4a22/64 
+br-464b9a26f04c  UP             172.19.0.1/16 fe80::346e:dfff:fe3c:2720/64 
+br-5524a2bad55f  DOWN           172.20.0.1/16 
+veth3d9a647@if2  UP             fe80::68d4:60ff:fe0b:e4c4/64 
+vethc490986@if2  UP             fe80::d429:90ff:fe53:fd3a/64 
+veth5c2b9e5@if2  UP             fe80::bc2e:94ff:fe30:a7ae/64 
+veth40203c4@if2  UP             fe80::1cfa:dbff:fead:48fe/64 
+vethd7eff18@if2  UP             fe80::6c29:b2ff:feaa:2a38/64 
+veth6b0ce99@if2  UP             fe80::98b9:7eff:fe01:eb4b/64 
+veth4c54562@if2  UP             fe80::dccf:38ff:fed6:6d03/64 
+veth1d1536f@if2  UP             fe80::344f:c6ff:fe6e:17e0/64 
+veth6c58e32@if2  UP             fe80::18d5:b2ff:fe1c:237d/64 
+br-fafcc2e35af5  UP             172.21.0.1/16 fe80::ecee:c3ff:fe65:ccc2/64 
+veth6d7766e@if2  UP             fe80::d4b5:eff:fedf:d0f5/64 
+vethd2ff065@if2  UP             fe80::d09e:86ff:fe9e:9495/64 
+br-cb6137e00915  UP             172.23.0.1/16 fe80::7c5a:e2ff:fe2f:60f0/64 
+vethceefbe1@if2  UP             fe80::e0ff:71ff:fe90:e0a8/64 
+vethe156962@if2  UP             fe80::b07f:eff:fe65:b8a6/64 
+vethaca0b9c@if2  UP             fe80::e4ec:93ff:fe5f:5b79/64 
+veth9f3bee6@if2  UP             fe80::b499:59ff:fed4:d019/64 
+br-b7b6ad947901  UP             172.24.0.1/16 fe80::c8d2:dff:fe95:cbaf/64 
+vethaa7e979@if2  UP             fe80::e097:78ff:feb2:2a9f/64 
+vethdf48b6c@if2  UP             fe80::2032:52ff:fe84:d62c/64 
+br-2a03ea1c97ee  UP             172.22.0.1/16 fe80::e8e5:1eff:fee5:2272/64 
+vethdfbae9d@if2  UP             fe80::302c:39ff:fef0:ff0/64 
+vethb8b471e@if2  UP             fe80::f4ff:14ff:fee7:a5c4/64 
+br-a5f95d39cde7  UP             172.26.0.1/16 fe80::a878:25ff:fe8f:d597/64 
+veth78d5bdb@if2  UP             fe80::54dc:56ff:fe0b:562b/64 
+vethc671895@if2  UP             fe80::ecd2:bdff:fe45:3da1/64 
+br-a15a06f18a1b  UP             172.28.0.1/16 fe80::acd0:f9ff:fe5e:211/64 
+vethbbaf7e0@if2  UP             fe80::e079:5aff:feaf:4992/64 
+veth813e5cc@if2  UP             fe80::34b8:bbff:fe1b:d829/64 
+vethdafcbdb@if2  UP             fe80::94d9:94ff:fe87:ecbf/64 
+br-839a3077832d  UP             172.25.0.1/16 fe80::ecc0:4dff:fe73:e5a8/64 
+vethea4a40a@if2  UP             fe80::5009:56ff:feec:8f8f/64 
+vethd12600b@if2  UP             fe80::e0b3:e1ff:feb4:6b29/64 
+br-abf2b3be237c  UP             172.27.0.1/16 fe80::2cba:26ff:fe45:82b7/64 
+veth12a9da9@if2  UP             fe80::10c0:e0ff:fe33:73a4/64 
+veth645f0d2@if2  UP             fe80::d0b6:c1ff:fe42:2baa/64 
+veth14ccc8e@if2  UP             fe80::3851:21ff:fe7c:7deb/64 
+
+LISTEN 0      4096               *:8080             *:*          
+LISTEN 0      4096               *:3000             *:*          
+--- LOAD & UPTIME ---
+ 23:17:51 up 2 days, 23:55,  1 user,  load average: 3,20, 2,12, 2,20
+
+3.20 2.12 2.20 7/2021 94030
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service            loaded active running Docker Application Container Engine
+=== END NODE: vimage6 ===
+
+------------------------------------------------------------
+ Probing: pi4
+------------------------------------------------------------
+=== NODE: pi4 ===
+--- OS ---
+NAME="Debian GNU/Linux"
+VERSION="12 (bookworm)"
+--- CPU ---
+Architecture:                            aarch64
+Model name:                              Cortex-A72
+Thread(s) per core:                      1
+Core(s) per cluster:                     4
+Socket(s):                               -
+CPU(s) scaling MHz:                      100%
+CPU max MHz:                             1800.0000
+CPU min MHz:                             600.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       2.5Gi       1.3Gi        61Mi       4.0Gi       5.2Gi
+Swap:          199Mi          0B       199Mi
+
+MemTotal:        8008488 kB
+MemFree:         1409012 kB
+MemAvailable:    5425268 kB
+SwapTotal:        204796 kB
+SwapFree:         204796 kB
+--- DISK ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/mmcblk0p2  114G   50G   60G  46% /
+/dev/mmcblk0p1  510M   80M  431M  16% /boot/firmware
+--- GPU (nvidia-smi) ---
+nvidia-smi not found
+--- DOCKER ---
+Docker version: Docker version 29.4.0, build 9d7ad9f
+
+Running containers:
+NAMES                        IMAGE                                 STATUS                    PORTS
+monitoring-promtail          grafana/promtail:3.4                  Up 37 hours               
+docker-catalog-exporter      python:3-alpine                       Up 37 hours               
+cadvisor-scrape              gcr.io/cadvisor/cadvisor:latest       Up 37 hours (unhealthy)   
+cloudflare-ddns              favonia/cloudflare-ddns:latest        Up 37 hours               
+pihole-old                   pihole/pihole:latest                  Up 37 hours (healthy)     0.0.0.0:53->53/udp, [::]:53->53/udp, 0.0.0.0:53->53/tcp, 0.0.0.0:67->67/udp, [::]:53->53/tcp, [::]:67->67/udp, 123/udp, 0.0.0.0:1010->80/tcp, [::]:1010->80/tcp, 0.0.0.0:4443->443/tcp, [::]:4443->443/tcp
+portainer                    portainer/portainer-ce:latest         Up 37 hours               0.0.0.0:9000->9000/tcp, [::]:9000->9000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 0.0.0.0:8008->8000/tcp, [::]:8008->8000/tcp
+homeassistant                homeassistant/home-assistant:stable   Up 37 hours               
+Dashy                        lissy93/dashy:latest                  Up 37 hours (healthy)     0.0.0.0:80->80/tcp, [::]:80->80/tcp, 8080/tcp
+Snippet-box                  pawelmalak/snippet-box:arm            Up 37 hours               0.0.0.0:5010->5000/tcp, [::]:5010->5000/tcp
+beszel                       henrygd/beszel                        Up 37 hours               0.0.0.0:8090->8090/tcp, [::]:8090->8090/tcp
+duckdns                      linuxserver/duckdns:latest            Up 37 hours               
+nginx-proxy-manager-sqlite   jc21/nginx-proxy-manager:latest       Up 37 hours               0.0.0.0:81->81/tcp, [::]:81->81/tcp, 0.0.0.0:8000->80/tcp, [::]:8000->80/tcp, 0.0.0.0:8443->443/tcp, [::]:8443->443/tcp
+photoprism                   photoprism/photoprism:latest          Up 28 seconds             0.0.0.0:2342->2342/tcp, [::]:2342->2342/tcp, 2442-2443/tcp
+ubooquity                    linuxserver/ubooquity:latest          Up 37 hours               0.0.0.0:2202-2203->2202-2203/tcp, [::]:2202-2203->2202-2203/tcp
+vpn                          azinchen/nordvpn                      Up 37 hours               
+elated_wing                  nicolargo/glances:latest-full         Up 37 hours               0.0.0.0:61208-61209->61208-61209/tcp, [::]:61208-61209->61208-61209/tcp
+ghost                        b1ffa6a8c9c0                          Up 37 hours               0.0.0.0:2368->2368/tcp, [::]:2368->2368/tcp
+monitoring-node-exporter     prom/node-exporter:latest             Up 37 hours               0.0.0.0:9100->9100/tcp, [::]:9100->9100/tcp
+monitoring-cadvisor          zcube/cadvisor:latest                 Up 37 hours (healthy)     
+monitoring-prometheus        prom/prometheus:latest                Up 37 hours               0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp
+photoprism-mariadb-1         mariadb:10.6                          Up 37 hours               3306/tcp
+flatnotes                    dullage/flatnotes:latest              Up 37 hours (healthy)     0.0.0.0:8715->8080/tcp, [::]:8715->8080/tcp
+syncthing                    linuxserver/syncthing:latest          Up 37 hours               0.0.0.0:8384->8384/tcp, [::]:8384->8384/tcp, 0.0.0.0:22000->22000/tcp, [::]:22000->22000/tcp, 0.0.0.0:21027->21027/udp, [::]:21027->21027/udp, 22000/udp
+MeTube                       alexta69/metube:latest                Up 37 hours               0.0.0.0:9898->8081/tcp, [::]:9898->8081/tcp
+jani-adminer-1               arm64v8/adminer:latest                Up 37 hours               0.0.0.0:6443->443/tcp, [::]:6443->443/tcp, 0.0.0.0:6680->8080/tcp, [::]:6680->8080/tcp
+mariadb-old                  be015d095fe9                          Up 37 hours               0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp
+librespeed                   linuxserver/librespeed:latest         Up 37 hours               443/tcp, 0.0.0.0:83->80/tcp, [::]:83->80/tcp
+
+All containers (including stopped):
+NAMES                        IMAGE                                 STATUS                     CREATED AT
+monitoring-promtail          grafana/promtail:3.4                  Up 37 hours                2026-05-23 02:35:29 +0300 EEST
+docker-catalog-exporter      python:3-alpine                       Up 37 hours                2026-05-23 01:34:50 +0300 EEST
+cadvisor-scrape              gcr.io/cadvisor/cadvisor:latest       Up 37 hours (unhealthy)    2026-05-23 01:30:19 +0300 EEST
+cloudflare-ddns              favonia/cloudflare-ddns:latest        Up 37 hours                2026-05-22 21:21:03 +0300 EEST
+pihole-old                   pihole/pihole:latest                  Up 37 hours (healthy)      2026-04-08 01:30:53 +0300 EEST
+portainer                    portainer/portainer-ce:latest         Up 37 hours                2026-04-08 01:25:58 +0300 EEST
+homeassistant                homeassistant/home-assistant:stable   Up 37 hours                2026-04-08 00:42:26 +0300 EEST
+Dashy                        lissy93/dashy:latest                  Up 37 hours (healthy)      2026-04-08 00:22:58 +0300 EEST
+Snippet-box                  pawelmalak/snippet-box:arm            Up 37 hours                2026-04-07 23:46:10 +0300 EEST
+beszel                       henrygd/beszel                        Up 37 hours                2026-04-07 23:45:00 +0300 EEST
+duckdns                      linuxserver/duckdns:latest            Up 37 hours                2026-04-07 23:26:47 +0300 EEST
+nginx-proxy-manager-sqlite   jc21/nginx-proxy-manager:latest       Up 37 hours                2026-03-21 05:13:53 +0200 EET
+photoprism                   photoprism/photoprism:latest          Up 28 seconds              2026-02-02 08:37:23 +0200 EET
+ubooquity                    linuxserver/ubooquity:latest          Up 37 hours                2026-02-02 07:19:12 +0200 EET
+vpn                          azinchen/nordvpn                      Up 37 hours                2025-11-24 00:29:36 +0200 EET
+elated_wing                  nicolargo/glances:latest-full         Up 37 hours                2025-11-23 23:37:10 +0200 EET
+ghost                        b1ffa6a8c9c0                          Up 37 hours                2025-08-12 11:31:54 +0300 EEST
+monitoring-node-exporter     prom/node-exporter:latest             Up 37 hours                2025-08-12 00:42:37 +0300 EEST
+monitoring-cadvisor          zcube/cadvisor:latest                 Up 37 hours (healthy)      2025-08-12 00:41:51 +0300 EEST
+monitoring-prometheus        prom/prometheus:latest                Up 37 hours                2025-08-11 23:55:25 +0300 EEST
+photoprism-mariadb-1         mariadb:10.6                          Up 37 hours                2025-08-09 23:18:07 +0300 EEST
+beszel-agent                 henrygd/beszel-agent                  Exited (2) 7 weeks ago     2025-07-28 07:57:09 +0300 EEST
+flatnotes                    dullage/flatnotes:latest              Up 37 hours (healthy)      2025-07-28 07:27:29 +0300 EEST
+syncthing                    linuxserver/syncthing:latest          Up 37 hours                2025-07-16 23:11:13 +0300 EEST
+MeTube                       alexta69/metube:latest                Up 37 hours                2025-03-10 11:37:29 +0200 EET
+filebrowser-latest           filebrowser/filebrowser:latest        Exited (1) 7 weeks ago     2024-07-27 16:42:43 +0300 EEST
+jani-adminer-1               arm64v8/adminer:latest                Up 37 hours                2024-04-27 01:59:59 +0300 EEST
+Sshwifty                     niruix/sshwifty:latest                Exited (137) 7 weeks ago   2024-04-18 03:49:25 +0300 EEST
+mariadb-old                  be015d095fe9                          Up 37 hours                2024-04-18 01:39:44 +0300 EEST
+librespeed                   linuxserver/librespeed:latest         Up 37 hours                2024-02-19 13:59:04 +0200 EET
+
+Docker resource usage:
+NAME                         CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O
+monitoring-promtail          0.74%     0B / 0B             0.00%     1.37MB / 2.3MB    78.2MB / 0B
+docker-catalog-exporter      0.02%     0B / 0B             0.00%     0B / 0B           13.9MB / 0B
+cadvisor-scrape              84.74%    0B / 0B             0.00%     0B / 0B           136MB / 0B
+cloudflare-ddns              0.00%     0B / 0B             0.00%     2.66MB / 1.31MB   13MB / 0B
+pihole-old                   0.25%     0B / 0B             0.00%     13.7MB / 18.2MB   155MB / 0B
+portainer                    0.03%     0B / 0B             0.00%     309MB / 37.2MB    72.2MB / 0B
+homeassistant                1.63%     0B / 0B             0.00%     0B / 0B           390MB / 0B
+Dashy                        0.02%     0B / 0B             0.00%     696kB / 1.97kB    66.8MB / 0B
+Snippet-box                  0.00%     0B / 0B             0.00%     681kB / 126B      52MB / 0B
+beszel                       0.00%     0B / 0B             0.00%     40.3MB / 11.5MB   32MB / 0B
+duckdns                      0.00%     0B / 0B             0.00%     3.53MB / 1.42MB   17.1MB / 0B
+nginx-proxy-manager-sqlite   0.31%     0B / 0B             0.00%     24.1GB / 23.4GB   448MB / 0B
+photoprism                   0.19%     0B / 0B             0.00%     8.7kB / 3.35kB    0B / 0B
+ubooquity                    0.28%     0B / 0B             0.00%     683kB / 1.78kB    74.2MB / 0B
+vpn                          0.00%     0B / 0B             0.00%     1.45MB / 531kB    14.3MB / 0B
+elated_wing                  2.72%     0B / 0B             0.00%     680kB / 1.57kB    45.8MB / 0B
+ghost                        0.01%     0B / 0B             0.00%     1.92MB / 1.05MB   120MB / 0B
+monitoring-node-exporter     4.19%     0B / 0B             0.00%     24.9MB / 468MB    13.9MB / 0B
+monitoring-cadvisor          0.01%     0B / 0B             0.00%     0B / 0B           25.4MB / 0B
+monitoring-prometheus        2.17%     0B / 0B             0.00%     351MB / 18.5MB    126MB / 0B
+photoprism-mariadb-1         0.06%     0B / 0B             0.00%     13.6MB / 14.1MB   42MB / 0B
+flatnotes                    0.22%     0B / 0B             0.00%     689kB / 126B      53.2MB / 0B
+syncthing                    0.02%     0B / 0B             0.00%     2.84MB / 1.64MB   31.9MB / 0B
+MeTube                       0.00%     0B / 0B             0.00%     682kB / 126B      37.9MB / 0B
+jani-adminer-1               0.01%     0B / 0B             0.00%     689kB / 126B      26.5MB / 0B
+mariadb-old                  0.02%     0B / 0B             0.00%     1.71MB / 1.19MB   87.6MB / 9.73kB
+librespeed                   0.00%     0B / 0B             0.00%     682kB / 126B      33.1MB / 0B
+
+Docker images:
+REPOSITORY                     TAG              SIZE      CREATED
+python                         3-alpine         51.1MB    2 weeks ago
+lissy93/dashy                  latest           878MB     7 weeks ago
+linuxserver/mariadb            arm64v8-latest   360MB     7 weeks ago
+linuxserver/duckdns            latest           49MB      8 weeks ago
+henrygd/beszel                 latest           31MB      8 weeks ago
+homeassistant/home-assistant   stable           2.24GB    8 weeks ago
+pihole/pihole                  latest           114MB     8 weeks ago
+favonia/cloudflare-ddns        latest           14MB      2 months ago
+portainer/portainer-ce         latest           173MB     2 months ago
+jc21/nginx-proxy-manager       latest           1.14GB    3 months ago
+gcr.io/cadvisor/cadvisor       latest           63.6MB    5 months ago
+photoprism/photoprism          latest           2.37GB    6 months ago
+azinchen/nordvpn               latest           51.3MB    6 months ago
+nicolargo/glances              latest-full      382MB     7 months ago
+linuxserver/ubooquity          latest           254MB     10 months ago
+prom/prometheus                latest           303MB     10 months ago
+linuxserver/syncthing          latest           63.6MB    11 months ago
+dullage/flatnotes              latest           234MB     11 months ago
+mariadb                        10.6             381MB     12 months ago
+grafana/promtail               3.4              218MB     14 months ago
+prom/node-exporter             latest           24.4MB    14 months ago
+alexta69/metube                latest           280MB     15 months ago
+henrygd/beszel-agent           latest           6.42MB    22 months ago
+filebrowser/filebrowser        latest           31.8MB    2 years ago
+arm64v8/adminer                latest           243MB     2 years ago
+linuxserver/mariadb            latest           369MB     2 years ago
+niruix/sshwifty                latest           47.3MB    2 years ago
+linuxserver/librespeed         latest           96.8MB    2 years ago
+rustdesk/rustdesk-server-s6    latest           39.3MB    2 years ago
+zcube/cadvisor                 latest           63MB      3 years ago
+pawelmalak/snippet-box         arm              805MB     4 years ago
+--- OLLAMA ---
+Ollama not detected
+--- LOCALAI ---
+LocalAI detected on port 8081
+--- NETWORK ---
+eth0             UP             192.168.2.6/24 fe80::9f20:aa3f:16ba:efb8/64 
+wlan0            DOWN           
+docker0          UP             172.17.0.1/16 fe80::dce7:a5ff:fe5d:ee19/64 
+br-afec35eb4221  UP             172.20.0.1/16 fe80::c0f4:99ff:fe46:1770/64 
+br-e28c9503a148  UP             172.19.0.1/16 fe80::141b:63ff:fea1:58f8/64 
+br-f17ef45fc99b  UP             172.21.0.1/16 fe80::84c5:22ff:fee0:e8d9/64 
+br-0e8417b58141  UP             172.18.0.1/16 fe80::28fe:d8ff:fe9c:abc2/64 
+veth27cf240@if2  UP             fe80::30c8:9eff:fe53:fa1e/64 
+veth3c48565@if2  UP             fe80::c80c:8cff:fec6:8916/64 
+vethbf8932f@if2  UP             fe80::8429:86ff:fe5d:255e/64 
+vethba6dbd4@if2  UP             fe80::34e5:19ff:fe9a:24b0/64 
+veth4b598e1@if2  UP             fe80::6c95:adff:fe85:c76d/64 
+veth4306898@if2  UP             fe80::a488:8eff:fe79:e1cb/64 
+vethea05cf4@if2  UP             fe80::a828:70ff:fee1:d9e2/64 
+vethda29ad4@if2  UP             fe80::f8dd:cfff:fe89:3848/64 
+veth8ea8ae5@if2  UP             fe80::5047:efff:fe72:795b/64 
+veth451ad82@if2  UP             fe80::4411:76ff:fe79:baf6/64 
+veth69a00f8@if2  UP             fe80::fc29:68ff:feb0:3ab7/64 
+veth08b72a1@if2  UP             fe80::58d1:e2ff:fe90:4923/64 
+veth7e9e874@if2  UP             fe80::1409:a0ff:fe1d:cdd6/64 
+veth4e47708@if2  UP             fe80::34e5:e4ff:fe54:27a8/64 
+veth8e6dc09@if2  UP             fe80::8450:d4ff:feef:cbf/64 
+veth722fb9a@if2  UP             fe80::1475:d5ff:fee7:ec04/64 
+veth3095907@if2  UP             fe80::4499:ffff:fecc:66a2/64 
+veth49a373c@if2  UP             fe80::c895:5dff:fe19:716f/64 
+veth7585c31@if2  UP             fe80::445e:97ff:fe81:9ea0/64 
+veth348041e@if2  UP             fe80::94a5:2eff:fef6:a39f/64 
+veth53a8030@if2  UP             fe80::4c45:99ff:fe26:a4a2/64 
+vethf3a6df7@if2  UP             fe80::38e4:60ff:fe7e:d42f/64 
+veth8f05239@if2  UP             fe80::cc36:2dff:fe9c:f730/64 
+
+LISTEN 0      4096         0.0.0.0:9000       0.0.0.0:*          
+LISTEN 0      4096            [::]:9000          [::]:*          
+LISTEN 0      4096               *:8081             *:*          
+--- LOAD & UPTIME ---
+ 23:17:55 up 1 day, 13:00,  1 user,  load average: 1.03, 1.27, 1.20
+
+1.03 1.27 1.20 1/1563 702026
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service            loaded active running Docker Application Container Engine
+=== END NODE: pi4 ===
+
+------------------------------------------------------------
+ Probing: pi5
+------------------------------------------------------------
+=== NODE: pi5 ===
+--- OS ---
+NAME="Debian GNU/Linux"
+VERSION="12 (bookworm)"
+--- CPU ---
+Architecture:                            aarch64
+Model name:                              Cortex-A76
+Thread(s) per core:                      1
+Core(s) per cluster:                     4
+Socket(s):                               -
+CPU(s) scaling MHz:                      67%
+CPU max MHz:                             2400.0000
+CPU min MHz:                             1500.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:           7.9Gi       6.3Gi       514Mi       605Mi       1.9Gi       1.6Gi
+Swap:          199Mi       199Mi          0B
+
+MemTotal:        8256576 kB
+MemFree:          526816 kB
+MemAvailable:    1662352 kB
+SwapTotal:        204784 kB
+SwapFree:              0 kB
+--- DISK ---
+Filesystem                          Size  Used Avail Use% Mounted on
+/dev/mmcblk0p2                      234G  108G  115G  49% /
+/dev/mmcblk0p1                      510M   78M  433M  16% /boot/firmware
+//192.168.2.3/share/externals/usb0  470G  409G   62G  88% /mnt/media
+192.168.2.100:/share                110G   63G   48G  57% /share/vimage1
+vimage4:/opt/outputs                916G  723G  148G  84% /share/outputs
+192.168.2.101:/share                110G  100G   11G  91% /share/vimage2
+--- GPU (nvidia-smi) ---
+nvidia-smi not found
+--- DOCKER ---
+Docker version: Docker version 29.4.0, build 9d7ad9f
+
+Running containers:
+NAMES                         IMAGE                                          STATUS                    PORTS
+docker-catalog-exporter       python:3-alpine                                Up 9 days                 
+cadvisor-scrape               gcr.io/cadvisor/cadvisor:latest                Up 29 hours (unhealthy)   
+node-exporter                 prom/node-exporter:latest                      Up 9 days                 
+invidious-invidious-1         quay.io/invidious/invidious:latest-arm64       Up 7 weeks (healthy)      0.0.0.0:3002->3000/tcp, [::]:3002->3000/tcp
+sonarr                        linuxserver/sonarr:latest                      Up 7 weeks                0.0.0.0:8989->8989/tcp, [::]:8989->8989/tcp
+transmission-openvpn-latest   haugene/transmission-openvpn:latest            Up 41 hours (healthy)     8118/tcp, 0.0.0.0:9091->9091/tcp, [::]:9091->9091/tcp
+invidious-invidious-db-1      postgres:14                                    Up 7 weeks (healthy)      5432/tcp
+invidious-companion-1         quay.io/invidious/invidious-companion:latest   Up 21 hours (healthy)     0.0.0.0:8282->8282/tcp, [::]:8282->8282/tcp
+beets                         linuxserver/beets:latest                       Up 7 weeks                0.0.0.0:8337->8337/tcp, [::]:8337->8337/tcp
+jackett                       linuxserver/jackett:latest                     Up 7 weeks                0.0.0.0:9117->9117/tcp, [::]:9117->9117/tcp
+beszel-agent                  henrygd/beszel-agent:latest                    Up 7 weeks                
+nzbhydra2                     linuxserver/nzbhydra2:latest                   Up 7 weeks                0.0.0.0:5076->5076/tcp, [::]:5076->5076/tcp
+mariadb                       linuxserver/mariadb:arm64v8-latest             Up 7 weeks                0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp
+jellyfin                      linuxserver/jellyfin:latest                    Up 7 weeks                0.0.0.0:8096->8096/tcp, [::]:8096->8096/tcp, 0.0.0.0:8920->8920/tcp, [::]:8920->8920/tcp
+radarr-old                    linuxserver/radarr:latest                      Up 7 weeks                0.0.0.0:7878->7878/tcp, [::]:7878->7878/tcp
+syncthing                     linuxserver/syncthing:latest                   Up 7 weeks                0.0.0.0:8384->8384/tcp, [::]:8384->8384/tcp, 0.0.0.0:22000->22000/tcp, [::]:22000->22000/tcp, 0.0.0.0:21027->21027/udp, [::]:21027->21027/udp, 22000/udp
+nzbget                        linuxserver/nzbget:latest                      Up 7 weeks                0.0.0.0:6789->6789/tcp, [::]:6789->6789/tcp
+funkwhale-postgres-1          postgres:15-alpine                             Up 7 weeks                5432/tcp
+lidarr                        70419ac6c662                                   Up 7 weeks                0.0.0.0:8686->8686/tcp, [::]:8686->8686/tcp
+prowlarr                      lscr.io/linuxserver/prowlarr:develop           Up 7 weeks                0.0.0.0:9696->9696/tcp, [::]:9696->9696/tcp
+portainer_agent               portainer/agent:latest                         Up 7 weeks                0.0.0.0:9001->9001/tcp, [::]:9001->9001/tcp
+portainer                     portainer/portainer-ce:lts                     Up 7 weeks                0.0.0.0:9000->9000/tcp, [::]:9000->9000/tcp, 8000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp
+funkwhale-redis-1             redis:7-alpine                                 Up 7 weeks                0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp
+whisparr                      ghcr.io/hotio/whisparr:latest                  Up 7 weeks                0.0.0.0:6969->6969/tcp, [::]:6969->6969/tcp
+uptime-kuma                   louislam/uptime-kuma:latest                    Up 7 weeks (healthy)      0.0.0.0:3001->3001/tcp, [::]:3001->3001/tcp
+memos                         ghcr.io/usememos/memos:latest                  Up 7 weeks                0.0.0.0:5230->5230/tcp, [::]:5230->5230/tcp
+FlareSolverr                  ghcr.io/flaresolverr/flaresolverr:latest       Up 7 weeks                0.0.0.0:8191->8191/tcp, [::]:8191->8191/tcp, 8192/tcp
+funkwhale-api-1               funkwhale/api:1.4.0                            Up 7 weeks                0.0.0.0:5000->80/tcp
+funkwhale-front-1             funkwhale/front:1.4.0                          Up 7 weeks                0.0.0.0:5080->80/tcp
+headphones                    linuxserver/headphones:latest                  Up 7 weeks                0.0.0.0:8181->8181/tcp, [::]:8181->8181/tcp
+funkwhale-celeryworker-1      funkwhale/api:1.4.0                            Up 19 minutes             0.0.0.0:5001->80/tcp, [::]:5001->80/tcp
+huginn                        mjysci/huginn:arm32v7                          Up 7 weeks                0.0.0.0:3033->3000/tcp, [::]:3033->3000/tcp
+intelligent_roentgen          8641a2afc79f                                   Up 7 weeks                0.0.0.0:5678->8080/tcp, [::]:5678->8080/tcp
+sharp_shtern                  c46d78771ba3                                   Up 7 weeks                0.0.0.0:6080->8080/tcp, [::]:6080->8080/tcp
+
+All containers (including stopped):
+NAMES                         IMAGE                                          STATUS                    CREATED AT
+docker-catalog-exporter       python:3-alpine                                Up 9 days                 2026-05-23 01:34:53 +0300 EEST
+cadvisor-scrape               gcr.io/cadvisor/cadvisor:latest                Up 29 hours (unhealthy)   2026-05-23 01:30:52 +0300 EEST
+node-exporter                 prom/node-exporter:latest                      Up 9 days                 2026-05-23 01:30:46 +0300 EEST
+invidious-invidious-1         quay.io/invidious/invidious:latest-arm64       Up 7 weeks (healthy)      2026-04-08 01:39:42 +0300 EEST
+sonarr                        linuxserver/sonarr:latest                      Up 7 weeks                2026-04-08 01:35:04 +0300 EEST
+transmission-openvpn-latest   haugene/transmission-openvpn:latest            Up 41 hours (healthy)     2026-04-08 01:33:38 +0300 EEST
+invidious-invidious-db-1      postgres:14                                    Up 7 weeks (healthy)      2026-04-07 22:54:54 +0300 EEST
+invidious-companion-1         quay.io/invidious/invidious-companion:latest   Up 21 hours (healthy)     2026-04-07 22:54:46 +0300 EEST
+beets                         linuxserver/beets:latest                       Up 7 weeks                2026-02-23 02:43:45 +0200 EET
+jackett                       linuxserver/jackett:latest                     Up 7 weeks                2026-02-23 02:43:44 +0200 EET
+beszel-agent                  henrygd/beszel-agent:latest                    Up 7 weeks                2026-02-21 02:43:40 +0200 EET
+nzbhydra2                     linuxserver/nzbhydra2:latest                   Up 7 weeks                2026-02-19 02:43:27 +0200 EET
+mariadb                       linuxserver/mariadb:arm64v8-latest             Up 7 weeks                2026-02-18 02:44:03 +0200 EET
+jellyfin                      linuxserver/jellyfin:latest                    Up 7 weeks                2026-02-18 02:44:00 +0200 EET
+radarr-old                    linuxserver/radarr:latest                      Up 7 weeks                2026-02-16 02:43:01 +0200 EET
+syncthing                     linuxserver/syncthing:latest                   Up 7 weeks                2026-02-15 02:43:23 +0200 EET
+nzbget                        linuxserver/nzbget:latest                      Up 7 weeks                2026-02-14 02:44:59 +0200 EET
+funkwhale-postgres-1          postgres:15-alpine                             Up 7 weeks                2026-02-13 02:46:19 +0200 EET
+lidarr                        70419ac6c662                                   Up 7 weeks                2026-02-12 02:45:40 +0200 EET
+prowlarr                      lscr.io/linuxserver/prowlarr:develop           Up 7 weeks                2026-02-12 02:45:37 +0200 EET
+portainer_agent               portainer/agent:latest                         Up 7 weeks                2026-02-11 02:44:11 +0200 EET
+portainer                     portainer/portainer-ce:lts                     Up 7 weeks                2026-02-11 02:44:09 +0200 EET
+funkwhale-redis-1             redis:7-alpine                                 Up 7 weeks                2026-01-29 02:44:26 +0200 EET
+whisparr                      ghcr.io/hotio/whisparr:latest                  Up 7 weeks                2026-01-29 02:44:23 +0200 EET
+uptime-kuma                   louislam/uptime-kuma:latest                    Up 7 weeks (healthy)      2026-01-08 03:00:17 +0200 EET
+memos                         ghcr.io/usememos/memos:latest                  Up 7 weeks                2026-01-08 03:00:12 +0200 EET
+FlareSolverr                  ghcr.io/flaresolverr/flaresolverr:latest       Up 7 weeks                2026-01-08 02:59:11 +0200 EET
+funkwhale-api-1               funkwhale/api:1.4.0                            Up 7 weeks                2025-08-11 16:09:09 +0300 EEST
+funkwhale-front-1             funkwhale/front:1.4.0                          Up 7 weeks                2025-08-11 15:58:31 +0300 EEST
+headphones                    linuxserver/headphones:latest                  Up 7 weeks                2025-07-28 21:41:19 +0300 EEST
+funkwhale-celeryworker-1      funkwhale/api:1.4.0                            Up 19 minutes             2025-07-16 23:54:50 +0300 EEST
+huginn                        mjysci/huginn:arm32v7                          Up 7 weeks                2024-08-15 06:31:46 +0300 EEST
+intelligent_roentgen          8641a2afc79f                                   Up 7 weeks                2024-08-15 06:11:08 +0300 EEST
+sharp_shtern                  c46d78771ba3                                   Up 7 weeks                2024-08-08 01:37:01 +0300 EEST
+
+Docker resource usage:
+NAME                          CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O
+docker-catalog-exporter       0.01%     0B / 0B             0.00%     0B / 0B           5.79GB / 0B
+cadvisor-scrape               6.47%     0B / 0B             0.00%     0B / 0B           5.91GB / 0B
+node-exporter                 0.00%     0B / 0B             0.00%     0B / 0B           17.3GB / 0B
+invidious-invidious-1         0.00%     0B / 0B             0.00%     26.1GB / 12.3GB   13.4GB / 0B
+sonarr                        0.04%     0B / 0B             0.00%     1.92GB / 248MB    55.7GB / 0B
+transmission-openvpn-latest   0.34%     0B / 0B             0.00%     167MB / 205MB     5.74GB / 0B
+invidious-invidious-db-1      0.00%     0B / 0B             0.00%     7.33GB / 2.05GB   50.8GB / 12.3kB
+invidious-companion-1         0.01%     0B / 0B             0.00%     230MB / 12.6MB    2.38GB / 0B
+beets                         0.02%     0B / 0B             0.00%     314MB / 187kB     4.11GB / 0B
+jackett                       0.01%     0B / 0B             0.00%     4.52GB / 12.7GB   34.6GB / 0B
+beszel-agent                  0.00%     0B / 0B             0.00%     0B / 0B           12.8GB / 0B
+nzbhydra2                     0.05%     0B / 0B             0.00%     7.66GB / 519MB    2.05TB / 0B
+mariadb                       0.01%     0B / 0B             0.00%     314MB / 126B      4.36GB / 0B
+jellyfin                      0.04%     0B / 0B             0.00%     324MB / 510MB     32.7GB / 0B
+radarr-old                    0.08%     0B / 0B             0.00%     5.03GB / 252MB    41.8GB / 24.6kB
+syncthing                     0.03%     0B / 0B             0.00%     356MB / 49.5MB    39.4GB / 0B
+nzbget                        0.01%     0B / 0B             0.00%     553MB / 357MB     5.94GB / 0B
+funkwhale-postgres-1          0.00%     0B / 0B             0.00%     4.81MB / 161kB    20.7GB / 0B
+lidarr                        0.11%     0B / 0B             0.00%     319MB / 1.79MB    26.4GB / 0B
+prowlarr                      0.17%     0B / 0B             0.00%     870MB / 1.75GB    34.2GB / 0B
+portainer_agent               0.00%     0B / 0B             0.00%     1.72GB / 11.9GB   19GB / 0B
+portainer                     0.00%     0B / 0B             0.00%     720MB / 13.7GB    52.4GB / 0B
+funkwhale-redis-1             0.78%     0B / 0B             0.00%     184MB / 205MB     6.26GB / 0B
+whisparr                      0.04%     0B / 0B             0.00%     2.21GB / 120MB    37.7GB / 0B
+uptime-kuma                   0.15%     0B / 0B             0.00%     3.67GB / 313MB    59.6GB / 0B
+memos                         0.00%     0B / 0B             0.00%     317MB / 1.17MB    10.2GB / 0B
+FlareSolverr                  2.67%     0B / 0B             0.00%     4.11GB / 583MB    586GB / 45.1kB
+funkwhale-api-1               0.40%     0B / 0B             0.00%     5.45MB / 1.42MB   9.12GB / 4.1kB
+funkwhale-front-1             0.00%     0B / 0B             0.00%     18MB / 208MB      849MB / 0B
+headphones                    0.02%     0B / 0B             0.00%     746MB / 464MB     7.57GB / 0B
+funkwhale-celeryworker-1      0.00%     0B / 0B             0.00%     33.1kB / 19.3kB   48.6MB / 0B
+huginn                        0.17%     0B / 0B             0.00%     321MB / 1.13MB    32.9GB / 0B
+intelligent_roentgen          0.07%     0B / 0B             0.00%     314MB / 1.15MB    14.1GB / 0B
+sharp_shtern                  0.14%     0B / 0B             0.00%     321MB / 36.1MB    15.8GB / 0B
+
+Docker images:
+REPOSITORY                              TAG              SIZE      CREATED
+python                                  3-alpine         51.1MB    2 weeks ago
+gitea/act_runner                        latest           48.1MB    4 weeks ago
+postgres                                14               464MB     7 weeks ago
+quay.io/invidious/invidious-companion   latest           150MB     8 weeks ago
+linuxserver/sonarr                      latest           225MB     8 weeks ago
+haugene/transmission-openvpn            latest           359MB     2 months ago
+portainer/portainer-ce                  latest           173MB     2 months ago
+linuxserver/lidarr                      latest           299MB     2 months ago
+linuxserver/beets                       latest           611MB     3 months ago
+linuxserver/jackett                     latest           208MB     3 months ago
+henrygd/beszel-agent                    latest           8.54MB    3 months ago
+linuxserver/nzbhydra2                   latest           291MB     3 months ago
+linuxserver/jellyfin                    latest           507MB     3 months ago
+linuxserver/mariadb                     arm64v8-latest   358MB     3 months ago
+linuxserver/radarr                      latest           236MB     3 months ago
+linuxserver/syncthing                   latest           69.2MB    3 months ago
+linuxserver/nzbget                      latest           131MB     3 months ago
+postgres                                15-alpine        270MB     3 months ago
+grafana/grafana                         latest           702MB     3 months ago
+lscr.io/linuxserver/prowlarr            develop          215MB     3 months ago
+portainer/agent                         latest           130MB     3 months ago
+portainer/portainer-ce                  lts              176MB     3 months ago
+quay.io/invidious/invidious             latest-arm64     75.9MB    3 months ago
+ghcr.io/hotio/whisparr                  latest           269MB     4 months ago
+redis                                   7-alpine         41.8MB    4 months ago
+prom/prometheus                         latest           339MB     4 months ago
+gcr.io/cadvisor/cadvisor                latest           63.6MB    5 months ago
+ghcr.io/flaresolverr/flaresolverr       latest           722MB     6 months ago
+prom/node-exporter                      latest           24.5MB    7 months ago
+louislam/uptime-kuma                    latest           439MB     7 months ago
+ghcr.io/usememos/memos                  latest           64.2MB    16 months ago
+funkwhale/api                           1.4.0            469MB     2 years ago
+funkwhale/front                         1.4.0            72.5MB    2 years ago
+linuxserver/headphones                  latest           188MB     2 years ago
+zcube/cadvisor                          latest           63MB      3 years ago
+mjysci/huginn                           arm32v7          949MB     5 years ago
+--- OLLAMA ---
+Ollama not detected
+--- LOCALAI ---
+LocalAI detected on port 8081
+--- NETWORK ---
+eth0             UP             192.168.2.7/24 fe80::ff5c:9eff:ee3d:a074/64 
+wlan0            DOWN           
+br-26b575deb66b  DOWN           172.18.0.1/16 fe80::6015:f6ff:fe7f:e284/64 
+br-8bec0c058d68  UP             172.20.0.1/16 fe80::2811:32ff:fea2:1038/64 
+docker0          UP             172.17.0.1/16 fe80::4c24:1dff:fed9:a13e/64 
+br-0ce7feee5bd1  UP             172.19.0.1/16 fe80::f801:e2ff:feb5:4e39/64 
+veth6ea5508@if2  UP             fe80::98ac:99ff:fe87:d57/64 
+vethc2b30c8@if2  UP             fe80::406e:94ff:fe7f:3b54/64 
+veth548fa18@if2  UP             fe80::f803:b1ff:fe79:d00c/64 
+vetha8eaa68@if2  UP             fe80::88b4:19ff:fe83:de4b/64 
+veth966ee60@if2  UP             fe80::8c98:57ff:fed3:a133/64 
+veth3e19887@if2  UP             fe80::8827:e0ff:fe47:906e/64 
+vethef37bce@if2  UP             fe80::fc87:e1ff:fefe:b398/64 
+veth0b4388c@if2  UP             fe80::ecaf:49ff:feed:8219/64 
+veth18593c7@if2  UP             fe80::ac16:42ff:fe66:a8c1/64 
+vetha7a4c39@if2  UP             fe80::c86f:16ff:fe15:dc4b/64 
+vethfc72e43@if2  UP             fe80::6c76:abff:fe43:7e78/64 
+veth8212dea@if2  UP             fe80::cc0b:2aff:fecc:fbf0/64 
+veth73ef692@if2  UP             fe80::2ca2:5bff:fe2b:5f83/64 
+veth065b8db@if2  UP             fe80::b032:b1ff:fe6d:91d0/64 
+veth4f3ed51@if2  UP             fe80::a4de:2eff:fef5:1664/64 
+veth3f44981@if2  UP             fe80::e0c5:d9ff:fe90:2c8f/64 
+veth77bf835@if2  UP             fe80::e87d:58ff:feea:cfe5/64 
+veth1325a0e@if2  UP             fe80::282a:5aff:fe19:cba/64 
+vethaf346f1@if2  UP             fe80::8c87:58ff:fe27:86b4/64 
+veth9541dd3@if2  UP             fe80::8425:12ff:fe32:10bf/64 
+veth73dd2fc@if2  UP             fe80::342f:2eff:fe99:7bc5/64 
+vetha48843a@if2  UP             fe80::c4b4:c3ff:fe18:cc36/64 
+veth1bd95dd@if2  UP             fe80::40e4:eaff:fe7a:84ef/64 
+veth8ff68be@if2  UP             fe80::34c0:99ff:fe1f:8491/64 
+veth1e88ca4@if2  UP             fe80::f091:a1ff:fef8:30a6/64 
+veth1dbf295@if2  UP             fe80::386e:4bff:fef2:5082/64 
+vethd85bd24@if2  UP             fe80::58f8:c4ff:fe89:677a/64 
+veth5e23ab7@if2  UP             fe80::81:44ff:fecd:8498/64 
+veth60878fe@if2  UP             fe80::6435:eaff:fe85:1874/64 
+vethc12d09d@if2  UP             fe80::cea:a4ff:fe8d:d664/64 
+
+LISTEN 0      4096         0.0.0.0:9000       0.0.0.0:*          
+LISTEN 0      4096         0.0.0.0:5000       0.0.0.0:*          
+LISTEN 0      4096            [::]:9000          [::]:*          
+LISTEN 0      4096               *:8081             *:*          
+--- LOAD & UPTIME ---
+ 23:18:00 up 54 days, 23:55,  1 user,  load average: 0.57, 0.56, 0.57
+
+0.57 0.56 0.57 1/4339 1643696
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service                loaded active running Docker Application Container Engine
+=== END NODE: pi5 ===
+
+------------------------------------------------------------
+ Probing: web
+------------------------------------------------------------
+=== NODE: web ===
+--- OS ---
+NAME="Debian GNU/Linux"
+VERSION="12 (bookworm)"
+--- CPU ---
+Architecture:                            aarch64
+Model name:                              Cortex-A72
+Thread(s) per core:                      1
+Core(s) per cluster:                     4
+Socket(s):                               -
+CPU(s) scaling MHz:                      100%
+CPU max MHz:                             1800.0000
+CPU min MHz:                             600.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       427Mi       1.7Gi        34Mi       1.7Gi       3.3Gi
+Swap:          511Mi          0B       511Mi
+
+MemTotal:        3887928 kB
+MemFree:         1749600 kB
+MemAvailable:    3449628 kB
+SwapTotal:        524284 kB
+SwapFree:         524284 kB
+--- DISK ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/mmcblk0p2   57G   13G   41G  25% /
+/dev/mmcblk0p1  510M   57M  454M  12% /boot/firmware
+--- GPU (nvidia-smi) ---
+nvidia-smi not found
+--- DOCKER ---
+Docker version: Docker version 20.10.24+dfsg1, build 297e128
+
+Running containers:
+NAMES     IMAGE     STATUS    PORTS
+
+All containers (including stopped):
+NAMES     IMAGE     STATUS    CREATED AT
+
+Docker resource usage:
+NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O
+
+Docker images:
+REPOSITORY   TAG       SIZE      CREATED
+--- OLLAMA ---
+Ollama not detected
+--- LOCALAI ---
+--- NETWORK ---
+eth0             UP             192.168.2.10/24 fe80::2c9e:6289:2ace:5596/64 
+wlan0            DOWN           
+docker0          DOWN           172.17.0.1/16 
+
+no known inference ports open
+--- LOAD & UPTIME ---
+ 23:18:02 up 38 days, 22:00,  0 user,  load average: 0.16, 0.03, 0.01
+
+0.16 0.03 0.01 1/208 197688
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service            loaded active running Docker Application Container Engine
+=== END NODE: web ===
+
+------------------------------------------------------------
+ Node: 192.168.2.12 (Windows — hardcoded specs)
+------------------------------------------------------------
+=== NODE: 192.168.2.12 (Windows / no SSH) ===
+--- OS ---
+Windows (version unknown — update manually)
+
+--- CPU ---
+Model: Intel Core i7-8700
+Cores: 6 cores / 12 threads
+Base clock: 3.20 GHz
+Boost clock: 4.60 GHz
+Architecture: Coffee Lake (x86_64)
+TDP: 65W
+
+--- MEMORY ---
+Total: 32 GB DDR4
+(available/used: unknown at audit time)
+
+--- GPU ---
+Name: NVIDIA GeForce RTX 4070 Ti
+VRAM: 12 GB GDDR6X
+Architecture: Ada Lovelace
+CUDA capability: 8.9
+TDP: 285W
+(driver version / utilization: unknown at audit time)
+
+--- INFERENCE ---
+Ollama: running on http://192.168.2.12:11434 (assumed)
+Backend: Windows native Ollama
+Models: (unknown — query manually or enable API)
+
+--- NOTES ---
+- No SSH access; specs provided manually
+- i7-8700 is 6th-gen Coffee Lake, no AVX-512
+- 4070 Ti is Ada Lovelace, CUDA 8.9 — full FP8 support
+- 32 GB RAM is adequate for model offloading to system RAM
+- Recommend enabling Ollama API remote access for dispatcher health polling
+
+============================================================
+ CONNECTIVITY SUMMARY
+============================================================
+  vimage : ok
+  vimage2 : ok
+  vimage3 : ok
+  vimage4 : ok
+  vimage5 : ok
+  vimage6 : ok
+  pi4 : ok
+  pi5 : ok
+  web : ok
+  192.168.2.12 (Windows) : hardcoded
+
+Output files written to: ./giggi_audit_20260601_231733/
+  full_report.txt       — complete audit
+  nodes.json            — (see below)
+  <node>.txt            — per-node raw output
+
+nodes.json skeleton written.
+
+Next step: paste full_report.txt back to Claude for optimization analysis.
+============================================================

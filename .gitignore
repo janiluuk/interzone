@@ -1,3 +1,33 @@
+# Build artifacts
 node_modules/
 dist/
 *.js.map
+.cache/
+
+# Environment and secrets
+.env
+.env.*
+*.env
+*.secret
+*.secrets
+
+# Credentials and keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+*.crt
+id_rsa
+id_ed25519
+id_ecdsa
+*.priv
+
+# Timestamped audit runs (raw dumps — keep only curated giggi_audit/)
+giggi_audit_*/
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo

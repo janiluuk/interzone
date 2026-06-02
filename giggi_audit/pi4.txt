@@ -1,0 +1,204 @@
+=== NODE: pi4 ===
+--- OS ---
+NAME="Debian GNU/Linux"
+VERSION="12 (bookworm)"
+--- CPU ---
+Architecture:                            aarch64
+Model name:                              Cortex-A72
+Thread(s) per core:                      1
+Core(s) per cluster:                     4
+Socket(s):                               -
+CPU(s) scaling MHz:                      100%
+CPU max MHz:                             1800.0000
+CPU min MHz:                             600.0000
+--- MEMORY ---
+               total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       2.5Gi       1.3Gi        61Mi       4.0Gi       5.2Gi
+Swap:          199Mi          0B       199Mi
+
+MemTotal:        8008488 kB
+MemFree:         1409012 kB
+MemAvailable:    5425268 kB
+SwapTotal:        204796 kB
+SwapFree:         204796 kB
+--- DISK ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/mmcblk0p2  114G   50G   60G  46% /
+/dev/mmcblk0p1  510M   80M  431M  16% /boot/firmware
+--- GPU (nvidia-smi) ---
+nvidia-smi not found
+--- DOCKER ---
+Docker version: Docker version 29.4.0, build 9d7ad9f
+
+Running containers:
+NAMES                        IMAGE                                 STATUS                    PORTS
+monitoring-promtail          grafana/promtail:3.4                  Up 37 hours               
+docker-catalog-exporter      python:3-alpine                       Up 37 hours               
+cadvisor-scrape              gcr.io/cadvisor/cadvisor:latest       Up 37 hours (unhealthy)   
+cloudflare-ddns              favonia/cloudflare-ddns:latest        Up 37 hours               
+pihole-old                   pihole/pihole:latest                  Up 37 hours (healthy)     0.0.0.0:53->53/udp, [::]:53->53/udp, 0.0.0.0:53->53/tcp, 0.0.0.0:67->67/udp, [::]:53->53/tcp, [::]:67->67/udp, 123/udp, 0.0.0.0:1010->80/tcp, [::]:1010->80/tcp, 0.0.0.0:4443->443/tcp, [::]:4443->443/tcp
+portainer                    portainer/portainer-ce:latest         Up 37 hours               0.0.0.0:9000->9000/tcp, [::]:9000->9000/tcp, 0.0.0.0:9443->9443/tcp, [::]:9443->9443/tcp, 0.0.0.0:8008->8000/tcp, [::]:8008->8000/tcp
+homeassistant                homeassistant/home-assistant:stable   Up 37 hours               
+Dashy                        lissy93/dashy:latest                  Up 37 hours (healthy)     0.0.0.0:80->80/tcp, [::]:80->80/tcp, 8080/tcp
+Snippet-box                  pawelmalak/snippet-box:arm            Up 37 hours               0.0.0.0:5010->5000/tcp, [::]:5010->5000/tcp
+beszel                       henrygd/beszel                        Up 37 hours               0.0.0.0:8090->8090/tcp, [::]:8090->8090/tcp
+duckdns                      linuxserver/duckdns:latest            Up 37 hours               
+nginx-proxy-manager-sqlite   jc21/nginx-proxy-manager:latest       Up 37 hours               0.0.0.0:81->81/tcp, [::]:81->81/tcp, 0.0.0.0:8000->80/tcp, [::]:8000->80/tcp, 0.0.0.0:8443->443/tcp, [::]:8443->443/tcp
+photoprism                   photoprism/photoprism:latest          Up 28 seconds             0.0.0.0:2342->2342/tcp, [::]:2342->2342/tcp, 2442-2443/tcp
+ubooquity                    linuxserver/ubooquity:latest          Up 37 hours               0.0.0.0:2202-2203->2202-2203/tcp, [::]:2202-2203->2202-2203/tcp
+vpn                          azinchen/nordvpn                      Up 37 hours               
+elated_wing                  nicolargo/glances:latest-full         Up 37 hours               0.0.0.0:61208-61209->61208-61209/tcp, [::]:61208-61209->61208-61209/tcp
+ghost                        b1ffa6a8c9c0                          Up 37 hours               0.0.0.0:2368->2368/tcp, [::]:2368->2368/tcp
+monitoring-node-exporter     prom/node-exporter:latest             Up 37 hours               0.0.0.0:9100->9100/tcp, [::]:9100->9100/tcp
+monitoring-cadvisor          zcube/cadvisor:latest                 Up 37 hours (healthy)     
+monitoring-prometheus        prom/prometheus:latest                Up 37 hours               0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp
+photoprism-mariadb-1         mariadb:10.6                          Up 37 hours               3306/tcp
+flatnotes                    dullage/flatnotes:latest              Up 37 hours (healthy)     0.0.0.0:8715->8080/tcp, [::]:8715->8080/tcp
+syncthing                    linuxserver/syncthing:latest          Up 37 hours               0.0.0.0:8384->8384/tcp, [::]:8384->8384/tcp, 0.0.0.0:22000->22000/tcp, [::]:22000->22000/tcp, 0.0.0.0:21027->21027/udp, [::]:21027->21027/udp, 22000/udp
+MeTube                       alexta69/metube:latest                Up 37 hours               0.0.0.0:9898->8081/tcp, [::]:9898->8081/tcp
+jani-adminer-1               arm64v8/adminer:latest                Up 37 hours               0.0.0.0:6443->443/tcp, [::]:6443->443/tcp, 0.0.0.0:6680->8080/tcp, [::]:6680->8080/tcp
+mariadb-old                  be015d095fe9                          Up 37 hours               0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp
+librespeed                   linuxserver/librespeed:latest         Up 37 hours               443/tcp, 0.0.0.0:83->80/tcp, [::]:83->80/tcp
+
+All containers (including stopped):
+NAMES                        IMAGE                                 STATUS                     CREATED AT
+monitoring-promtail          grafana/promtail:3.4                  Up 37 hours                2026-05-23 02:35:29 +0300 EEST
+docker-catalog-exporter      python:3-alpine                       Up 37 hours                2026-05-23 01:34:50 +0300 EEST
+cadvisor-scrape              gcr.io/cadvisor/cadvisor:latest       Up 37 hours (unhealthy)    2026-05-23 01:30:19 +0300 EEST
+cloudflare-ddns              favonia/cloudflare-ddns:latest        Up 37 hours                2026-05-22 21:21:03 +0300 EEST
+pihole-old                   pihole/pihole:latest                  Up 37 hours (healthy)      2026-04-08 01:30:53 +0300 EEST
+portainer                    portainer/portainer-ce:latest         Up 37 hours                2026-04-08 01:25:58 +0300 EEST
+homeassistant                homeassistant/home-assistant:stable   Up 37 hours                2026-04-08 00:42:26 +0300 EEST
+Dashy                        lissy93/dashy:latest                  Up 37 hours (healthy)      2026-04-08 00:22:58 +0300 EEST
+Snippet-box                  pawelmalak/snippet-box:arm            Up 37 hours                2026-04-07 23:46:10 +0300 EEST
+beszel                       henrygd/beszel                        Up 37 hours                2026-04-07 23:45:00 +0300 EEST
+duckdns                      linuxserver/duckdns:latest            Up 37 hours                2026-04-07 23:26:47 +0300 EEST
+nginx-proxy-manager-sqlite   jc21/nginx-proxy-manager:latest       Up 37 hours                2026-03-21 05:13:53 +0200 EET
+photoprism                   photoprism/photoprism:latest          Up 28 seconds              2026-02-02 08:37:23 +0200 EET
+ubooquity                    linuxserver/ubooquity:latest          Up 37 hours                2026-02-02 07:19:12 +0200 EET
+vpn                          azinchen/nordvpn                      Up 37 hours                2025-11-24 00:29:36 +0200 EET
+elated_wing                  nicolargo/glances:latest-full         Up 37 hours                2025-11-23 23:37:10 +0200 EET
+ghost                        b1ffa6a8c9c0                          Up 37 hours                2025-08-12 11:31:54 +0300 EEST
+monitoring-node-exporter     prom/node-exporter:latest             Up 37 hours                2025-08-12 00:42:37 +0300 EEST
+monitoring-cadvisor          zcube/cadvisor:latest                 Up 37 hours (healthy)      2025-08-12 00:41:51 +0300 EEST
+monitoring-prometheus        prom/prometheus:latest                Up 37 hours                2025-08-11 23:55:25 +0300 EEST
+photoprism-mariadb-1         mariadb:10.6                          Up 37 hours                2025-08-09 23:18:07 +0300 EEST
+beszel-agent                 henrygd/beszel-agent                  Exited (2) 7 weeks ago     2025-07-28 07:57:09 +0300 EEST
+flatnotes                    dullage/flatnotes:latest              Up 37 hours (healthy)      2025-07-28 07:27:29 +0300 EEST
+syncthing                    linuxserver/syncthing:latest          Up 37 hours                2025-07-16 23:11:13 +0300 EEST
+MeTube                       alexta69/metube:latest                Up 37 hours                2025-03-10 11:37:29 +0200 EET
+filebrowser-latest           filebrowser/filebrowser:latest        Exited (1) 7 weeks ago     2024-07-27 16:42:43 +0300 EEST
+jani-adminer-1               arm64v8/adminer:latest                Up 37 hours                2024-04-27 01:59:59 +0300 EEST
+Sshwifty                     niruix/sshwifty:latest                Exited (137) 7 weeks ago   2024-04-18 03:49:25 +0300 EEST
+mariadb-old                  be015d095fe9                          Up 37 hours                2024-04-18 01:39:44 +0300 EEST
+librespeed                   linuxserver/librespeed:latest         Up 37 hours                2024-02-19 13:59:04 +0200 EET
+
+Docker resource usage:
+NAME                         CPU %     MEM USAGE / LIMIT   MEM %     NET I/O           BLOCK I/O
+monitoring-promtail          0.74%     0B / 0B             0.00%     1.37MB / 2.3MB    78.2MB / 0B
+docker-catalog-exporter      0.02%     0B / 0B             0.00%     0B / 0B           13.9MB / 0B
+cadvisor-scrape              84.74%    0B / 0B             0.00%     0B / 0B           136MB / 0B
+cloudflare-ddns              0.00%     0B / 0B             0.00%     2.66MB / 1.31MB   13MB / 0B
+pihole-old                   0.25%     0B / 0B             0.00%     13.7MB / 18.2MB   155MB / 0B
+portainer                    0.03%     0B / 0B             0.00%     309MB / 37.2MB    72.2MB / 0B
+homeassistant                1.63%     0B / 0B             0.00%     0B / 0B           390MB / 0B
+Dashy                        0.02%     0B / 0B             0.00%     696kB / 1.97kB    66.8MB / 0B
+Snippet-box                  0.00%     0B / 0B             0.00%     681kB / 126B      52MB / 0B
+beszel                       0.00%     0B / 0B             0.00%     40.3MB / 11.5MB   32MB / 0B
+duckdns                      0.00%     0B / 0B             0.00%     3.53MB / 1.42MB   17.1MB / 0B
+nginx-proxy-manager-sqlite   0.31%     0B / 0B             0.00%     24.1GB / 23.4GB   448MB / 0B
+photoprism                   0.19%     0B / 0B             0.00%     8.7kB / 3.35kB    0B / 0B
+ubooquity                    0.28%     0B / 0B             0.00%     683kB / 1.78kB    74.2MB / 0B
+vpn                          0.00%     0B / 0B             0.00%     1.45MB / 531kB    14.3MB / 0B
+elated_wing                  2.72%     0B / 0B             0.00%     680kB / 1.57kB    45.8MB / 0B
+ghost                        0.01%     0B / 0B             0.00%     1.92MB / 1.05MB   120MB / 0B
+monitoring-node-exporter     4.19%     0B / 0B             0.00%     24.9MB / 468MB    13.9MB / 0B
+monitoring-cadvisor          0.01%     0B / 0B             0.00%     0B / 0B           25.4MB / 0B
+monitoring-prometheus        2.17%     0B / 0B             0.00%     351MB / 18.5MB    126MB / 0B
+photoprism-mariadb-1         0.06%     0B / 0B             0.00%     13.6MB / 14.1MB   42MB / 0B
+flatnotes                    0.22%     0B / 0B             0.00%     689kB / 126B      53.2MB / 0B
+syncthing                    0.02%     0B / 0B             0.00%     2.84MB / 1.64MB   31.9MB / 0B
+MeTube                       0.00%     0B / 0B             0.00%     682kB / 126B      37.9MB / 0B
+jani-adminer-1               0.01%     0B / 0B             0.00%     689kB / 126B      26.5MB / 0B
+mariadb-old                  0.02%     0B / 0B             0.00%     1.71MB / 1.19MB   87.6MB / 9.73kB
+librespeed                   0.00%     0B / 0B             0.00%     682kB / 126B      33.1MB / 0B
+
+Docker images:
+REPOSITORY                     TAG              SIZE      CREATED
+python                         3-alpine         51.1MB    2 weeks ago
+lissy93/dashy                  latest           878MB     7 weeks ago
+linuxserver/mariadb            arm64v8-latest   360MB     7 weeks ago
+linuxserver/duckdns            latest           49MB      8 weeks ago
+henrygd/beszel                 latest           31MB      8 weeks ago
+homeassistant/home-assistant   stable           2.24GB    8 weeks ago
+pihole/pihole                  latest           114MB     8 weeks ago
+favonia/cloudflare-ddns        latest           14MB      2 months ago
+portainer/portainer-ce         latest           173MB     2 months ago
+jc21/nginx-proxy-manager       latest           1.14GB    3 months ago
+gcr.io/cadvisor/cadvisor       latest           63.6MB    5 months ago
+photoprism/photoprism          latest           2.37GB    6 months ago
+azinchen/nordvpn               latest           51.3MB    6 months ago
+nicolargo/glances              latest-full      382MB     7 months ago
+linuxserver/ubooquity          latest           254MB     10 months ago
+prom/prometheus                latest           303MB     10 months ago
+linuxserver/syncthing          latest           63.6MB    11 months ago
+dullage/flatnotes              latest           234MB     11 months ago
+mariadb                        10.6             381MB     12 months ago
+grafana/promtail               3.4              218MB     14 months ago
+prom/node-exporter             latest           24.4MB    14 months ago
+alexta69/metube                latest           280MB     15 months ago
+henrygd/beszel-agent           latest           6.42MB    22 months ago
+filebrowser/filebrowser        latest           31.8MB    2 years ago
+arm64v8/adminer                latest           243MB     2 years ago
+linuxserver/mariadb            latest           369MB     2 years ago
+niruix/sshwifty                latest           47.3MB    2 years ago
+linuxserver/librespeed         latest           96.8MB    2 years ago
+rustdesk/rustdesk-server-s6    latest           39.3MB    2 years ago
+zcube/cadvisor                 latest           63MB      3 years ago
+pawelmalak/snippet-box         arm              805MB     4 years ago
+--- OLLAMA ---
+Ollama not detected
+--- LOCALAI ---
+LocalAI detected on port 8081
+--- NETWORK ---
+eth0             UP             192.168.2.6/24 fe80::9f20:aa3f:16ba:efb8/64 
+wlan0            DOWN           
+docker0          UP             172.17.0.1/16 fe80::dce7:a5ff:fe5d:ee19/64 
+br-afec35eb4221  UP             172.20.0.1/16 fe80::c0f4:99ff:fe46:1770/64 
+br-e28c9503a148  UP             172.19.0.1/16 fe80::141b:63ff:fea1:58f8/64 
+br-f17ef45fc99b  UP             172.21.0.1/16 fe80::84c5:22ff:fee0:e8d9/64 
+br-0e8417b58141  UP             172.18.0.1/16 fe80::28fe:d8ff:fe9c:abc2/64 
+veth27cf240@if2  UP             fe80::30c8:9eff:fe53:fa1e/64 
+veth3c48565@if2  UP             fe80::c80c:8cff:fec6:8916/64 
+vethbf8932f@if2  UP             fe80::8429:86ff:fe5d:255e/64 
+vethba6dbd4@if2  UP             fe80::34e5:19ff:fe9a:24b0/64 
+veth4b598e1@if2  UP             fe80::6c95:adff:fe85:c76d/64 
+veth4306898@if2  UP             fe80::a488:8eff:fe79:e1cb/64 
+vethea05cf4@if2  UP             fe80::a828:70ff:fee1:d9e2/64 
+vethda29ad4@if2  UP             fe80::f8dd:cfff:fe89:3848/64 
+veth8ea8ae5@if2  UP             fe80::5047:efff:fe72:795b/64 
+veth451ad82@if2  UP             fe80::4411:76ff:fe79:baf6/64 
+veth69a00f8@if2  UP             fe80::fc29:68ff:feb0:3ab7/64 
+veth08b72a1@if2  UP             fe80::58d1:e2ff:fe90:4923/64 
+veth7e9e874@if2  UP             fe80::1409:a0ff:fe1d:cdd6/64 
+veth4e47708@if2  UP             fe80::34e5:e4ff:fe54:27a8/64 
+veth8e6dc09@if2  UP             fe80::8450:d4ff:feef:cbf/64 
+veth722fb9a@if2  UP             fe80::1475:d5ff:fee7:ec04/64 
+veth3095907@if2  UP             fe80::4499:ffff:fecc:66a2/64 
+veth49a373c@if2  UP             fe80::c895:5dff:fe19:716f/64 
+veth7585c31@if2  UP             fe80::445e:97ff:fe81:9ea0/64 
+veth348041e@if2  UP             fe80::94a5:2eff:fef6:a39f/64 
+veth53a8030@if2  UP             fe80::4c45:99ff:fe26:a4a2/64 
+vethf3a6df7@if2  UP             fe80::38e4:60ff:fe7e:d42f/64 
+veth8f05239@if2  UP             fe80::cc36:2dff:fe9c:f730/64 
+
+LISTEN 0      4096         0.0.0.0:9000       0.0.0.0:*          
+LISTEN 0      4096            [::]:9000          [::]:*          
+LISTEN 0      4096               *:8081             *:*          
+--- LOAD & UPTIME ---
+ 23:17:55 up 1 day, 13:00,  1 user,  load average: 1.03, 1.27, 1.20
+
+1.03 1.27 1.20 1/1563 702026
+--- SYSTEMD SERVICES (inference-related) ---
+  docker.service            loaded active running Docker Application Container Engine
+=== END NODE: pi4 ===
