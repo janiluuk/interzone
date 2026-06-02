@@ -3,6 +3,7 @@ import { NodeCard } from "./components/NodeCard";
 import { RouteLog } from "./components/RouteLog";
 import { ThroughputChart } from "./components/ThroughputChart";
 import { FleetTopology } from "./components/FleetTopology";
+import { VideoStatsPanel } from "./components/VideoStatsPanel";
 
 const CSS = `
   :root {
@@ -100,9 +101,16 @@ export default function App() {
           )}
         </div>
 
-        {/* Route log footer */}
-        <div style={{ padding: "0 16px 16px" }}>
-          <RouteLog decisions={decisions} />
+        {/* Footer: video stats + route log */}
+        <div style={{ padding: "0 16px 16px", display: "flex", gap: 12, alignItems: "flex-start" }}>
+          {(state?.video_stats?.length ?? 0) > 0 && (
+            <div style={{ flexShrink: 0, width: 280 }}>
+              <VideoStatsPanel stats={state!.video_stats} />
+            </div>
+          )}
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <RouteLog decisions={decisions} />
+          </div>
         </div>
       </div>
     </>

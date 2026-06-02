@@ -7,6 +7,7 @@ import type {
   ImageGenRequest,
   VideoGenRequest,
   VideoGenJob,
+  VideoBackendStats,
   TaskType,
 } from "../types/index.js";
 import type { Router } from "../router/Router.js";
@@ -14,10 +15,19 @@ import type { NodePoller } from "../poller/NodePoller.js";
 
 const INFERENCE_TIMEOUT_MS = parseInt(process.env.INFERENCE_TIMEOUT_MS ?? "60000");
 
+interface BackendAccumulator {
+  jobs_total: number;
+  jobs_ok: number;
+  jobs_failed: number;
+  durations: number[];
+  last_updated: number;
+}
+
 export class Proxy {
   private videoJobs: Map<string, VideoGenJob> = new Map();
   // Track active video jobs per node (used for cross-constraint checks)
   private activeDeforumByNode: Map<string, string> = new Map();
+  private videoBackendStats: Map<string, BackendAccumulator> = new Map();
 
   constructor(
     private router: Router,
@@ -26,6 +36,23 @@ export class Proxy {
 
   getVideoJob(jobId: string): VideoGenJob | undefined {
     return this.videoJobs.get(jobId);
+  }
+
+  getVideoBackendStats(): VideoBackendStats[] {
+    return Array.from(this.videoBackendStats.entries()).map(([backend, acc]) => {
+      const sorted = [...acc.durations].sort((a, b) => a - b);
+      const avg = sorted.length > 0 ? sorted.reduce((s, v) => s + v, 0) / sorted.length : 0;
+      return {
+        backend,
+        jobs_total: acc.jobs_total,
+        jobs_ok: acc.jobs_ok,
+        jobs_failed: acc.jobs_failed,
+        duration_avg_ms: Math.round(avg),
+        duration_min_ms: sorted[0] ?? 0,
+        duration_max_ms: sorted[sorted.length - 1] ?? 0,
+        last_updated: acc.last_updated,
+      };
+    });
   }
 
   async handleChat(req: FastifyRequest, reply: FastifyReply): Promise<void> {
@@ -377,11 +404,25 @@ export class Proxy {
   }
 
   private finalizeVideoJob(job: VideoGenJob): void {
+    job.duration_ms = Date.now() - job.submitted_at;
+
+    // Record per-backend stats
+    const nodeState = this.poller.getState(job.node_id);
+    const backend = nodeState?.config.backend ?? "unknown";
+    const acc = this.videoBackendStats.get(backend) ?? {
+      jobs_total: 0, jobs_ok: 0, jobs_failed: 0, durations: [], last_updated: 0,
+    };
+    acc.jobs_total++;
+    if (job.status === "succeeded") { acc.jobs_ok++; acc.durations.push(job.duration_ms); }
+    else acc.jobs_failed++;
+    if (acc.durations.length > 500) acc.durations.shift(); // cap history
+    acc.last_updated = Date.now();
+    this.videoBackendStats.set(backend, acc);
+
     this.poller.setVideoJob(job.node_id, undefined);
     this.activeDeforumByNode.delete(job.node_id);
 
     // Undo the Forge cross-constraint only for Deforum jobs
-    const nodeState = this.poller.getState(job.node_id);
     if (nodeState?.config.backend === "deforum") {
       const forgeNode = this.poller.getAllStates().find(
         (s) => s.config.host === nodeState.config.host && s.config.backend === "sd_forge",

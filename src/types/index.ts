@@ -95,6 +95,7 @@ export interface DispatcherStats {
   uptime_s: number;
   nodes: NodeState[];
   recent_decisions: RoutingDecision[];
+  video_stats: VideoBackendStats[];
 }
 
 export interface OpenAIChatMessage {
@@ -170,7 +171,19 @@ export interface VideoGenJob {
   output_b64?: string;   // SVD / LTX / Wan / AnimateLCM: base64-encoded video or GIF
   submitted_at: number;
   updated_at: number;
+  duration_ms?: number;  // wall-clock time from submission to completion
   error?: string;
+}
+
+export interface VideoBackendStats {
+  backend: string;
+  jobs_total: number;
+  jobs_ok: number;
+  jobs_failed: number;
+  duration_avg_ms: number;
+  duration_min_ms: number;
+  duration_max_ms: number;
+  last_updated: number;
 }
 
 export type WSMessage =
