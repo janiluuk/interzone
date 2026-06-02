@@ -156,4 +156,79 @@ export const FLEET: NodeConfig[] = [
     capabilities: ["llm"],
     enabled: false,
   },
+
+  // ── SVD — Stable Video Diffusion (img2video) ──────────────────────────────
+  // Recommended models: stabilityai/stable-video-diffusion-img2vid-xt-1-1 (25 frames, ~10 GB VRAM)
+  //                     stabilityai/stable-video-diffusion-img2vid         (14 frames, ~8 GB VRAM)
+  // Server: https://github.com/Stability-AI/generative-models or a diffusers FastAPI wrapper
+  // API: POST /generate  GET /health
+  {
+    id: "vimage2-svd",
+    host: "192.168.2.101",
+    label: "vimage2 / SVD (5060 Ti)",
+    backend: "svd",
+    port: 8282,
+    gpu: { name: "RTX 5060 Ti", arch: "blackwell", vram_gb: 16, cuda_cap: 13.0 },
+    tier: 1,
+    tags: ["5060ti", "blackwell", "img2video", "svd"],
+    capabilities: ["img2video"],
+    enabled: false,
+  },
+
+  // ── LTX-Video (txt2video and img2video) ───────────────────────────────────
+  // Recommended models: Lightricks/LTX-Video                (up to 257 frames @ 24 fps, ~8 GB VRAM)
+  //                     Lightricks/LTX-Video-0.9.7-distilled (faster, fewer steps needed)
+  // Server: https://github.com/Lightricks/LTX-Video  (run with --server flag)
+  // API: POST /generate  GET /jobs/:id  GET /health
+  {
+    id: "vimage3-ltx",
+    host: "192.168.2.102",
+    label: "vimage3 / LTX-Video",
+    backend: "ltx_video",
+    port: 8383,
+    gpu: { name: "RTX 4060 Ti", arch: "ada", vram_gb: 16, cuda_cap: 8.9 },
+    tier: 2,
+    tags: ["4060ti", "ada", "txt2video", "img2video", "ltx"],
+    capabilities: ["txt2video", "img2video"],
+    enabled: false,
+  },
+
+  // ── Wan Video (txt2video and img2video) ───────────────────────────────────
+  // Recommended models: Wan-AI/Wan2.1-T2V-1.3B     (text→video, ~8 GB VRAM)
+  //                     Wan-AI/Wan2.1-T2V-14B       (text→video, ~24 GB VRAM, multi-GPU)
+  //                     Wan-AI/Wan2.1-I2V-14B-480P  (image→video, ~24 GB VRAM)
+  //                     Wan-AI/Wan2.1-I2V-14B-720P  (image→video, ~40 GB VRAM)
+  // Server: https://github.com/Wan-Video/Wan2.1  (FastAPI inference wrapper)
+  // API: POST /generate  GET /jobs/:id  GET /health
+  {
+    id: "vimage4-wan",
+    host: "192.168.2.103",
+    label: "vimage4 / Wan Video (P100)",
+    backend: "wan_video",
+    port: 8484,
+    gpu: { name: "Tesla P100", arch: "pascal", vram_gb: 16, cuda_cap: 6.0 },
+    tier: 2,
+    tags: ["p100", "pascal", "txt2video", "wan"],
+    capabilities: ["txt2video"],
+    enabled: false,
+  },
+
+  // ── AnimateLCM via SD-Forge (txt2video) ───────────────────────────────────
+  // Recommended models: wangfuyun/AnimateLCM              (motion module, ~6 GB VRAM on SD1.5)
+  //                     wangfuyun/AnimateLCM-SDXL-t2v     (SDXL variant, ~12 GB VRAM)
+  // Requires AnimateDiff extension in Forge: sd-webui-animatediff
+  // SD1.5 base: any compatible checkpoint (e.g. dreamshaper-8, realisticVisionV60)
+  // API: Forge /sdapi/v1/txt2img with alwayson_scripts.animatediff
+  {
+    id: "vimage5-animate",
+    host: "192.168.2.104",
+    label: "vimage5 / AnimateLCM",
+    backend: "animate_lcm",
+    port: 7860,
+    gpu: { name: "RTX 3060", arch: "ampere", vram_gb: 12, cuda_cap: 8.6 },
+    tier: 2,
+    tags: ["3060", "ampere", "txt2video", "animate-lcm"],
+    capabilities: ["txt2video"],
+    enabled: false,
+  },
 ];

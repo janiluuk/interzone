@@ -175,6 +175,14 @@ export class NodePoller {
         partial = await this.fetchSwarmUIMetrics(node);
       } else if (node.backend === "deforum") {
         partial = await this.fetchDeforumMetrics(node);
+      } else if (node.backend === "svd") {
+        partial = await this.fetchSVDMetrics(node);
+      } else if (node.backend === "ltx_video") {
+        partial = await this.fetchLTXVideoMetrics(node);
+      } else if (node.backend === "wan_video") {
+        partial = await this.fetchWanVideoMetrics(node);
+      } else if (node.backend === "animate_lcm") {
+        partial = await this.fetchAnimateLCMMetrics(node);
       } else {
         partial = { status: "unknown" };
       }
@@ -627,6 +635,48 @@ export class NodePoller {
     } catch {
       return null;
     }
+  }
+
+  // ── New video backend health checks ──────────────────────────────────────
+
+  private async fetchSVDMetrics(node: NodeConfig): Promise<Partial<NodeState>> {
+    try {
+      const res = await fetchWithTimeout(`http://${node.host}:${node.port}/health`);
+      if (!res.ok) return { status: "unreachable" };
+      const state = this.states.get(node.id)!;
+      return { status: "healthy", queue_depth_video: state.queue_depth_video, active_video_job: state.active_video_job };
+    } catch {
+      return { status: "unreachable" };
+    }
+  }
+
+  private async fetchLTXVideoMetrics(node: NodeConfig): Promise<Partial<NodeState>> {
+    try {
+      const res = await fetchWithTimeout(`http://${node.host}:${node.port}/health`);
+      if (!res.ok) return { status: "unreachable" };
+      const state = this.states.get(node.id)!;
+      return { status: "healthy", queue_depth_video: state.queue_depth_video, active_video_job: state.active_video_job };
+    } catch {
+      return { status: "unreachable" };
+    }
+  }
+
+  private async fetchWanVideoMetrics(node: NodeConfig): Promise<Partial<NodeState>> {
+    try {
+      const res = await fetchWithTimeout(`http://${node.host}:${node.port}/health`);
+      if (!res.ok) return { status: "unreachable" };
+      const state = this.states.get(node.id)!;
+      return { status: "healthy", queue_depth_video: state.queue_depth_video, active_video_job: state.active_video_job };
+    } catch {
+      return { status: "unreachable" };
+    }
+  }
+
+  private async fetchAnimateLCMMetrics(node: NodeConfig): Promise<Partial<NodeState>> {
+    // AnimateLCM runs inside a Forge instance — reuse the Forge health check
+    const forgePartial = await this.fetchForgeMetrics(node);
+    const state = this.states.get(node.id)!;
+    return { ...forgePartial, queue_depth_video: state.queue_depth_video, active_video_job: state.active_video_job };
   }
 
   private updateLatencyPercentiles(id: string, latency_ms: number): void {

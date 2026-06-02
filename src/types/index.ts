@@ -1,8 +1,8 @@
 export type NodeCapability = "llm" | "txt2img" | "img2img" | "txt2video" | "img2video";
-export type BackendType = "ollama" | "localai" | "sd_forge" | "swarmui" | "deforum";
+export type BackendType = "ollama" | "localai" | "sd_forge" | "swarmui" | "deforum" | "svd" | "ltx_video" | "wan_video" | "animate_lcm";
 export type GpuArch = "blackwell" | "ada" | "ampere" | "pascal" | "volta" | null;
 export type NodeTier = 1 | 2 | 3;
-export type TaskType = "classify" | "parse_agreement" | "generic" | "txt2img" | "img2img" | "txt2video";
+export type TaskType = "classify" | "parse_agreement" | "generic" | "txt2img" | "img2img" | "txt2video" | "img2video";
 export type NodeStatus = "healthy" | "degraded" | "unreachable" | "unknown";
 
 export interface GpuConfig {
@@ -138,15 +138,25 @@ export interface ImageGenRequest {
 }
 
 export interface VideoGenRequest {
-  animation_mode?: "2D" | "3D";
-  max_frames: number;
+  // Unified fields (all backends)
+  prompt?: string;
+  negative_prompt?: string;
   width?: number;
   height?: number;
-  prompts: Record<string, string>;
+  num_frames?: number;
+  fps?: number;
   seed?: number;
   steps?: number;
   cfg_scale?: number;
   model?: string;
+  // img2video backends (SVD, LTX I2V, Wan I2V)
+  image?: string;              // base64-encoded input image
+  motion_bucket_id?: number;   // SVD: controls motion intensity (0–255, default 127)
+  augmentation_level?: number; // SVD: noise augmentation (0.0–1.0, default 0.0)
+  // Deforum legacy fields
+  animation_mode?: "2D" | "3D";
+  max_frames?: number;
+  prompts?: Record<string, string>;
 }
 
 export interface VideoGenJob {
@@ -156,7 +166,8 @@ export interface VideoGenJob {
   status: "pending" | "running" | "succeeded" | "failed";
   frames_done: number;
   total_frames: number;
-  outdir: string;
+  outdir?: string;       // Deforum: filesystem path where frames are written
+  output_b64?: string;   // SVD / LTX / Wan / AnimateLCM: base64-encoded video or GIF
   submitted_at: number;
   updated_at: number;
   error?: string;
