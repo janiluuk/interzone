@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  dispatcher:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "4242:4242"
+    environment:
+      - PORT=4242
+      - HOST=0.0.0.0
+      - POLL_INTERVAL_MS=5000
+      - POLL_TIMEOUT_MS=3000
+      - NODE_FAILURE_THRESHOLD=3
+      - WS_BROADCAST_INTERVAL_MS=2000
+      - DISABLED_NODES=vimage-cpu
+      - INFERENCE_TIMEOUT_MS=60000
+      - MIN_VRAM_FREE_MB=2048
+      - NVIDIA_METRICS_PORT=9835
+      - NODE_EXPORTER_PORT=9100
+    extra_hosts:
+      - "vimage2:192.168.2.101"
+      - "vimage3:192.168.2.102"
+      - "vimage4:192.168.2.103"
+      - "vimage5:192.168.2.104"
+      - "win-node:192.168.2.12"
+    networks:
+      - dispatcher_net
+
+networks:
+  dispatcher_net:
+    driver: bridge
