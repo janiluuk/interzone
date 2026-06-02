@@ -64,6 +64,7 @@ const broadcaster = new DashboardBroadcaster((): DispatcherStats => {
     uptime_s: Math.floor((Date.now() - startMs) / 1000),
     nodes: states,
     recent_decisions: router.getRecentDecisions(),
+    video_stats: proxy.getVideoBackendStats(),
   };
 });
 

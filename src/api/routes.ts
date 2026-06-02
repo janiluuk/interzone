@@ -246,6 +246,7 @@ export async function registerRoutes(
       uptime_s: Math.floor((Date.now() - startTime) / 1000),
       nodes: states,
       recent_decisions: decisions,
+      video_stats: proxy.getVideoBackendStats(),
     });
   });
 
