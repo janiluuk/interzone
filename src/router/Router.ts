@@ -12,7 +12,8 @@ const CAPABILITY_MAP: Record<TaskType, string[]> = {
   generic: ["ollama", "localai"],
   txt2img: ["sd_forge", "swarmui"],
   img2img: ["sd_forge", "swarmui"],
-  txt2video: ["deforum"],
+  txt2video: ["deforum", "ltx_video", "wan_video", "animate_lcm"],
+  img2video: ["svd", "ltx_video", "wan_video"],
 };
 
 // Task type → required node capability
@@ -23,6 +24,7 @@ const TASK_CAPABILITY: Record<TaskType, NodeCapability> = {
   txt2img: "txt2img",
   img2img: "img2img",
   txt2video: "txt2video",
+  img2video: "img2video",
 };
 
 export class Router {

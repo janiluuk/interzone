@@ -16,7 +16,7 @@ const INFERENCE_TIMEOUT_MS = parseInt(process.env.INFERENCE_TIMEOUT_MS ?? "60000
 
 export class Proxy {
   private videoJobs: Map<string, VideoGenJob> = new Map();
-  // Track active Deforum jobs per node for cross-constraint with Forge
+  // Track active video jobs per node (used for cross-constraint checks)
   private activeDeforumByNode: Map<string, string> = new Map();
 
   constructor(
@@ -134,8 +134,9 @@ export class Proxy {
 
   async handleVideoGen(req: FastifyRequest, reply: FastifyReply): Promise<void> {
     const body = req.body as VideoGenRequest;
+    const task = body.image ? "img2video" as const : "txt2video" as const;
 
-    const result = this.router.selectNode("txt2video");
+    const result = this.router.selectNode(task);
     if (!result) {
       reply.header("Retry-After", "30");
       return reply.status(503).send({ error: "no video nodes available" });
@@ -143,36 +144,57 @@ export class Proxy {
 
     const { node, decision } = result;
     const jobId = uuidv4();
+    const t0 = Date.now();
 
     try {
-      const batchId = await this.submitDeforumJob(node, body);
+      let job: VideoGenJob;
 
-      const job: VideoGenJob = {
-        job_id: jobId,
-        node_id: node.id,
-        backend_batch_id: batchId,
-        status: "pending",
-        frames_done: 0,
-        total_frames: body.max_frames,
-        outdir: "",
-        submitted_at: Date.now(),
-        updated_at: Date.now(),
-      };
+      switch (node.backend) {
+        case "deforum": {
+          const batchId = await this.submitDeforumJob(node, body);
+          job = {
+            job_id: jobId,
+            node_id: node.id,
+            backend_batch_id: batchId,
+            status: "pending",
+            frames_done: 0,
+            total_frames: body.max_frames ?? body.num_frames ?? 120,
+            outdir: "",
+            submitted_at: Date.now(),
+            updated_at: Date.now(),
+          };
+          // Cross-constraint: Deforum and Forge share the GPU on the same host
+          const forgeNode = this.poller.getAllStates().find(
+            (s) => s.config.host === node.host && s.config.backend === "sd_forge",
+          );
+          if (forgeNode) this.poller.incrementQueue(forgeNode.config.id, "image");
+          break;
+        }
+        case "svd":
+          job = await this.submitSVDJob(node, body, jobId);
+          break;
+        case "ltx_video":
+          job = await this.submitLTXVideoJob(node, body, jobId);
+          break;
+        case "wan_video":
+          job = await this.submitWanVideoJob(node, body, jobId);
+          break;
+        case "animate_lcm":
+          job = await this.submitAnimateLCMJob(node, body, jobId);
+          break;
+        default:
+          this.router.completeDecision(decision.id, Date.now() - t0, false);
+          return reply.status(400).send({ error: `unsupported video backend: ${node.backend}` });
+      }
 
-      this.videoJobs.set(jobId, job);
-      this.poller.setVideoJob(node.id, jobId);
-      this.activeDeforumByNode.set(node.id, jobId);
+      this.videoJobs.set(job.job_id, job);
+      this.poller.setVideoJob(node.id, job.job_id);
+      this.activeDeforumByNode.set(node.id, job.job_id);
 
-      // Also mark the Forge node on the same host as busy
-      const forgeNode = this.poller.getAllStates().find(
-        (s) => s.config.host === node.host && s.config.backend === "sd_forge",
-      );
-      if (forgeNode) this.poller.incrementQueue(forgeNode.config.id, "image");
-
-      this.router.completeDecision(decision.id, 0, true);
-      return reply.status(202).send({ job_id: jobId });
+      this.router.completeDecision(decision.id, Date.now() - t0, true);
+      return reply.status(202).send({ job_id: job.job_id });
     } catch (err) {
-      this.router.completeDecision(decision.id, Date.now(), false);
+      this.router.completeDecision(decision.id, Date.now() - t0, false);
       return reply.status(502).send({ error: String(err) });
     }
   }
@@ -183,7 +205,11 @@ export class Proxy {
     if (!job) return reply.status(404).send({ error: "job not found" });
 
     if (job.status === "pending" || job.status === "running") {
-      await this.pollDeforumJob(job);
+      const backend = this.poller.getState(job.node_id)?.config.backend;
+      if (backend === "deforum") await this.pollDeforumJob(job);
+      else if (backend === "ltx_video") await this.pollLTXVideoJob(job);
+      else if (backend === "wan_video") await this.pollWanVideoJob(job);
+      // SVD and AnimateLCM complete synchronously — nothing to poll
     }
 
     return reply.send(job);
@@ -354,14 +380,251 @@ export class Proxy {
     this.poller.setVideoJob(job.node_id, undefined);
     this.activeDeforumByNode.delete(job.node_id);
 
-    // Unmark the co-located Forge node
+    // Undo the Forge cross-constraint only for Deforum jobs
     const nodeState = this.poller.getState(job.node_id);
-    if (nodeState) {
+    if (nodeState?.config.backend === "deforum") {
       const forgeNode = this.poller.getAllStates().find(
         (s) => s.config.host === nodeState.config.host && s.config.backend === "sd_forge",
       );
       if (forgeNode) this.poller.decrementQueue(forgeNode.config.id, "image");
     }
+  }
+
+  // ── SVD (img2video, synchronous) ─────────────────────────────────────────
+
+  private async submitSVDJob(node: NodeConfig, body: VideoGenRequest, jobId: string): Promise<VideoGenJob> {
+    if (!body.image) throw new Error("SVD requires an input image (base64)");
+
+    const controller = new AbortController();
+    setTimeout(() => controller.abort(), INFERENCE_TIMEOUT_MS * 10);
+
+    const res = await fetch(`http://${node.host}:${node.port}/generate`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        image: body.image,
+        num_frames: body.num_frames ?? 25,
+        fps: body.fps ?? 7,
+        motion_bucket_id: body.motion_bucket_id ?? 127,
+        augmentation_level: body.augmentation_level ?? 0.0,
+        width: body.width ?? 1024,
+        height: body.height ?? 576,
+        seed: body.seed ?? -1,
+        decode_chunk_size: 8,
+      }),
+      signal: controller.signal,
+    });
+
+    if (!res.ok) throw new Error(`SVD server returned ${res.status}`);
+    const data = await res.json() as { video_b64?: string; frames?: string[] };
+
+    return {
+      job_id: jobId,
+      node_id: node.id,
+      backend_batch_id: jobId,
+      status: "succeeded",
+      frames_done: body.num_frames ?? 25,
+      total_frames: body.num_frames ?? 25,
+      output_b64: data.video_b64,
+      submitted_at: Date.now(),
+      updated_at: Date.now(),
+    };
+  }
+
+  // ── LTX-Video (txt2video and img2video, async) ────────────────────────────
+
+  private async submitLTXVideoJob(node: NodeConfig, body: VideoGenRequest, jobId: string): Promise<VideoGenJob> {
+    const controller = new AbortController();
+    setTimeout(() => controller.abort(), INFERENCE_TIMEOUT_MS);
+
+    const reqBody: Record<string, unknown> = {
+      prompt: body.prompt ?? "",
+      negative_prompt: body.negative_prompt ?? "",
+      width: body.width ?? 768,
+      height: body.height ?? 512,
+      num_frames: body.num_frames ?? 121,
+      fps: body.fps ?? 24,
+      seed: body.seed ?? -1,
+      num_inference_steps: body.steps ?? 50,
+      guidance_scale: body.cfg_scale ?? 3.0,
+    };
+    if (body.image) reqBody.image = body.image;
+    if (body.model) reqBody.model = body.model;
+
+    const res = await fetch(`http://${node.host}:${node.port}/generate`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(reqBody),
+      signal: controller.signal,
+    });
+
+    if (!res.ok) throw new Error(`LTX-Video server returned ${res.status}`);
+    const data = await res.json() as { job_id?: string; video_b64?: string };
+
+    const totalFrames = body.num_frames ?? 121;
+    if (data.video_b64) {
+      return {
+        job_id: jobId, node_id: node.id, backend_batch_id: jobId,
+        status: "succeeded", frames_done: totalFrames, total_frames: totalFrames,
+        output_b64: data.video_b64, submitted_at: Date.now(), updated_at: Date.now(),
+      };
+    }
+    return {
+      job_id: jobId, node_id: node.id, backend_batch_id: data.job_id ?? jobId,
+      status: "pending", frames_done: 0, total_frames: totalFrames,
+      submitted_at: Date.now(), updated_at: Date.now(),
+    };
+  }
+
+  private async pollLTXVideoJob(job: VideoGenJob): Promise<void> {
+    try {
+      const nodeState = this.poller.getState(job.node_id);
+      if (!nodeState) return;
+      const res = await fetch(
+        `http://${nodeState.config.host}:${nodeState.config.port}/jobs/${job.backend_batch_id}`,
+      );
+      if (!res.ok) return;
+      const data = await res.json() as {
+        status: string; progress?: number; frames_done?: number;
+        video_b64?: string; error?: string;
+      };
+      job.frames_done = data.frames_done ?? Math.round((data.progress ?? 0) * job.total_frames);
+      job.updated_at = Date.now();
+      const s = data.status.toLowerCase();
+      if (s === "running") job.status = "running";
+      else if (s === "succeeded") {
+        job.status = "succeeded"; job.output_b64 = data.video_b64;
+        job.frames_done = job.total_frames; this.finalizeVideoJob(job);
+      } else if (s === "failed") {
+        job.status = "failed"; job.error = data.error; this.finalizeVideoJob(job);
+      }
+    } catch { /* retry next poll */ }
+  }
+
+  // ── Wan Video (txt2video and img2video, async) ────────────────────────────
+
+  private async submitWanVideoJob(node: NodeConfig, body: VideoGenRequest, jobId: string): Promise<VideoGenJob> {
+    const controller = new AbortController();
+    setTimeout(() => controller.abort(), INFERENCE_TIMEOUT_MS);
+
+    const reqBody: Record<string, unknown> = {
+      prompt: body.prompt ?? "",
+      negative_prompt: body.negative_prompt ?? "",
+      width: body.width ?? 832,
+      height: body.height ?? 480,
+      num_frames: body.num_frames ?? 81,
+      fps: body.fps ?? 16,
+      seed: body.seed ?? -1,
+      steps: body.steps ?? 50,
+      guidance_scale: body.cfg_scale ?? 5.0,
+      task: body.image ? "i2v" : "t2v",
+    };
+    if (body.image) reqBody.image = body.image;
+    if (body.model) reqBody.model = body.model;
+
+    const res = await fetch(`http://${node.host}:${node.port}/generate`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(reqBody),
+      signal: controller.signal,
+    });
+
+    if (!res.ok) throw new Error(`Wan Video server returned ${res.status}`);
+    const data = await res.json() as { job_id?: string; video_b64?: string };
+
+    const totalFrames = body.num_frames ?? 81;
+    if (data.video_b64) {
+      return {
+        job_id: jobId, node_id: node.id, backend_batch_id: jobId,
+        status: "succeeded", frames_done: totalFrames, total_frames: totalFrames,
+        output_b64: data.video_b64, submitted_at: Date.now(), updated_at: Date.now(),
+      };
+    }
+    return {
+      job_id: jobId, node_id: node.id, backend_batch_id: data.job_id ?? jobId,
+      status: "pending", frames_done: 0, total_frames: totalFrames,
+      submitted_at: Date.now(), updated_at: Date.now(),
+    };
+  }
+
+  private async pollWanVideoJob(job: VideoGenJob): Promise<void> {
+    try {
+      const nodeState = this.poller.getState(job.node_id);
+      if (!nodeState) return;
+      const res = await fetch(
+        `http://${nodeState.config.host}:${nodeState.config.port}/jobs/${job.backend_batch_id}`,
+      );
+      if (!res.ok) return;
+      const data = await res.json() as {
+        status: string; progress?: number; frames_done?: number;
+        video_b64?: string; error?: string;
+      };
+      job.frames_done = data.frames_done ?? Math.round((data.progress ?? 0) * job.total_frames);
+      job.updated_at = Date.now();
+      const s = data.status.toLowerCase();
+      if (s === "running") job.status = "running";
+      else if (s === "succeeded") {
+        job.status = "succeeded"; job.output_b64 = data.video_b64;
+        job.frames_done = job.total_frames; this.finalizeVideoJob(job);
+      } else if (s === "failed") {
+        job.status = "failed"; job.error = data.error; this.finalizeVideoJob(job);
+      }
+    } catch { /* retry next poll */ }
+  }
+
+  // ── AnimateLCM via Forge (txt2video, synchronous) ─────────────────────────
+
+  private async submitAnimateLCMJob(node: NodeConfig, body: VideoGenRequest, jobId: string): Promise<VideoGenJob> {
+    const controller = new AbortController();
+    setTimeout(() => controller.abort(), INFERENCE_TIMEOUT_MS * 5);
+
+    const numFrames = body.num_frames ?? 16;
+    const res = await fetch(`http://${node.host}:${node.port}/sdapi/v1/txt2img`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        prompt: body.prompt ?? "",
+        negative_prompt: body.negative_prompt ?? "",
+        steps: body.steps ?? 4,      // LCM needs very few steps
+        width: body.width ?? 512,
+        height: body.height ?? 512,
+        seed: body.seed ?? -1,
+        cfg_scale: 1.0,              // LCM works at cfg=1
+        send_images: true,
+        save_images: false,
+        alwayson_scripts: {
+          animatediff: {
+            args: [{
+              enable: true,
+              model: body.model ?? "AnimateLCM_sd15_t2v.ckpt",
+              format: ["GIF"],
+              video_length: numFrames,
+              fps: body.fps ?? 8,
+              loop_number: 0,
+              closed_loop: "A",
+              batch_size: 1,
+              stride: 1,
+              overlap: -1,
+            }],
+          },
+        },
+      }),
+      signal: controller.signal,
+    });
+
+    if (!res.ok) throw new Error(`AnimateLCM/Forge returned ${res.status}`);
+    const data = await res.json() as { images?: string[] };
+    const gifB64 = data.images?.[0];
+
+    return {
+      job_id: jobId, node_id: node.id, backend_batch_id: jobId,
+      status: gifB64 ? "succeeded" : "failed",
+      frames_done: gifB64 ? numFrames : 0,
+      total_frames: numFrames,
+      output_b64: gifB64,
+      submitted_at: Date.now(), updated_at: Date.now(),
+      error: gifB64 ? undefined : "No GIF returned by AnimateDiff",
+    };
   }
 
   private translateToOllamaFormat(body: OpenAIChatRequest): OllamaChatRequest {

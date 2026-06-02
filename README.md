@@ -10,7 +10,7 @@ Typical setup:
 
 - **LLM inference** via [Ollama](https://ollama.com) or [LocalAI](https://localai.io) across multiple nodes
 - **Image generation** via [Stable Diffusion Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge) or [SwarmUI](https://github.com/mcmonkeyprojects/SwarmUI)
-- **Video generation** via [Deforum](https://github.com/deforum-art/sd-webui-deforum) on a dedicated node
+- **Video generation** via [Deforum](https://github.com/deforum-art/sd-webui-deforum), [LTX-Video](https://github.com/Lightricks/LTX-Video), [Wan2.1](https://github.com/Wan-Video/Wan2.1), [SVD](https://github.com/Stability-AI/generative-models), or [AnimateLCM](https://github.com/continue-revolution/sd-webui-animatediff)
 
 Interzone is not a cloud gateway — it is designed for a trusted home or lab LAN where you own every machine.
 
@@ -39,6 +39,65 @@ Task routing adds a tier boost for high-priority task types (e.g. `parse_agreeme
 | Stable Diffusion Forge | txt2img, img2img | `/sdapi/v1/txt2img`, `/sdapi/v1/img2img` |
 | SwarmUI | txt2img | `/API/GenerateText2Image` |
 | Deforum | txt2video | `/deforum_api/batches` (async) |
+| SVD | img2video | `POST /generate` (sync, base64 I/O) |
+| LTX-Video | txt2video, img2video | `POST /generate` → `GET /jobs/:id` (async) |
+| Wan Video | txt2video, img2video | `POST /generate` → `GET /jobs/:id` (async) |
+| AnimateLCM | txt2video | Forge `/sdapi/v1/txt2img` with AnimateDiff script (sync) |
+
+### Video model recommendations
+
+**SVD — Stable Video Diffusion** (`backend: "svd"`)
+
+Requires a FastAPI wrapper around the [Stability AI generative-models](https://github.com/Stability-AI/generative-models) or a diffusers SVD pipeline. Exposes `POST /generate` and `GET /health`.
+
+| Model | VRAM | Frames | Notes |
+|-------|------|--------|-------|
+| `stabilityai/stable-video-diffusion-img2vid-xt-1-1` | ~10 GB | 25 | Best quality, recommended |
+| `stabilityai/stable-video-diffusion-img2vid` | ~8 GB | 14 | Faster, fewer frames |
+
+Key request parameters: `motion_bucket_id` (0–255, default 127 — higher = more motion), `augmentation_level` (0.0–1.0, adds input noise for stylistic variation), `fps` (default 7).
+
+---
+
+**LTX-Video** (`backend: "ltx_video"`)
+
+Run the [official LTX-Video server](https://github.com/Lightricks/LTX-Video) with its `--server` flag. Supports both text-to-video and image-to-video (pass `image` as base64 in the request body).
+
+| Model | VRAM | Max frames | Notes |
+|-------|------|-----------|-------|
+| `Lightricks/LTX-Video` | ~8 GB | 257 | Up to ~10 s @ 24 fps |
+| `Lightricks/LTX-Video-0.9.7-distilled` | ~8 GB | 257 | 4–8 steps sufficient, much faster |
+
+Default resolution: 768×512. Default `guidance_scale`: 3.0 — do not exceed 5.
+
+---
+
+**Wan Video** (`backend: "wan_video"`)
+
+Wrap the [Wan2.1 inference script](https://github.com/Wan-Video/Wan2.1) in a FastAPI server exposing `POST /generate`, `GET /jobs/:id`, and `GET /health`. Interzone sets `task: "t2v"` or `task: "i2v"` automatically based on whether an `image` field is present in the request.
+
+| Model | VRAM | Frames | Notes |
+|-------|------|--------|-------|
+| `Wan-AI/Wan2.1-T2V-1.3B` | ~8 GB | 81 | Fast, good for iteration |
+| `Wan-AI/Wan2.1-T2V-14B` | ~24 GB | 81 | High quality, needs multi-GPU |
+| `Wan-AI/Wan2.1-I2V-14B-480P` | ~24 GB | 81 | Image-to-video, 480p |
+| `Wan-AI/Wan2.1-I2V-14B-720P` | ~40 GB | 81 | Image-to-video, 720p |
+
+Default resolution: 832×480. Default `guidance_scale`: 5.0.
+
+---
+
+**AnimateLCM** (`backend: "animate_lcm"`)
+
+Runs inside an existing Forge instance with the [sd-webui-animatediff](https://github.com/continue-revolution/sd-webui-animatediff) extension. No separate server needed — point the node config at the same Forge port. AnimateLCM uses `cfg_scale=1.0` and `steps=4` by default.
+
+| Motion module | VRAM | Notes |
+|--------------|------|-------|
+| `wangfuyun/AnimateLCM` | ~6 GB on SD1.5 | 4 steps sufficient, very fast |
+| `wangfuyun/AnimateLCM-SDXL-t2v` | ~12 GB on SDXL | Higher resolution output |
+| `guoyww/animatediff-motion-adapter-v1-5-3` | ~6 GB on SD1.5 | Standard AnimateDiff (non-LCM, ~20 steps) |
+
+Pair with any compatible SD1.5 checkpoint (e.g. `dreamshaper-8`, `realisticVisionV60B4`). Do not raise `cfg_scale` above 2 for AnimateLCM.
 
 ## API
 
@@ -49,8 +108,8 @@ POST /v1/chat/completions       — LLM inference (streaming and non-streaming)
 GET  /v1/models                 — List models available across the fleet
 POST /v1/images/generations     — txt2img
 POST /v1/images/edits           — img2img
-POST /v1/video/generations      — Submit a Deforum video job (returns job_id)
-GET  /v1/video/generations/:id  — Poll video job status
+POST /v1/video/generations      — Submit a video job (txt2video or img2video; returns job_id)
+GET  /v1/video/generations/:id  — Poll video job status and retrieve output_b64
 
 GET  /admin/nodes               — All node states with metrics
 GET  /admin/nodes/:id           — Single node
